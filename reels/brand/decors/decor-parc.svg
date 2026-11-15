@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 480" width="1080" height="1920"><g class="decor" id="decor-parc">
+  <rect width="270" height="480" fill="#EAF0E1"/><circle cx="60" cy="80" r="26" fill="#F2B33D" opacity=".8"/>
+  <path d="M0 260 Q70 200 140 250 Q210 190 270 240 V480 H0Z" fill="#A9C39A"/>
+  <path d="M0 330 Q90 290 170 330 Q230 300 270 320 V480 H0Z" fill="#7FA37A"/>
+  <path d="M110 480 Q130 400 150 330 L162 330 Q156 400 170 480Z" fill="#E6D6B4"/>
+  <g><rect x="206" y="250" width="8" height="90" fill="#6B4A2B"/><circle cx="210" cy="240" r="34" fill="#5E8A5A"/></g>
+  <g><rect x="40" y="300" width="6" height="60" fill="#6B4A2B"/><circle cx="43" cy="292" r="24" fill="#5E8A5A"/></g>
+  <g transform="translate(180 380)"><rect width="60" height="8" rx="2" fill="#8A5A3A"/><rect y="-16" width="60" height="6" rx="2" fill="#8A5A3A"/><rect x="6" y="8" width="5" height="16" fill="#1B1B1B"/><rect x="49" y="8" width="5" height="16" fill="#1B1B1B"/></g>
+</g></svg>

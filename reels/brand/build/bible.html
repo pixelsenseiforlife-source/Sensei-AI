@@ -1,0 +1,511 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Bible graphique La Voie du Pixel</title><link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet"><style>@page{ size:A4 landscape; margin:0 }
+*{ box-sizing:border-box; margin:0; padding:0 }
+body{ font-family:Inter,sans-serif; color:#1B1B1B; -webkit-print-color-adjust:exact; print-color-adjust:exact }
+.page{ width:297mm; height:210mm; background:#F4EDE1; position:relative; overflow:hidden; padding:14mm 16mm; page-break-after:always }
+.page:last-child{ page-break-after:auto }
+h1,h2{ font-family:Anton,sans-serif; font-weight:400; text-transform:uppercase; line-height:1 }
+h2{ font-size:30pt; margin-bottom:6mm } h2 em{ font-style:normal; color:#E63B2E }
+.kicker{ font-weight:800; font-size:8pt; letter-spacing:2.5px; text-transform:uppercase; color:#E63B2E; margin-bottom:1.5mm }
+.lead{ font-size:11.5pt; line-height:1.5; margin-bottom:4mm } .small{ font-size:8.5pt; color:#5b5650; margin-top:4mm }
+.notes{ list-style:none; display:grid; gap:2.6mm; font-size:9.6pt; line-height:1.45 }
+.notes li{ padding-left:4mm; border-left:1mm solid #F2B33D }
+.foot{ position:absolute; left:16mm; right:16mm; bottom:7mm; display:flex; justify-content:space-between; font-size:7pt; letter-spacing:1.5px; text-transform:uppercase; color:#8a8378; border-top:1px solid #d6cbb7; padding-top:2mm }
+figure{ background:#FBF7F0; border:1px solid #e1d6c3; border-radius:3mm; padding:3mm; display:flex; flex-direction:column; align-items:center }
+figure svg{ width:100%; height:auto; max-height:100% }
+figcaption{ font-size:7.5pt; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:#5b5650; margin-top:2mm; text-align:center }
+.grid2{ display:grid; grid-template-columns:1fr 1.25fr; gap:10mm; align-items:start }
+.big svg{ height:150mm; width:auto; display:block; margin:auto }
+.headbig svg{ width:60mm; display:block; margin-bottom:3mm }
+.swatches{ display:flex; flex-wrap:wrap; gap:3mm; margin-top:5mm }
+.sw{ display:flex; flex-direction:column; align-items:flex-start; font-size:7.5pt; width:19mm }
+.sw span{ width:19mm; height:10mm; border-radius:2mm; border:1px solid #cdbfa8; margin-bottom:1mm }
+.sw i{ font-style:normal; color:#7a7268 }
+.row4{ display:grid; grid-template-columns:repeat(4,1fr); gap:5mm; margin-bottom:5mm }
+.row4 figure svg{ height:34mm; width:auto }
+.row4.poses figure svg{ height:78mm }
+.row2{ display:grid; grid-template-columns:1fr 1fr; gap:5mm } .row2 svg{ height:130mm; width:auto }
+.row3{ display:grid; grid-template-columns:repeat(3,1fr); gap:4mm; margin-top:5mm } .row3 figure svg{ height:24mm; width:auto }
+.row3.decors{ gap:8mm; margin-top:0 } .row3.decors figure svg{ height:118mm; width:auto }
+.mock svg{ height:160mm; width:auto; display:block; margin:-4mm auto 0; border-radius:3mm; box-shadow:0 2mm 6mm rgba(0,0,0,.18) }
+.props{ display:grid; grid-template-columns:repeat(6,1fr); gap:4mm } .props figure{ height:42mm; justify-content:space-between } .props svg{ height:28mm; width:auto }
+.bottom{ margin-top:7mm } .anton{ font-family:Anton,sans-serif; font-size:13pt }
+.cover{ background:#1B1B1B; color:#F4EDE1; padding:18mm 20mm }
+.cover .sun{ position:absolute; width:150mm; height:150mm; border-radius:50%; background:#E63B2E; right:-10mm; top:30mm }
+.cover .hero{ position:absolute; right:12mm; bottom:6mm; width:150mm } .cover .hero svg{ width:100% }
+.brandrow{ display:flex; align-items:center; gap:5mm; position:relative }
+.logo{ width:30mm; height:30mm; border-radius:50%; background:#F3F0E8 center/122% no-repeat; box-shadow:0 0 0 1.2mm rgba(242,179,61,.6) }
+.t1{ font-weight:800; letter-spacing:4px; font-size:10pt; color:#F2B33D } .t2{ font-size:9pt; color:#bdb5a8; margin-top:1mm }
+.cover h1{ font-size:66pt; margin-top:22mm; position:relative } .cover h1 span{ color:#F2B33D }
+.cover .sub{ font-size:12pt; line-height:1.5; max-width:100mm; margin-top:6mm; color:#e2d9ca; position:relative }
+</style></head><body><section class="page cover"><div class="sun"></div>
+  <div class="brandrow"><div class="logo" style="background-image:url(../logo-pixel-sensei.jpg)"></div><div><div class="t1">LA VOIE DU PIXEL</div><div class="t2">par Pixel Sensei · Filmmaker &amp; Photographer</div></div></div>
+  <h1>Bible<br><span>graphique</span></h1>
+  <p class="sub">Personnages, décors, accessoires et règles visuelles de la série de reels animés 2D.</p>
+  <div class="hero"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 0 450 430"><g class="sensei" data-pose="camera"><g id="robe">
+  <path d="M62 160 Q100 150 138 160 L156 408 Q100 418 44 408Z" fill="#2F4858"/>
+  <path d="M84 160 L100 214 L116 160Z" fill="#F4EDE1"/>
+  <path d="M78 160 L100 222 L122 160" fill="none" stroke="#F2B33D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M100 222 L102 408" fill="none" stroke="#24394A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M50 262 Q100 272 150 262 L151 284 Q100 294 49 284Z" fill="#E63B2E"/>
+  <path d="M96 282 L88 318 M104 282 L112 318" fill="none" stroke="#E63B2E" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="78" cy="414" rx="17" ry="7" fill="#1B1B1B"/><ellipse cx="122" cy="414" rx="17" ry="7" fill="#1B1B1B"/>
+</g><g id="arm-left"><path d="M64 166 Q44 222 78 252 L96 236 Q70 214 80 192Z" fill="#24394A"/></g><g id="arm-right"><path d="M136 166 Q156 222 122 252 L104 236 Q130 214 120 192Z" fill="#24394A"/></g><g class="sensei-head" data-expression="rire">
+  <g id="hair"><path d="M54 84 Q46 124 72 152 L76 96Z" fill="#4A4A4A"/><path d="M146 84 Q154 124 128 152 L124 96Z" fill="#4A4A4A"/></g>
+  <path id="face" d="M68 84 H132 V124 Q132 154 100 154 Q68 154 68 124Z" fill="#F1C9A0"/>
+  <g id="brows" fill="#4A4A4A"><path d="M70 98 Q83 86 97 96 Q84 92 70 98Z"/><path d="M130 98 Q117 86 103 96 Q116 92 130 98Z"/></g>
+  <g id="eyes"><path d="M76 111 Q84 101 92 111" fill="none" stroke="#1B1B1B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M108 111 Q116 101 124 111" fill="none" stroke="#1B1B1B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <path id="nose" d="M96 119 Q100 123 104 119" fill="none" stroke="#B9875E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path id="beard" d="M70 122 Q78 130 90 127 Q100 123 110 127 Q122 130 130 122 Q138 152 124 174 Q114 188 120 198 Q100 196 90 180 Q72 160 70 122Z" fill="#4A4A4A"/>
+  <path id="mouth-area" d="M87 129 Q100 125 113 129 Q111 147 100 153 Q89 147 87 129Z" fill="#F1C9A0"/>
+  <g id="mouth"><path d="M91 134 Q100 152 109 134Z" fill="#7A2A22"/></g>
+  <path id="mustache" d="M78 126 Q90 118 100 125 Q110 118 122 126 Q112 133 100 129 Q88 133 78 126Z" fill="#4A4A4A"/>
+  <path d="M92 158 L100 172 L108 158" fill="#F1C9A0" opacity=".0"/>
+  <g id="hat">
+    <path d="M12 84 L100 20 L188 84 Q100 99 12 84Z" fill="#D9A441"/>
+    <path d="M103 32 Q121 45 116 58 Q134 54 146 64 Q128 72 104 72 Q131 65 124 62 Q106 64 112 54 Q116 44 103 32Z" fill="#F2C766"/>
+    <path d="M30 86 Q100 98 170 86 Q100 104 30 86Z" fill="#8A6420"/>
+    <path d="M12 84 L100 20 L188 84" fill="none" stroke="#8A6420" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</g><g class="prop-camera" transform="translate(100 236) scale(1.0)">
+  <rect x="-20" y="-24" width="16" height="9" rx="2" fill="#3A3A3A"/>
+  <rect x="-30" y="-17" width="60" height="34" rx="5" fill="#1B1B1B"/>
+  <rect x="-30" y="-8" width="60" height="5" fill="#F2B33D"/>
+  <circle r="13" fill="#3A3A3A"/><circle r="8" fill="#2F4858"/><circle cx="-3" cy="-3" r="2.5" fill="#fff" opacity=".8"/>
+  <circle cx="22" cy="-11" r="2.5" fill="#E63B2E"/>
+</g><circle cx="72" cy="244" r="10" fill="#F1C9A0"/><circle cx="128" cy="244" r="10" fill="#F1C9A0"/></g><g transform="translate(230 60) scale(.86)"><g class="eleve" data-pose="filme"><g id="body">
+  <rect x="92" y="148" width="16" height="40" fill="#8D5A3B"/>
+  <path d="M74 178 Q100 196 126 178 Q118 196 100 200 Q82 196 74 178Z" fill="#C98F1F"/>
+  <path d="M60 192 Q100 178 140 192 L148 304 Q100 312 52 304Z" fill="#F2B33D"/>
+  <path d="M74 262 H126 L122 290 H78Z" fill="#E0A42E"/>
+  <path d="M94 200 L92 236 M106 200 L108 236" fill="none" stroke="#F4EDE1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M56 302 H144 L140 404 H106 L100 330 L94 404 H60Z" fill="#2F4858"/>
+  <ellipse cx="78" cy="410" rx="20" ry="9" fill="#fff" stroke="#1B1B1B" stroke-width="2.5"/>
+  <ellipse cx="122" cy="410" rx="20" ry="9" fill="#fff" stroke="#1B1B1B" stroke-width="2.5"/>
+</g><g id="arm-left"><path d="M62 196 Q42 240 46 296 L66 296 Q64 248 76 214Z" fill="#F2B33D"/><circle cx="56" cy="304" r="10" fill="#8D5A3B"/></g><g id="arm-right"><path d="M138 196 Q186 196 190 162 L174 156 Q170 184 128 214Z" fill="#F2B33D"/><g class="prop-phone" transform="translate(186 142) rotate(90)"><rect x="-11" y="-19" width="22" height="38" rx="4" fill="#1B1B1B"/><rect x="-8" y="-15" width="16" height="28" rx="2" fill="#2F4858"/><circle cx="5" cy="-11" r="2" fill="#E63B2E"/></g><circle cx="182" cy="158" r="10" fill="#8D5A3B"/></g><g class="eleve-head" data-expression="emerveille">
+  <circle cx="52" cy="110" r="9" fill="#8D5A3B"/><circle cx="148" cy="110" r="9" fill="#8D5A3B"/>
+  <circle id="face" cx="100" cy="106" r="48" fill="#8D5A3B"/>
+  <g id="hair"><path d="M54 98 Q54 58 100 56 Q146 58 146 98 Q132 76 100 74 Q68 76 54 98Z" fill="#1B1B1B"/><circle cx="58" cy="86" r="11" fill="#1B1B1B"/><circle cx="68" cy="68" r="11" fill="#1B1B1B"/><circle cx="84" cy="57" r="11" fill="#1B1B1B"/><circle cx="100" cy="53" r="11" fill="#1B1B1B"/><circle cx="116" cy="57" r="11" fill="#1B1B1B"/><circle cx="132" cy="68" r="11" fill="#1B1B1B"/><circle cx="142" cy="86" r="11" fill="#1B1B1B"/></g>
+  <g id="brows"><path d="M74 87 Q84 80 94 86" fill="none" stroke="#1B1B1B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M106 86 Q116 80 126 87" fill="none" stroke="#1B1B1B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g><g id="eyes"><ellipse cx="84" cy="106" rx="8" ry="10" fill="#fff"/><circle cx="84" cy="107" r="5" fill="#1B1B1B"/><circle cx="86" cy="104" r="1.6" fill="#fff"/><ellipse cx="116" cy="106" rx="8" ry="10" fill="#fff"/><circle cx="116" cy="107" r="5" fill="#1B1B1B"/><circle cx="118" cy="104" r="1.6" fill="#fff"/></g>
+  <path id="nose" d="M97 116 Q100 120 103 116" fill="none" stroke="#5E3A26" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g id="mouth"><ellipse cx="100" cy="132" rx="8" ry="10" fill="#7A2A22"/></g>
+</g></g></g></svg></div>
+</section><section class="page"><div class="kicker">Personnage principal</div><h2>Le <em>Sensei</em></h2>
+  <div class="grid2"><div class="big"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 0 220 430"><g class="sensei" data-pose="neutre"><g id="robe">
+  <path d="M62 160 Q100 150 138 160 L156 408 Q100 418 44 408Z" fill="#2F4858"/>
+  <path d="M84 160 L100 214 L116 160Z" fill="#F4EDE1"/>
+  <path d="M78 160 L100 222 L122 160" fill="none" stroke="#F2B33D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M100 222 L102 408" fill="none" stroke="#24394A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M50 262 Q100 272 150 262 L151 284 Q100 294 49 284Z" fill="#E63B2E"/>
+  <path d="M96 282 L88 318 M104 282 L112 318" fill="none" stroke="#E63B2E" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="78" cy="414" rx="17" ry="7" fill="#1B1B1B"/><ellipse cx="122" cy="414" rx="17" ry="7" fill="#1B1B1B"/>
+</g><g id="arm-left"><path d="M64 166 Q34 222 40 300 L72 300 Q66 240 78 198Z" fill="#24394A"/><circle cx="56" cy="308" r="10" fill="#F1C9A0"/></g><g id="arm-right"><path d="M136 166 Q166 222 160 300 L128 300 Q134 240 122 198Z" fill="#24394A"/><circle cx="144" cy="308" r="10" fill="#F1C9A0"/></g><g class="sensei-head" data-expression="serein">
+  <g id="hair"><path d="M54 84 Q46 124 72 152 L76 96Z" fill="#4A4A4A"/><path d="M146 84 Q154 124 128 152 L124 96Z" fill="#4A4A4A"/></g>
+  <path id="face" d="M68 84 H132 V124 Q132 154 100 154 Q68 154 68 124Z" fill="#F1C9A0"/>
+  <g id="brows" fill="#4A4A4A"><path d="M70 101 Q83 89 97 99 Q84 95 70 101Z"/><path d="M130 101 Q117 89 103 99 Q116 95 130 101Z"/></g>
+  <g id="eyes"><path d="M76 109 Q84 103 92 109" fill="none" stroke="#1B1B1B" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M108 109 Q116 103 124 109" fill="none" stroke="#1B1B1B" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <path id="nose" d="M96 119 Q100 123 104 119" fill="none" stroke="#B9875E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path id="beard" d="M70 122 Q78 130 90 127 Q100 123 110 127 Q122 130 130 122 Q138 152 124 174 Q114 188 120 198 Q100 196 90 180 Q72 160 70 122Z" fill="#4A4A4A"/>
+  <path id="mouth-area" d="M87 129 Q100 125 113 129 Q111 147 100 153 Q89 147 87 129Z" fill="#F1C9A0"/>
+  <g id="mouth"><path d="M95 138 Q100 141 105 138" fill="none" stroke="#1B1B1B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <path id="mustache" d="M78 126 Q90 118 100 125 Q110 118 122 126 Q112 133 100 129 Q88 133 78 126Z" fill="#4A4A4A"/>
+  <path d="M92 158 L100 172 L108 158" fill="#F1C9A0" opacity=".0"/>
+  <g id="hat">
+    <path d="M12 84 L100 20 L188 84 Q100 99 12 84Z" fill="#D9A441"/>
+    <path d="M103 32 Q121 45 116 58 Q134 54 146 64 Q128 72 104 72 Q131 65 124 62 Q106 64 112 54 Q116 44 103 32Z" fill="#F2C766"/>
+    <path d="M30 86 Q100 98 170 86 Q100 104 30 86Z" fill="#8A6420"/>
+    <path d="M12 84 L100 20 L188 84" fill="none" stroke="#8A6420" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</g></g></svg></div><div>
+    <div class="headbig"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 10 200 195"><g class="sensei-head" data-expression="serein">
+  <g id="hair"><path d="M54 84 Q46 124 72 152 L76 96Z" fill="#4A4A4A"/><path d="M146 84 Q154 124 128 152 L124 96Z" fill="#4A4A4A"/></g>
+  <path id="face" d="M68 84 H132 V124 Q132 154 100 154 Q68 154 68 124Z" fill="#F1C9A0"/>
+  <g id="brows" fill="#4A4A4A"><path d="M70 101 Q83 89 97 99 Q84 95 70 101Z"/><path d="M130 101 Q117 89 103 99 Q116 95 130 101Z"/></g>
+  <g id="eyes"><path d="M76 109 Q84 103 92 109" fill="none" stroke="#1B1B1B" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M108 109 Q116 103 124 109" fill="none" stroke="#1B1B1B" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <path id="nose" d="M96 119 Q100 123 104 119" fill="none" stroke="#B9875E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path id="beard" d="M70 122 Q78 130 90 127 Q100 123 110 127 Q122 130 130 122 Q138 152 124 174 Q114 188 120 198 Q100 196 90 180 Q72 160 70 122Z" fill="#4A4A4A"/>
+  <path id="mouth-area" d="M87 129 Q100 125 113 129 Q111 147 100 153 Q89 147 87 129Z" fill="#F1C9A0"/>
+  <g id="mouth"><path d="M95 138 Q100 141 105 138" fill="none" stroke="#1B1B1B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <path id="mustache" d="M78 126 Q90 118 100 125 Q110 118 122 126 Q112 133 100 129 Q88 133 78 126Z" fill="#4A4A4A"/>
+  <path d="M92 158 L100 172 L108 158" fill="#F1C9A0" opacity=".0"/>
+  <g id="hat">
+    <path d="M12 84 L100 20 L188 84 Q100 99 12 84Z" fill="#D9A441"/>
+    <path d="M103 32 Q121 45 116 58 Q134 54 146 64 Q128 72 104 72 Q131 65 124 62 Q106 64 112 54 Q116 44 103 32Z" fill="#F2C766"/>
+    <path d="M30 86 Q100 98 170 86 Q100 104 30 86Z" fill="#8A6420"/>
+    <path d="M12 84 L100 20 L188 84" fill="none" stroke="#8A6420" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</g></svg></div>
+    <p class="lead">Le maître du logo Pixel Sensei, en version animée. C'est ta voix, ton personnage, ta marque.</p>
+    <ul class="notes">
+      <li><b>Caractère :</b> calme, bienveillant, malicieux. Il n'élève la voix que pour « STOP ».</li>
+      <li><b>Silhouette :</b> chapeau conique très large, barbe en pointe qui part vers la droite, robe longue. Reconnaissable en ombre chinoise.</li>
+      <li><b>Proportions :</b> environ 2 têtes de haut, chapeau compris. La tête est grande pour que les expressions se lisent sur un téléphone.</li>
+      <li><b>Animation :</b> la barbe suit la tête avec un léger retard. Le chapeau ne se déforme jamais.</li>
+    </ul>
+    <div class="swatches"><div class="sw"><span style="background:#D9A441"></span><b>Paille</b><i>#D9A441</i></div><div class="sw"><span style="background:#4A4A4A"></span><b>Barbe</b><i>#4A4A4A</i></div><div class="sw"><span style="background:#F1C9A0"></span><b>Peau</b><i>#F1C9A0</i></div><div class="sw"><span style="background:#2F4858"></span><b>Robe</b><i>#2F4858</i></div><div class="sw"><span style="background:#E63B2E"></span><b>Ceinture</b><i>#E63B2E</i></div><div class="sw"><span style="background:#F2B33D"></span><b>Col</b><i>#F2B33D</i></div></div>
+  </div></div><div class="foot"><span>La Voie du Pixel · Bible graphique</span><span>@iampixelsensei · 02</span></div></section><section class="page"><div class="kicker">Le Sensei</div><h2>Expressions <em>&amp; poses</em></h2>
+  <div class="row4"><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 10 200 195"><g class="sensei-head" data-expression="serein">
+  <g id="hair"><path d="M54 84 Q46 124 72 152 L76 96Z" fill="#4A4A4A"/><path d="M146 84 Q154 124 128 152 L124 96Z" fill="#4A4A4A"/></g>
+  <path id="face" d="M68 84 H132 V124 Q132 154 100 154 Q68 154 68 124Z" fill="#F1C9A0"/>
+  <g id="brows" fill="#4A4A4A"><path d="M70 101 Q83 89 97 99 Q84 95 70 101Z"/><path d="M130 101 Q117 89 103 99 Q116 95 130 101Z"/></g>
+  <g id="eyes"><path d="M76 109 Q84 103 92 109" fill="none" stroke="#1B1B1B" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M108 109 Q116 103 124 109" fill="none" stroke="#1B1B1B" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <path id="nose" d="M96 119 Q100 123 104 119" fill="none" stroke="#B9875E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path id="beard" d="M70 122 Q78 130 90 127 Q100 123 110 127 Q122 130 130 122 Q138 152 124 174 Q114 188 120 198 Q100 196 90 180 Q72 160 70 122Z" fill="#4A4A4A"/>
+  <path id="mouth-area" d="M87 129 Q100 125 113 129 Q111 147 100 153 Q89 147 87 129Z" fill="#F1C9A0"/>
+  <g id="mouth"><path d="M95 138 Q100 141 105 138" fill="none" stroke="#1B1B1B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <path id="mustache" d="M78 126 Q90 118 100 125 Q110 118 122 126 Q112 133 100 129 Q88 133 78 126Z" fill="#4A4A4A"/>
+  <path d="M92 158 L100 172 L108 158" fill="#F1C9A0" opacity=".0"/>
+  <g id="hat">
+    <path d="M12 84 L100 20 L188 84 Q100 99 12 84Z" fill="#D9A441"/>
+    <path d="M103 32 Q121 45 116 58 Q134 54 146 64 Q128 72 104 72 Q131 65 124 62 Q106 64 112 54 Q116 44 103 32Z" fill="#F2C766"/>
+    <path d="M30 86 Q100 98 170 86 Q100 104 30 86Z" fill="#8A6420"/>
+    <path d="M12 84 L100 20 L188 84" fill="none" stroke="#8A6420" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</g></svg><figcaption>Serein · explique</figcaption></figure><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 10 200 195"><g class="sensei-head" data-expression="severe">
+  <g id="hair"><path d="M54 84 Q46 124 72 152 L76 96Z" fill="#4A4A4A"/><path d="M146 84 Q154 124 128 152 L124 96Z" fill="#4A4A4A"/></g>
+  <path id="face" d="M68 84 H132 V124 Q132 154 100 154 Q68 154 68 124Z" fill="#F1C9A0"/>
+  <g id="brows" fill="#4A4A4A"><path d="M69 92 L97 103 L96 97 L71 86Z"/><path d="M131 92 L103 103 L104 97 L129 86Z"/></g>
+  <g id="eyes"><ellipse cx="84" cy="109" rx="4.2" ry="5" fill="#1B1B1B"/><circle cx="85.5" cy="107.3" r="1.3" fill="#fff"/><ellipse cx="116" cy="109" rx="4.2" ry="5" fill="#1B1B1B"/><circle cx="117.5" cy="107.3" r="1.3" fill="#fff"/></g>
+  <path id="nose" d="M96 119 Q100 123 104 119" fill="none" stroke="#B9875E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path id="beard" d="M70 122 Q78 130 90 127 Q100 123 110 127 Q122 130 130 122 Q138 152 124 174 Q114 188 120 198 Q100 196 90 180 Q72 160 70 122Z" fill="#4A4A4A"/>
+  <path id="mouth-area" d="M87 129 Q100 125 113 129 Q111 147 100 153 Q89 147 87 129Z" fill="#F1C9A0"/>
+  <g id="mouth"><ellipse cx="100" cy="140" rx="6" ry="8" fill="#7A2A22"/></g>
+  <path id="mustache" d="M78 126 Q90 118 100 125 Q110 118 122 126 Q112 133 100 129 Q88 133 78 126Z" fill="#4A4A4A"/>
+  <path d="M92 158 L100 172 L108 158" fill="#F1C9A0" opacity=".0"/>
+  <g id="hat">
+    <path d="M12 84 L100 20 L188 84 Q100 99 12 84Z" fill="#D9A441"/>
+    <path d="M103 32 Q121 45 116 58 Q134 54 146 64 Q128 72 104 72 Q131 65 124 62 Q106 64 112 54 Q116 44 103 32Z" fill="#F2C766"/>
+    <path d="M30 86 Q100 98 170 86 Q100 104 30 86Z" fill="#8A6420"/>
+    <path d="M12 84 L100 20 L188 84" fill="none" stroke="#8A6420" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</g></svg><figcaption>Sévère · « STOP ! »</figcaption></figure><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 10 200 195"><g class="sensei-head" data-expression="malin">
+  <g id="hair"><path d="M54 84 Q46 124 72 152 L76 96Z" fill="#4A4A4A"/><path d="M146 84 Q154 124 128 152 L124 96Z" fill="#4A4A4A"/></g>
+  <path id="face" d="M68 84 H132 V124 Q132 154 100 154 Q68 154 68 124Z" fill="#F1C9A0"/>
+  <g id="brows" fill="#4A4A4A"><path d="M70 101 Q83 89 97 99 Q84 95 70 101Z"/><path d="M130 92 Q117 79 103 89 Q116 85 130 92Z"/></g>
+  <g id="eyes"><ellipse cx="84" cy="109" rx="4.2" ry="5" fill="#1B1B1B"/><circle cx="85.5" cy="107.3" r="1.3" fill="#fff"/><ellipse cx="116" cy="109" rx="4.2" ry="5" fill="#1B1B1B"/><circle cx="117.5" cy="107.3" r="1.3" fill="#fff"/></g>
+  <path id="nose" d="M96 119 Q100 123 104 119" fill="none" stroke="#B9875E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path id="beard" d="M70 122 Q78 130 90 127 Q100 123 110 127 Q122 130 130 122 Q138 152 124 174 Q114 188 120 198 Q100 196 90 180 Q72 160 70 122Z" fill="#4A4A4A"/>
+  <path id="mouth-area" d="M87 129 Q100 125 113 129 Q111 147 100 153 Q89 147 87 129Z" fill="#F1C9A0"/>
+  <g id="mouth"><path d="M93 136 Q101 144 108 134" fill="none" stroke="#1B1B1B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <path id="mustache" d="M78 126 Q90 118 100 125 Q110 118 122 126 Q112 133 100 129 Q88 133 78 126Z" fill="#4A4A4A"/>
+  <path d="M92 158 L100 172 L108 158" fill="#F1C9A0" opacity=".0"/>
+  <g id="hat">
+    <path d="M12 84 L100 20 L188 84 Q100 99 12 84Z" fill="#D9A441"/>
+    <path d="M103 32 Q121 45 116 58 Q134 54 146 64 Q128 72 104 72 Q131 65 124 62 Q106 64 112 54 Q116 44 103 32Z" fill="#F2C766"/>
+    <path d="M30 86 Q100 98 170 86 Q100 104 30 86Z" fill="#8A6420"/>
+    <path d="M12 84 L100 20 L188 84" fill="none" stroke="#8A6420" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</g></svg><figcaption>Malin · l'astuce</figcaption></figure><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 10 200 195"><g class="sensei-head" data-expression="rire">
+  <g id="hair"><path d="M54 84 Q46 124 72 152 L76 96Z" fill="#4A4A4A"/><path d="M146 84 Q154 124 128 152 L124 96Z" fill="#4A4A4A"/></g>
+  <path id="face" d="M68 84 H132 V124 Q132 154 100 154 Q68 154 68 124Z" fill="#F1C9A0"/>
+  <g id="brows" fill="#4A4A4A"><path d="M70 98 Q83 86 97 96 Q84 92 70 98Z"/><path d="M130 98 Q117 86 103 96 Q116 92 130 98Z"/></g>
+  <g id="eyes"><path d="M76 111 Q84 101 92 111" fill="none" stroke="#1B1B1B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M108 111 Q116 101 124 111" fill="none" stroke="#1B1B1B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <path id="nose" d="M96 119 Q100 123 104 119" fill="none" stroke="#B9875E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path id="beard" d="M70 122 Q78 130 90 127 Q100 123 110 127 Q122 130 130 122 Q138 152 124 174 Q114 188 120 198 Q100 196 90 180 Q72 160 70 122Z" fill="#4A4A4A"/>
+  <path id="mouth-area" d="M87 129 Q100 125 113 129 Q111 147 100 153 Q89 147 87 129Z" fill="#F1C9A0"/>
+  <g id="mouth"><path d="M91 134 Q100 152 109 134Z" fill="#7A2A22"/></g>
+  <path id="mustache" d="M78 126 Q90 118 100 125 Q110 118 122 126 Q112 133 100 129 Q88 133 78 126Z" fill="#4A4A4A"/>
+  <path d="M92 158 L100 172 L108 158" fill="#F1C9A0" opacity=".0"/>
+  <g id="hat">
+    <path d="M12 84 L100 20 L188 84 Q100 99 12 84Z" fill="#D9A441"/>
+    <path d="M103 32 Q121 45 116 58 Q134 54 146 64 Q128 72 104 72 Q131 65 124 62 Q106 64 112 54 Q116 44 103 32Z" fill="#F2C766"/>
+    <path d="M30 86 Q100 98 170 86 Q100 104 30 86Z" fill="#8A6420"/>
+    <path d="M12 84 L100 20 L188 84" fill="none" stroke="#8A6420" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</g></svg><figcaption>Rire · fier de l'élève</figcaption></figure></div>
+  <div class="row4 poses"><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 0 220 430"><g class="sensei" data-pose="neutre"><g id="robe">
+  <path d="M62 160 Q100 150 138 160 L156 408 Q100 418 44 408Z" fill="#2F4858"/>
+  <path d="M84 160 L100 214 L116 160Z" fill="#F4EDE1"/>
+  <path d="M78 160 L100 222 L122 160" fill="none" stroke="#F2B33D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M100 222 L102 408" fill="none" stroke="#24394A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M50 262 Q100 272 150 262 L151 284 Q100 294 49 284Z" fill="#E63B2E"/>
+  <path d="M96 282 L88 318 M104 282 L112 318" fill="none" stroke="#E63B2E" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="78" cy="414" rx="17" ry="7" fill="#1B1B1B"/><ellipse cx="122" cy="414" rx="17" ry="7" fill="#1B1B1B"/>
+</g><g id="arm-left"><path d="M64 166 Q34 222 40 300 L72 300 Q66 240 78 198Z" fill="#24394A"/><circle cx="56" cy="308" r="10" fill="#F1C9A0"/></g><g id="arm-right"><path d="M136 166 Q166 222 160 300 L128 300 Q134 240 122 198Z" fill="#24394A"/><circle cx="144" cy="308" r="10" fill="#F1C9A0"/></g><g class="sensei-head" data-expression="serein">
+  <g id="hair"><path d="M54 84 Q46 124 72 152 L76 96Z" fill="#4A4A4A"/><path d="M146 84 Q154 124 128 152 L124 96Z" fill="#4A4A4A"/></g>
+  <path id="face" d="M68 84 H132 V124 Q132 154 100 154 Q68 154 68 124Z" fill="#F1C9A0"/>
+  <g id="brows" fill="#4A4A4A"><path d="M70 101 Q83 89 97 99 Q84 95 70 101Z"/><path d="M130 101 Q117 89 103 99 Q116 95 130 101Z"/></g>
+  <g id="eyes"><path d="M76 109 Q84 103 92 109" fill="none" stroke="#1B1B1B" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M108 109 Q116 103 124 109" fill="none" stroke="#1B1B1B" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <path id="nose" d="M96 119 Q100 123 104 119" fill="none" stroke="#B9875E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path id="beard" d="M70 122 Q78 130 90 127 Q100 123 110 127 Q122 130 130 122 Q138 152 124 174 Q114 188 120 198 Q100 196 90 180 Q72 160 70 122Z" fill="#4A4A4A"/>
+  <path id="mouth-area" d="M87 129 Q100 125 113 129 Q111 147 100 153 Q89 147 87 129Z" fill="#F1C9A0"/>
+  <g id="mouth"><path d="M95 138 Q100 141 105 138" fill="none" stroke="#1B1B1B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <path id="mustache" d="M78 126 Q90 118 100 125 Q110 118 122 126 Q112 133 100 129 Q88 133 78 126Z" fill="#4A4A4A"/>
+  <path d="M92 158 L100 172 L108 158" fill="#F1C9A0" opacity=".0"/>
+  <g id="hat">
+    <path d="M12 84 L100 20 L188 84 Q100 99 12 84Z" fill="#D9A441"/>
+    <path d="M103 32 Q121 45 116 58 Q134 54 146 64 Q128 72 104 72 Q131 65 124 62 Q106 64 112 54 Q116 44 103 32Z" fill="#F2C766"/>
+    <path d="M30 86 Q100 98 170 86 Q100 104 30 86Z" fill="#8A6420"/>
+    <path d="M12 84 L100 20 L188 84" fill="none" stroke="#8A6420" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</g></g></svg><figcaption>Neutre</figcaption></figure><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 0 220 430"><g class="sensei" data-pose="enseigne"><g id="robe">
+  <path d="M62 160 Q100 150 138 160 L156 408 Q100 418 44 408Z" fill="#2F4858"/>
+  <path d="M84 160 L100 214 L116 160Z" fill="#F4EDE1"/>
+  <path d="M78 160 L100 222 L122 160" fill="none" stroke="#F2B33D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M100 222 L102 408" fill="none" stroke="#24394A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M50 262 Q100 272 150 262 L151 284 Q100 294 49 284Z" fill="#E63B2E"/>
+  <path d="M96 282 L88 318 M104 282 L112 318" fill="none" stroke="#E63B2E" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="78" cy="414" rx="17" ry="7" fill="#1B1B1B"/><ellipse cx="122" cy="414" rx="17" ry="7" fill="#1B1B1B"/>
+</g><g id="arm-left"><path d="M64 166 Q34 222 40 300 L72 300 Q66 240 78 198Z" fill="#24394A"/><circle cx="56" cy="308" r="10" fill="#F1C9A0"/></g><g id="arm-right"><path d="M134 166 Q170 150 178 112 L196 118 Q190 170 142 206Z" fill="#24394A"/>
+  <rect x="180" y="74" width="7" height="26" rx="3.5" fill="#F1C9A0"/><circle cx="187" cy="106" r="11" fill="#F1C9A0"/></g><g class="sensei-head" data-expression="malin">
+  <g id="hair"><path d="M54 84 Q46 124 72 152 L76 96Z" fill="#4A4A4A"/><path d="M146 84 Q154 124 128 152 L124 96Z" fill="#4A4A4A"/></g>
+  <path id="face" d="M68 84 H132 V124 Q132 154 100 154 Q68 154 68 124Z" fill="#F1C9A0"/>
+  <g id="brows" fill="#4A4A4A"><path d="M70 101 Q83 89 97 99 Q84 95 70 101Z"/><path d="M130 92 Q117 79 103 89 Q116 85 130 92Z"/></g>
+  <g id="eyes"><ellipse cx="84" cy="109" rx="4.2" ry="5" fill="#1B1B1B"/><circle cx="85.5" cy="107.3" r="1.3" fill="#fff"/><ellipse cx="116" cy="109" rx="4.2" ry="5" fill="#1B1B1B"/><circle cx="117.5" cy="107.3" r="1.3" fill="#fff"/></g>
+  <path id="nose" d="M96 119 Q100 123 104 119" fill="none" stroke="#B9875E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path id="beard" d="M70 122 Q78 130 90 127 Q100 123 110 127 Q122 130 130 122 Q138 152 124 174 Q114 188 120 198 Q100 196 90 180 Q72 160 70 122Z" fill="#4A4A4A"/>
+  <path id="mouth-area" d="M87 129 Q100 125 113 129 Q111 147 100 153 Q89 147 87 129Z" fill="#F1C9A0"/>
+  <g id="mouth"><path d="M93 136 Q101 144 108 134" fill="none" stroke="#1B1B1B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <path id="mustache" d="M78 126 Q90 118 100 125 Q110 118 122 126 Q112 133 100 129 Q88 133 78 126Z" fill="#4A4A4A"/>
+  <path d="M92 158 L100 172 L108 158" fill="#F1C9A0" opacity=".0"/>
+  <g id="hat">
+    <path d="M12 84 L100 20 L188 84 Q100 99 12 84Z" fill="#D9A441"/>
+    <path d="M103 32 Q121 45 116 58 Q134 54 146 64 Q128 72 104 72 Q131 65 124 62 Q106 64 112 54 Q116 44 103 32Z" fill="#F2C766"/>
+    <path d="M30 86 Q100 98 170 86 Q100 104 30 86Z" fill="#8A6420"/>
+    <path d="M12 84 L100 20 L188 84" fill="none" stroke="#8A6420" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</g></g></svg><figcaption>Enseigne (doigt levé)</figcaption></figure><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 0 220 430"><g class="sensei" data-pose="stop"><g id="robe">
+  <path d="M62 160 Q100 150 138 160 L156 408 Q100 418 44 408Z" fill="#2F4858"/>
+  <path d="M84 160 L100 214 L116 160Z" fill="#F4EDE1"/>
+  <path d="M78 160 L100 222 L122 160" fill="none" stroke="#F2B33D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M100 222 L102 408" fill="none" stroke="#24394A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M50 262 Q100 272 150 262 L151 284 Q100 294 49 284Z" fill="#E63B2E"/>
+  <path d="M96 282 L88 318 M104 282 L112 318" fill="none" stroke="#E63B2E" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="78" cy="414" rx="17" ry="7" fill="#1B1B1B"/><ellipse cx="122" cy="414" rx="17" ry="7" fill="#1B1B1B"/>
+</g><g id="arm-left"><path d="M64 166 Q34 222 40 300 L72 300 Q66 240 78 198Z" fill="#24394A"/><circle cx="56" cy="308" r="10" fill="#F1C9A0"/></g><g id="arm-right"><path d="M134 166 Q172 176 178 214 L160 222 Q154 196 128 200Z" fill="#24394A"/>
+  <g fill="#F1C9A0"><rect x="160" y="168" width="28" height="34" rx="9"/><rect x="161" y="150" width="6" height="24" rx="3"/><rect x="168" y="146" width="6" height="26" rx="3"/><rect x="175" y="148" width="6" height="24" rx="3"/><rect x="182" y="154" width="6" height="20" rx="3"/><rect x="152" y="176" width="14" height="7" rx="3.5" transform="rotate(-30 159 179)"/></g></g><g class="sensei-head" data-expression="severe">
+  <g id="hair"><path d="M54 84 Q46 124 72 152 L76 96Z" fill="#4A4A4A"/><path d="M146 84 Q154 124 128 152 L124 96Z" fill="#4A4A4A"/></g>
+  <path id="face" d="M68 84 H132 V124 Q132 154 100 154 Q68 154 68 124Z" fill="#F1C9A0"/>
+  <g id="brows" fill="#4A4A4A"><path d="M69 92 L97 103 L96 97 L71 86Z"/><path d="M131 92 L103 103 L104 97 L129 86Z"/></g>
+  <g id="eyes"><ellipse cx="84" cy="109" rx="4.2" ry="5" fill="#1B1B1B"/><circle cx="85.5" cy="107.3" r="1.3" fill="#fff"/><ellipse cx="116" cy="109" rx="4.2" ry="5" fill="#1B1B1B"/><circle cx="117.5" cy="107.3" r="1.3" fill="#fff"/></g>
+  <path id="nose" d="M96 119 Q100 123 104 119" fill="none" stroke="#B9875E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path id="beard" d="M70 122 Q78 130 90 127 Q100 123 110 127 Q122 130 130 122 Q138 152 124 174 Q114 188 120 198 Q100 196 90 180 Q72 160 70 122Z" fill="#4A4A4A"/>
+  <path id="mouth-area" d="M87 129 Q100 125 113 129 Q111 147 100 153 Q89 147 87 129Z" fill="#F1C9A0"/>
+  <g id="mouth"><ellipse cx="100" cy="140" rx="6" ry="8" fill="#7A2A22"/></g>
+  <path id="mustache" d="M78 126 Q90 118 100 125 Q110 118 122 126 Q112 133 100 129 Q88 133 78 126Z" fill="#4A4A4A"/>
+  <path d="M92 158 L100 172 L108 158" fill="#F1C9A0" opacity=".0"/>
+  <g id="hat">
+    <path d="M12 84 L100 20 L188 84 Q100 99 12 84Z" fill="#D9A441"/>
+    <path d="M103 32 Q121 45 116 58 Q134 54 146 64 Q128 72 104 72 Q131 65 124 62 Q106 64 112 54 Q116 44 103 32Z" fill="#F2C766"/>
+    <path d="M30 86 Q100 98 170 86 Q100 104 30 86Z" fill="#8A6420"/>
+    <path d="M12 84 L100 20 L188 84" fill="none" stroke="#8A6420" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</g></g></svg><figcaption>Stop (main levée)</figcaption></figure><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 0 220 430"><g class="sensei" data-pose="camera"><g id="robe">
+  <path d="M62 160 Q100 150 138 160 L156 408 Q100 418 44 408Z" fill="#2F4858"/>
+  <path d="M84 160 L100 214 L116 160Z" fill="#F4EDE1"/>
+  <path d="M78 160 L100 222 L122 160" fill="none" stroke="#F2B33D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M100 222 L102 408" fill="none" stroke="#24394A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M50 262 Q100 272 150 262 L151 284 Q100 294 49 284Z" fill="#E63B2E"/>
+  <path d="M96 282 L88 318 M104 282 L112 318" fill="none" stroke="#E63B2E" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="78" cy="414" rx="17" ry="7" fill="#1B1B1B"/><ellipse cx="122" cy="414" rx="17" ry="7" fill="#1B1B1B"/>
+</g><g id="arm-left"><path d="M64 166 Q44 222 78 252 L96 236 Q70 214 80 192Z" fill="#24394A"/></g><g id="arm-right"><path d="M136 166 Q156 222 122 252 L104 236 Q130 214 120 192Z" fill="#24394A"/></g><g class="sensei-head" data-expression="rire">
+  <g id="hair"><path d="M54 84 Q46 124 72 152 L76 96Z" fill="#4A4A4A"/><path d="M146 84 Q154 124 128 152 L124 96Z" fill="#4A4A4A"/></g>
+  <path id="face" d="M68 84 H132 V124 Q132 154 100 154 Q68 154 68 124Z" fill="#F1C9A0"/>
+  <g id="brows" fill="#4A4A4A"><path d="M70 98 Q83 86 97 96 Q84 92 70 98Z"/><path d="M130 98 Q117 86 103 96 Q116 92 130 98Z"/></g>
+  <g id="eyes"><path d="M76 111 Q84 101 92 111" fill="none" stroke="#1B1B1B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M108 111 Q116 101 124 111" fill="none" stroke="#1B1B1B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <path id="nose" d="M96 119 Q100 123 104 119" fill="none" stroke="#B9875E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path id="beard" d="M70 122 Q78 130 90 127 Q100 123 110 127 Q122 130 130 122 Q138 152 124 174 Q114 188 120 198 Q100 196 90 180 Q72 160 70 122Z" fill="#4A4A4A"/>
+  <path id="mouth-area" d="M87 129 Q100 125 113 129 Q111 147 100 153 Q89 147 87 129Z" fill="#F1C9A0"/>
+  <g id="mouth"><path d="M91 134 Q100 152 109 134Z" fill="#7A2A22"/></g>
+  <path id="mustache" d="M78 126 Q90 118 100 125 Q110 118 122 126 Q112 133 100 129 Q88 133 78 126Z" fill="#4A4A4A"/>
+  <path d="M92 158 L100 172 L108 158" fill="#F1C9A0" opacity=".0"/>
+  <g id="hat">
+    <path d="M12 84 L100 20 L188 84 Q100 99 12 84Z" fill="#D9A441"/>
+    <path d="M103 32 Q121 45 116 58 Q134 54 146 64 Q128 72 104 72 Q131 65 124 62 Q106 64 112 54 Q116 44 103 32Z" fill="#F2C766"/>
+    <path d="M30 86 Q100 98 170 86 Q100 104 30 86Z" fill="#8A6420"/>
+    <path d="M12 84 L100 20 L188 84" fill="none" stroke="#8A6420" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</g><g class="prop-camera" transform="translate(100 236) scale(1.0)">
+  <rect x="-20" y="-24" width="16" height="9" rx="2" fill="#3A3A3A"/>
+  <rect x="-30" y="-17" width="60" height="34" rx="5" fill="#1B1B1B"/>
+  <rect x="-30" y="-8" width="60" height="5" fill="#F2B33D"/>
+  <circle r="13" fill="#3A3A3A"/><circle r="8" fill="#2F4858"/><circle cx="-3" cy="-3" r="2.5" fill="#fff" opacity=".8"/>
+  <circle cx="22" cy="-11" r="2.5" fill="#E63B2E"/>
+</g><circle cx="72" cy="244" r="10" fill="#F1C9A0"/><circle cx="128" cy="244" r="10" fill="#F1C9A0"/></g></svg><figcaption>Caméra (démonstration)</figcaption></figure></div>
+  <div class="foot"><span>La Voie du Pixel · Bible graphique</span><span>@iampixelsensei · 03</span></div></section><section class="page"><div class="kicker">Personnage secondaire</div><h2>L'<em>élève</em></h2>
+  <div class="grid2"><div class="row2"><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 0 220 430"><g class="eleve" data-pose="neutre"><g id="body">
+  <rect x="92" y="148" width="16" height="40" fill="#8D5A3B"/>
+  <path d="M74 178 Q100 196 126 178 Q118 196 100 200 Q82 196 74 178Z" fill="#C98F1F"/>
+  <path d="M60 192 Q100 178 140 192 L148 304 Q100 312 52 304Z" fill="#F2B33D"/>
+  <path d="M74 262 H126 L122 290 H78Z" fill="#E0A42E"/>
+  <path d="M94 200 L92 236 M106 200 L108 236" fill="none" stroke="#F4EDE1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M56 302 H144 L140 404 H106 L100 330 L94 404 H60Z" fill="#2F4858"/>
+  <ellipse cx="78" cy="410" rx="20" ry="9" fill="#fff" stroke="#1B1B1B" stroke-width="2.5"/>
+  <ellipse cx="122" cy="410" rx="20" ry="9" fill="#fff" stroke="#1B1B1B" stroke-width="2.5"/>
+</g><g id="arm-left"><path d="M62 196 Q42 240 46 296 L66 296 Q64 248 76 214Z" fill="#F2B33D"/><circle cx="56" cy="304" r="10" fill="#8D5A3B"/></g><g id="arm-right"><path d="M138 196 Q158 240 154 296 L134 296 Q136 248 124 214Z" fill="#F2B33D"/><g class="prop-phone" transform="translate(146 300) rotate(-10)"><rect x="-11" y="-19" width="22" height="38" rx="4" fill="#1B1B1B"/><rect x="-8" y="-15" width="16" height="28" rx="2" fill="#2F4858"/><circle cx="5" cy="-11" r="2" fill="#E63B2E"/></g><circle cx="144" cy="308" r="10" fill="#8D5A3B"/></g><g class="eleve-head" data-expression="confiant">
+  <circle cx="52" cy="110" r="9" fill="#8D5A3B"/><circle cx="148" cy="110" r="9" fill="#8D5A3B"/>
+  <circle id="face" cx="100" cy="106" r="48" fill="#8D5A3B"/>
+  <g id="hair"><path d="M54 98 Q54 58 100 56 Q146 58 146 98 Q132 76 100 74 Q68 76 54 98Z" fill="#1B1B1B"/><circle cx="58" cy="86" r="11" fill="#1B1B1B"/><circle cx="68" cy="68" r="11" fill="#1B1B1B"/><circle cx="84" cy="57" r="11" fill="#1B1B1B"/><circle cx="100" cy="53" r="11" fill="#1B1B1B"/><circle cx="116" cy="57" r="11" fill="#1B1B1B"/><circle cx="132" cy="68" r="11" fill="#1B1B1B"/><circle cx="142" cy="86" r="11" fill="#1B1B1B"/></g>
+  <g id="brows"><path d="M75 93 Q84 88 93 92" fill="none" stroke="#1B1B1B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M107 92 Q116 88 125 93" fill="none" stroke="#1B1B1B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g><g id="eyes"><ellipse cx="84" cy="107" rx="7" ry="8" fill="#fff"/><circle cx="85" cy="108" r="4.5" fill="#1B1B1B"/><circle cx="86.5" cy="106" r="1.4" fill="#fff"/><ellipse cx="116" cy="107" rx="7" ry="8" fill="#fff"/><circle cx="117" cy="108" r="4.5" fill="#1B1B1B"/><circle cx="118.5" cy="106" r="1.4" fill="#fff"/></g>
+  <path id="nose" d="M97 116 Q100 120 103 116" fill="none" stroke="#5E3A26" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g id="mouth"><path d="M88 128 Q100 140 112 128" fill="none" stroke="#1B1B1B" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+</g></g></svg><figcaption>Neutre</figcaption></figure><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 0 220 430"><g class="eleve" data-pose="filme"><g id="body">
+  <rect x="92" y="148" width="16" height="40" fill="#8D5A3B"/>
+  <path d="M74 178 Q100 196 126 178 Q118 196 100 200 Q82 196 74 178Z" fill="#C98F1F"/>
+  <path d="M60 192 Q100 178 140 192 L148 304 Q100 312 52 304Z" fill="#F2B33D"/>
+  <path d="M74 262 H126 L122 290 H78Z" fill="#E0A42E"/>
+  <path d="M94 200 L92 236 M106 200 L108 236" fill="none" stroke="#F4EDE1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M56 302 H144 L140 404 H106 L100 330 L94 404 H60Z" fill="#2F4858"/>
+  <ellipse cx="78" cy="410" rx="20" ry="9" fill="#fff" stroke="#1B1B1B" stroke-width="2.5"/>
+  <ellipse cx="122" cy="410" rx="20" ry="9" fill="#fff" stroke="#1B1B1B" stroke-width="2.5"/>
+</g><g id="arm-left"><path d="M62 196 Q42 240 46 296 L66 296 Q64 248 76 214Z" fill="#F2B33D"/><circle cx="56" cy="304" r="10" fill="#8D5A3B"/></g><g id="arm-right"><path d="M138 196 Q186 196 190 162 L174 156 Q170 184 128 214Z" fill="#F2B33D"/><g class="prop-phone" transform="translate(186 142) rotate(90)"><rect x="-11" y="-19" width="22" height="38" rx="4" fill="#1B1B1B"/><rect x="-8" y="-15" width="16" height="28" rx="2" fill="#2F4858"/><circle cx="5" cy="-11" r="2" fill="#E63B2E"/></g><circle cx="182" cy="158" r="10" fill="#8D5A3B"/></g><g class="eleve-head" data-expression="emerveille">
+  <circle cx="52" cy="110" r="9" fill="#8D5A3B"/><circle cx="148" cy="110" r="9" fill="#8D5A3B"/>
+  <circle id="face" cx="100" cy="106" r="48" fill="#8D5A3B"/>
+  <g id="hair"><path d="M54 98 Q54 58 100 56 Q146 58 146 98 Q132 76 100 74 Q68 76 54 98Z" fill="#1B1B1B"/><circle cx="58" cy="86" r="11" fill="#1B1B1B"/><circle cx="68" cy="68" r="11" fill="#1B1B1B"/><circle cx="84" cy="57" r="11" fill="#1B1B1B"/><circle cx="100" cy="53" r="11" fill="#1B1B1B"/><circle cx="116" cy="57" r="11" fill="#1B1B1B"/><circle cx="132" cy="68" r="11" fill="#1B1B1B"/><circle cx="142" cy="86" r="11" fill="#1B1B1B"/></g>
+  <g id="brows"><path d="M74 87 Q84 80 94 86" fill="none" stroke="#1B1B1B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M106 86 Q116 80 126 87" fill="none" stroke="#1B1B1B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g><g id="eyes"><ellipse cx="84" cy="106" rx="8" ry="10" fill="#fff"/><circle cx="84" cy="107" r="5" fill="#1B1B1B"/><circle cx="86" cy="104" r="1.6" fill="#fff"/><ellipse cx="116" cy="106" rx="8" ry="10" fill="#fff"/><circle cx="116" cy="107" r="5" fill="#1B1B1B"/><circle cx="118" cy="104" r="1.6" fill="#fff"/></g>
+  <path id="nose" d="M97 116 Q100 120 103 116" fill="none" stroke="#5E3A26" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g id="mouth"><ellipse cx="100" cy="132" rx="8" ry="10" fill="#7A2A22"/></g>
+</g></g></svg><figcaption>Filme (téléphone levé)</figcaption></figure></div><div>
+    <p class="lead">Le spectateur à l'écran : un jeune créateur qui filme tout au téléphone. Il fait les erreurs que ton public fait, et le Sensei les corrige.</p>
+    <ul class="notes">
+      <li><b>Caractère :</b> enthousiaste, pressé, un peu maladroit. Il progresse d'un reel à l'autre.</li>
+      <li><b>Signes distinctifs :</b> cheveux bouclés, sweat à capuche or, smartphone toujours en main.</li>
+      <li><b>Proximité :</b> il ressemble à ton audience. Le spectateur doit se dire « c'est moi ».</li>
+    </ul>
+    <div class="row3"><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="40 40 140 130"><g class="eleve-head" data-expression="confiant">
+  <circle cx="52" cy="110" r="9" fill="#8D5A3B"/><circle cx="148" cy="110" r="9" fill="#8D5A3B"/>
+  <circle id="face" cx="100" cy="106" r="48" fill="#8D5A3B"/>
+  <g id="hair"><path d="M54 98 Q54 58 100 56 Q146 58 146 98 Q132 76 100 74 Q68 76 54 98Z" fill="#1B1B1B"/><circle cx="58" cy="86" r="11" fill="#1B1B1B"/><circle cx="68" cy="68" r="11" fill="#1B1B1B"/><circle cx="84" cy="57" r="11" fill="#1B1B1B"/><circle cx="100" cy="53" r="11" fill="#1B1B1B"/><circle cx="116" cy="57" r="11" fill="#1B1B1B"/><circle cx="132" cy="68" r="11" fill="#1B1B1B"/><circle cx="142" cy="86" r="11" fill="#1B1B1B"/></g>
+  <g id="brows"><path d="M75 93 Q84 88 93 92" fill="none" stroke="#1B1B1B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M107 92 Q116 88 125 93" fill="none" stroke="#1B1B1B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g><g id="eyes"><ellipse cx="84" cy="107" rx="7" ry="8" fill="#fff"/><circle cx="85" cy="108" r="4.5" fill="#1B1B1B"/><circle cx="86.5" cy="106" r="1.4" fill="#fff"/><ellipse cx="116" cy="107" rx="7" ry="8" fill="#fff"/><circle cx="117" cy="108" r="4.5" fill="#1B1B1B"/><circle cx="118.5" cy="106" r="1.4" fill="#fff"/></g>
+  <path id="nose" d="M97 116 Q100 120 103 116" fill="none" stroke="#5E3A26" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g id="mouth"><path d="M88 128 Q100 140 112 128" fill="none" stroke="#1B1B1B" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+</g></svg><figcaption>Confiant</figcaption></figure><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="40 40 140 130"><g class="eleve-head" data-expression="confus">
+  <circle cx="52" cy="110" r="9" fill="#8D5A3B"/><circle cx="148" cy="110" r="9" fill="#8D5A3B"/>
+  <circle id="face" cx="100" cy="106" r="48" fill="#8D5A3B"/>
+  <g id="hair"><path d="M54 98 Q54 58 100 56 Q146 58 146 98 Q132 76 100 74 Q68 76 54 98Z" fill="#1B1B1B"/><circle cx="58" cy="86" r="11" fill="#1B1B1B"/><circle cx="68" cy="68" r="11" fill="#1B1B1B"/><circle cx="84" cy="57" r="11" fill="#1B1B1B"/><circle cx="100" cy="53" r="11" fill="#1B1B1B"/><circle cx="116" cy="57" r="11" fill="#1B1B1B"/><circle cx="132" cy="68" r="11" fill="#1B1B1B"/><circle cx="142" cy="86" r="11" fill="#1B1B1B"/></g>
+  <g id="brows"><path d="M75 90 L93 95" fill="none" stroke="#1B1B1B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M107 94 Q116 86 125 91" fill="none" stroke="#1B1B1B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g><g id="eyes"><ellipse cx="84" cy="107" rx="7" ry="8" fill="#fff"/><circle cx="85" cy="108" r="4.5" fill="#1B1B1B"/><circle cx="86.5" cy="106" r="1.4" fill="#fff"/><ellipse cx="116" cy="107" rx="7" ry="8" fill="#fff"/><circle cx="117" cy="108" r="4.5" fill="#1B1B1B"/><circle cx="118.5" cy="106" r="1.4" fill="#fff"/></g>
+  <path id="nose" d="M97 116 Q100 120 103 116" fill="none" stroke="#5E3A26" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g id="mouth"><path d="M88 132 L94 128 L100 132 L106 128 L112 132" fill="none" stroke="#1B1B1B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g><text x="150" y="60" font-family="Anton, Inter, sans-serif" font-size="34" fill="#E63B2E">?</text>
+</g></svg><figcaption>Confus</figcaption></figure><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="40 40 140 130"><g class="eleve-head" data-expression="emerveille">
+  <circle cx="52" cy="110" r="9" fill="#8D5A3B"/><circle cx="148" cy="110" r="9" fill="#8D5A3B"/>
+  <circle id="face" cx="100" cy="106" r="48" fill="#8D5A3B"/>
+  <g id="hair"><path d="M54 98 Q54 58 100 56 Q146 58 146 98 Q132 76 100 74 Q68 76 54 98Z" fill="#1B1B1B"/><circle cx="58" cy="86" r="11" fill="#1B1B1B"/><circle cx="68" cy="68" r="11" fill="#1B1B1B"/><circle cx="84" cy="57" r="11" fill="#1B1B1B"/><circle cx="100" cy="53" r="11" fill="#1B1B1B"/><circle cx="116" cy="57" r="11" fill="#1B1B1B"/><circle cx="132" cy="68" r="11" fill="#1B1B1B"/><circle cx="142" cy="86" r="11" fill="#1B1B1B"/></g>
+  <g id="brows"><path d="M74 87 Q84 80 94 86" fill="none" stroke="#1B1B1B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M106 86 Q116 80 126 87" fill="none" stroke="#1B1B1B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g><g id="eyes"><ellipse cx="84" cy="106" rx="8" ry="10" fill="#fff"/><circle cx="84" cy="107" r="5" fill="#1B1B1B"/><circle cx="86" cy="104" r="1.6" fill="#fff"/><ellipse cx="116" cy="106" rx="8" ry="10" fill="#fff"/><circle cx="116" cy="107" r="5" fill="#1B1B1B"/><circle cx="118" cy="104" r="1.6" fill="#fff"/></g>
+  <path id="nose" d="M97 116 Q100 120 103 116" fill="none" stroke="#5E3A26" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g id="mouth"><ellipse cx="100" cy="132" rx="8" ry="10" fill="#7A2A22"/></g>
+</g></svg><figcaption>Émerveillé</figcaption></figure></div>
+    <div class="swatches"><div class="sw"><span style="background:#8D5A3B"></span><b>Peau</b><i>#8D5A3B</i></div><div class="sw"><span style="background:#F2B33D"></span><b>Sweat</b><i>#F2B33D</i></div><div class="sw"><span style="background:#2F4858"></span><b>Jean</b><i>#2F4858</i></div><div class="sw"><span style="background:#1B1B1B"></span><b>Cheveux</b><i>#1B1B1B</i></div></div>
+  </div></div><div class="foot"><span>La Voie du Pixel · Bible graphique</span><span>@iampixelsensei · 04</span></div></section><section class="page"><div class="kicker">Les lieux</div><h2>Les <em>décors</em></h2>
+  <div class="row3 decors"><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 480"><g class="decor" id="decor-studio">
+  <rect width="270" height="480" fill="#F4EDE1"/>
+  <line x1="45" y1="0" x2="45" y2="330" stroke="#E2D6C2" stroke-width="2"/><line x1="90" y1="0" x2="90" y2="330" stroke="#E2D6C2" stroke-width="2"/><line x1="135" y1="0" x2="135" y2="330" stroke="#E2D6C2" stroke-width="2"/><line x1="180" y1="0" x2="180" y2="330" stroke="#E2D6C2" stroke-width="2"/><line x1="225" y1="0" x2="225" y2="330" stroke="#E2D6C2" stroke-width="2"/>
+  <line x1="0" y1="110" x2="270" y2="110" stroke="#E2D6C2" stroke-width="2"/><line x1="0" y1="220" x2="270" y2="220" stroke="#E2D6C2" stroke-width="2"/>
+  <circle cx="135" cy="170" r="92" fill="#E63B2E"/>
+  <rect x="200" y="40" width="44" height="120" fill="#FBF6EC" stroke="#8A6420" stroke-width="3"/>
+  <text x="222" y="118" font-family="IPAGothic, sans-serif" font-size="34" text-anchor="middle" fill="#1B1B1B">道</text>
+  <rect x="0" y="330" width="270" height="150" fill="#C99A5B"/>
+  <line x1="0" y1="360" x2="270" y2="360" stroke="#B5864A" stroke-width="2"/><line x1="0" y1="390" x2="270" y2="390" stroke="#B5864A" stroke-width="2"/><line x1="0" y1="420" x2="270" y2="420" stroke="#B5864A" stroke-width="2"/><line x1="0" y1="450" x2="270" y2="450" stroke="#B5864A" stroke-width="2"/>
+  <rect x="0" y="326" width="270" height="8" fill="#8A6420"/>
+  <g transform="translate(40 250)"><path d="M0 80 L18 0 L36 80 M18 0 L18 80" fill="none" stroke="#1B1B1B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><g class="prop-camera" transform="translate(18 -10) scale(0.55)">
+  <rect x="-20" y="-24" width="16" height="9" rx="2" fill="#3A3A3A"/>
+  <rect x="-30" y="-17" width="60" height="34" rx="5" fill="#1B1B1B"/>
+  <rect x="-30" y="-8" width="60" height="5" fill="#F2B33D"/>
+  <circle r="13" fill="#3A3A3A"/><circle r="8" fill="#2F4858"/><circle cx="-3" cy="-3" r="2.5" fill="#fff" opacity=".8"/>
+  <circle cx="22" cy="-11" r="2.5" fill="#E63B2E"/>
+</g></g>
+</g></svg><figcaption>Le studio du Sensei · explications, règles</figcaption></figure><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 480"><g class="decor" id="decor-rue">
+  <rect width="270" height="480" fill="#F7E9D2"/><circle cx="210" cy="90" r="34" fill="#F2B33D" opacity=".7"/>
+  <rect x="0" y="150" width="90" height="250" fill="#C9B79C"/><rect x="12" y="170" width="12" height="16" rx="2" fill="#F4EDE1"/><rect x="34" y="170" width="12" height="16" rx="2" fill="#F4EDE1"/><rect x="56" y="170" width="12" height="16" rx="2" fill="#F4EDE1"/><rect x="12" y="205" width="12" height="16" rx="2" fill="#F4EDE1"/><rect x="34" y="205" width="12" height="16" rx="2" fill="#F4EDE1"/><rect x="56" y="205" width="12" height="16" rx="2" fill="#F4EDE1"/><rect x="12" y="240" width="12" height="16" rx="2" fill="#F4EDE1"/><rect x="34" y="240" width="12" height="16" rx="2" fill="#F4EDE1"/><rect x="56" y="240" width="12" height="16" rx="2" fill="#F4EDE1"/>
+  <rect x="90" y="120" width="96" height="280" fill="#2F4858"/><rect x="102" y="140" width="12" height="16" rx="2" fill="#F2B33D"/><rect x="124" y="140" width="12" height="16" rx="2" fill="#F2B33D"/><rect x="146" y="140" width="12" height="16" rx="2" fill="#F2B33D"/><rect x="168" y="140" width="12" height="16" rx="2" fill="#F2B33D"/><rect x="102" y="178" width="12" height="16" rx="2" fill="#3E5D72"/><rect x="124" y="178" width="12" height="16" rx="2" fill="#3E5D72"/><rect x="146" y="178" width="12" height="16" rx="2" fill="#3E5D72"/><rect x="168" y="178" width="12" height="16" rx="2" fill="#3E5D72"/><rect x="102" y="216" width="12" height="16" rx="2" fill="#F2B33D"/><rect x="124" y="216" width="12" height="16" rx="2" fill="#F2B33D"/><rect x="146" y="216" width="12" height="16" rx="2" fill="#F2B33D"/><rect x="168" y="216" width="12" height="16" rx="2" fill="#F2B33D"/>
+  <rect x="186" y="170" width="84" height="230" fill="#D98C6A"/><rect x="198" y="190" width="12" height="16" rx="2" fill="#F4EDE1"/><rect x="220" y="190" width="12" height="16" rx="2" fill="#F4EDE1"/><rect x="242" y="190" width="12" height="16" rx="2" fill="#F4EDE1"/><rect x="198" y="226" width="12" height="16" rx="2" fill="#F4EDE1"/><rect x="220" y="226" width="12" height="16" rx="2" fill="#F4EDE1"/><rect x="242" y="226" width="12" height="16" rx="2" fill="#F4EDE1"/>
+  <rect x="120" y="340" width="30" height="60" fill="#1B1B1B"/>
+  <rect x="0" y="400" width="270" height="80" fill="#BFAE93"/><rect x="0" y="398" width="270" height="6" fill="#A8977C"/>
+  <rect x="226" y="300" width="5" height="100" fill="#1B1B1B"/><circle cx="228" cy="296" r="8" fill="#F2B33D"/>
+  <circle cx="40" cy="330" r="30" fill="#7FA37A"/><rect x="37" y="350" width="6" height="50" fill="#6B4A2B"/>
+</g></svg><figcaption>La rue · travelling, panoramique, zoom</figcaption></figure><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 480"><g class="decor" id="decor-parc">
+  <rect width="270" height="480" fill="#EAF0E1"/><circle cx="60" cy="80" r="26" fill="#F2B33D" opacity=".8"/>
+  <path d="M0 260 Q70 200 140 250 Q210 190 270 240 V480 H0Z" fill="#A9C39A"/>
+  <path d="M0 330 Q90 290 170 330 Q230 300 270 320 V480 H0Z" fill="#7FA37A"/>
+  <path d="M110 480 Q130 400 150 330 L162 330 Q156 400 170 480Z" fill="#E6D6B4"/>
+  <g><rect x="206" y="250" width="8" height="90" fill="#6B4A2B"/><circle cx="210" cy="240" r="34" fill="#5E8A5A"/></g>
+  <g><rect x="40" y="300" width="6" height="60" fill="#6B4A2B"/><circle cx="43" cy="292" r="24" fill="#5E8A5A"/></g>
+  <g transform="translate(180 380)"><rect width="60" height="8" rx="2" fill="#8A5A3A"/><rect y="-16" width="60" height="6" rx="2" fill="#8A5A3A"/><rect x="6" y="8" width="5" height="16" fill="#1B1B1B"/><rect x="49" y="8" width="5" height="16" fill="#1B1B1B"/></g>
+</g></svg><figcaption>Le parc · drone, parallaxe, profondeur</figcaption></figure></div>
+  <p class="small">Format 9:16, 1080 × 1920. Chaque élément du décor (bâtiments, arbres, soleil) est un objet séparé dans le SVG : on peut les décaler à des vitesses différentes pour créer de la parallaxe.</p>
+  <div class="foot"><span>La Voie du Pixel · Bible graphique</span><span>@iampixelsensei · 05</span></div></section><section class="page"><div class="kicker">Mise en page</div><h2>Un reel <em>type</em></h2>
+  <div class="grid2"><div class="mock"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 480"><g class="decor" id="decor-studio">
+  <rect width="270" height="480" fill="#F4EDE1"/>
+  <line x1="45" y1="0" x2="45" y2="330" stroke="#E2D6C2" stroke-width="2"/><line x1="90" y1="0" x2="90" y2="330" stroke="#E2D6C2" stroke-width="2"/><line x1="135" y1="0" x2="135" y2="330" stroke="#E2D6C2" stroke-width="2"/><line x1="180" y1="0" x2="180" y2="330" stroke="#E2D6C2" stroke-width="2"/><line x1="225" y1="0" x2="225" y2="330" stroke="#E2D6C2" stroke-width="2"/>
+  <line x1="0" y1="110" x2="270" y2="110" stroke="#E2D6C2" stroke-width="2"/><line x1="0" y1="220" x2="270" y2="220" stroke="#E2D6C2" stroke-width="2"/>
+  <circle cx="135" cy="170" r="92" fill="#E63B2E"/>
+  <rect x="200" y="40" width="44" height="120" fill="#FBF6EC" stroke="#8A6420" stroke-width="3"/>
+  <text x="222" y="118" font-family="IPAGothic, sans-serif" font-size="34" text-anchor="middle" fill="#1B1B1B">道</text>
+  <rect x="0" y="330" width="270" height="150" fill="#C99A5B"/>
+  <line x1="0" y1="360" x2="270" y2="360" stroke="#B5864A" stroke-width="2"/><line x1="0" y1="390" x2="270" y2="390" stroke="#B5864A" stroke-width="2"/><line x1="0" y1="420" x2="270" y2="420" stroke="#B5864A" stroke-width="2"/><line x1="0" y1="450" x2="270" y2="450" stroke="#B5864A" stroke-width="2"/>
+  <rect x="0" y="326" width="270" height="8" fill="#8A6420"/>
+  <g transform="translate(40 250)"><path d="M0 80 L18 0 L36 80 M18 0 L18 80" fill="none" stroke="#1B1B1B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><g class="prop-camera" transform="translate(18 -10) scale(0.55)">
+  <rect x="-20" y="-24" width="16" height="9" rx="2" fill="#3A3A3A"/>
+  <rect x="-30" y="-17" width="60" height="34" rx="5" fill="#1B1B1B"/>
+  <rect x="-30" y="-8" width="60" height="5" fill="#F2B33D"/>
+  <circle r="13" fill="#3A3A3A"/><circle r="8" fill="#2F4858"/><circle cx="-3" cy="-3" r="2.5" fill="#fff" opacity=".8"/>
+  <circle cx="22" cy="-11" r="2.5" fill="#E63B2E"/>
+</g></g>
+</g><g transform="translate(20 40)"><rect width="210" height="44" rx="4" fill="#1B1B1B"/><text x="105" y="32" text-anchor="middle" font-family="Anton, Inter" font-size="26" fill="#F2B33D">ARRÊTE DE ZOOMER</text></g><g transform="translate(14 186) scale(.5)"><g class="sensei" data-pose="stop"><g id="robe">
+  <path d="M62 160 Q100 150 138 160 L156 408 Q100 418 44 408Z" fill="#2F4858"/>
+  <path d="M84 160 L100 214 L116 160Z" fill="#F4EDE1"/>
+  <path d="M78 160 L100 222 L122 160" fill="none" stroke="#F2B33D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M100 222 L102 408" fill="none" stroke="#24394A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M50 262 Q100 272 150 262 L151 284 Q100 294 49 284Z" fill="#E63B2E"/>
+  <path d="M96 282 L88 318 M104 282 L112 318" fill="none" stroke="#E63B2E" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="78" cy="414" rx="17" ry="7" fill="#1B1B1B"/><ellipse cx="122" cy="414" rx="17" ry="7" fill="#1B1B1B"/>
+</g><g id="arm-left"><path d="M64 166 Q34 222 40 300 L72 300 Q66 240 78 198Z" fill="#24394A"/><circle cx="56" cy="308" r="10" fill="#F1C9A0"/></g><g id="arm-right"><path d="M134 166 Q172 176 178 214 L160 222 Q154 196 128 200Z" fill="#24394A"/>
+  <g fill="#F1C9A0"><rect x="160" y="168" width="28" height="34" rx="9"/><rect x="161" y="150" width="6" height="24" rx="3"/><rect x="168" y="146" width="6" height="26" rx="3"/><rect x="175" y="148" width="6" height="24" rx="3"/><rect x="182" y="154" width="6" height="20" rx="3"/><rect x="152" y="176" width="14" height="7" rx="3.5" transform="rotate(-30 159 179)"/></g></g><g class="sensei-head" data-expression="severe">
+  <g id="hair"><path d="M54 84 Q46 124 72 152 L76 96Z" fill="#4A4A4A"/><path d="M146 84 Q154 124 128 152 L124 96Z" fill="#4A4A4A"/></g>
+  <path id="face" d="M68 84 H132 V124 Q132 154 100 154 Q68 154 68 124Z" fill="#F1C9A0"/>
+  <g id="brows" fill="#4A4A4A"><path d="M69 92 L97 103 L96 97 L71 86Z"/><path d="M131 92 L103 103 L104 97 L129 86Z"/></g>
+  <g id="eyes"><ellipse cx="84" cy="109" rx="4.2" ry="5" fill="#1B1B1B"/><circle cx="85.5" cy="107.3" r="1.3" fill="#fff"/><ellipse cx="116" cy="109" rx="4.2" ry="5" fill="#1B1B1B"/><circle cx="117.5" cy="107.3" r="1.3" fill="#fff"/></g>
+  <path id="nose" d="M96 119 Q100 123 104 119" fill="none" stroke="#B9875E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path id="beard" d="M70 122 Q78 130 90 127 Q100 123 110 127 Q122 130 130 122 Q138 152 124 174 Q114 188 120 198 Q100 196 90 180 Q72 160 70 122Z" fill="#4A4A4A"/>
+  <path id="mouth-area" d="M87 129 Q100 125 113 129 Q111 147 100 153 Q89 147 87 129Z" fill="#F1C9A0"/>
+  <g id="mouth"><ellipse cx="100" cy="140" rx="6" ry="8" fill="#7A2A22"/></g>
+  <path id="mustache" d="M78 126 Q90 118 100 125 Q110 118 122 126 Q112 133 100 129 Q88 133 78 126Z" fill="#4A4A4A"/>
+  <path d="M92 158 L100 172 L108 158" fill="#F1C9A0" opacity=".0"/>
+  <g id="hat">
+    <path d="M12 84 L100 20 L188 84 Q100 99 12 84Z" fill="#D9A441"/>
+    <path d="M103 32 Q121 45 116 58 Q134 54 146 64 Q128 72 104 72 Q131 65 124 62 Q106 64 112 54 Q116 44 103 32Z" fill="#F2C766"/>
+    <path d="M30 86 Q100 98 170 86 Q100 104 30 86Z" fill="#8A6420"/>
+    <path d="M12 84 L100 20 L188 84" fill="none" stroke="#8A6420" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</g></g></g><g transform="translate(126 216) scale(.44)"><g class="eleve" data-pose="filme"><g id="body">
+  <rect x="92" y="148" width="16" height="40" fill="#8D5A3B"/>
+  <path d="M74 178 Q100 196 126 178 Q118 196 100 200 Q82 196 74 178Z" fill="#C98F1F"/>
+  <path d="M60 192 Q100 178 140 192 L148 304 Q100 312 52 304Z" fill="#F2B33D"/>
+  <path d="M74 262 H126 L122 290 H78Z" fill="#E0A42E"/>
+  <path d="M94 200 L92 236 M106 200 L108 236" fill="none" stroke="#F4EDE1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M56 302 H144 L140 404 H106 L100 330 L94 404 H60Z" fill="#2F4858"/>
+  <ellipse cx="78" cy="410" rx="20" ry="9" fill="#fff" stroke="#1B1B1B" stroke-width="2.5"/>
+  <ellipse cx="122" cy="410" rx="20" ry="9" fill="#fff" stroke="#1B1B1B" stroke-width="2.5"/>
+</g><g id="arm-left"><path d="M62 196 Q42 240 46 296 L66 296 Q64 248 76 214Z" fill="#F2B33D"/><circle cx="56" cy="304" r="10" fill="#8D5A3B"/></g><g id="arm-right"><path d="M138 196 Q186 196 190 162 L174 156 Q170 184 128 214Z" fill="#F2B33D"/><g class="prop-phone" transform="translate(186 142) rotate(90)"><rect x="-11" y="-19" width="22" height="38" rx="4" fill="#1B1B1B"/><rect x="-8" y="-15" width="16" height="28" rx="2" fill="#2F4858"/><circle cx="5" cy="-11" r="2" fill="#E63B2E"/></g><circle cx="182" cy="158" r="10" fill="#8D5A3B"/></g><g class="eleve-head" data-expression="confus">
+  <circle cx="52" cy="110" r="9" fill="#8D5A3B"/><circle cx="148" cy="110" r="9" fill="#8D5A3B"/>
+  <circle id="face" cx="100" cy="106" r="48" fill="#8D5A3B"/>
+  <g id="hair"><path d="M54 98 Q54 58 100 56 Q146 58 146 98 Q132 76 100 74 Q68 76 54 98Z" fill="#1B1B1B"/><circle cx="58" cy="86" r="11" fill="#1B1B1B"/><circle cx="68" cy="68" r="11" fill="#1B1B1B"/><circle cx="84" cy="57" r="11" fill="#1B1B1B"/><circle cx="100" cy="53" r="11" fill="#1B1B1B"/><circle cx="116" cy="57" r="11" fill="#1B1B1B"/><circle cx="132" cy="68" r="11" fill="#1B1B1B"/><circle cx="142" cy="86" r="11" fill="#1B1B1B"/></g>
+  <g id="brows"><path d="M75 90 L93 95" fill="none" stroke="#1B1B1B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M107 94 Q116 86 125 91" fill="none" stroke="#1B1B1B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g><g id="eyes"><ellipse cx="84" cy="107" rx="7" ry="8" fill="#fff"/><circle cx="85" cy="108" r="4.5" fill="#1B1B1B"/><circle cx="86.5" cy="106" r="1.4" fill="#fff"/><ellipse cx="116" cy="107" rx="7" ry="8" fill="#fff"/><circle cx="117" cy="108" r="4.5" fill="#1B1B1B"/><circle cx="118.5" cy="106" r="1.4" fill="#fff"/></g>
+  <path id="nose" d="M97 116 Q100 120 103 116" fill="none" stroke="#5E3A26" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g id="mouth"><path d="M88 132 L94 128 L100 132 L106 128 L112 132" fill="none" stroke="#1B1B1B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g><text x="150" y="60" font-family="Anton, Inter, sans-serif" font-size="34" fill="#E63B2E">?</text>
+</g></g></g><g transform="translate(22 368)"><rect width="206" height="30" rx="4" fill="#1B1B1B" opacity=".88"/><text x="103" y="20" text-anchor="middle" font-family="Inter" font-weight="800" font-size="11" fill="#fff">Ces deux plans ont l'air pareils…</text></g><g transform="translate(140 110) scale(.45)"><g class="prop-stamp" transform="rotate(-8)"><rect x="0" y="0" width="170" height="56" rx="6" fill="#F4EDE1" stroke="#E63B2E" stroke-width="7"/><text x="85.0" y="40" text-anchor="middle" font-family="Anton, Inter, sans-serif" font-size="30" fill="#E63B2E" letter-spacing="1">RÈGLE N°2</text></g></g><g><rect x="0" y="414" width="270" height="66" fill="#E63B2E" opacity=".18"/><rect x="232" y="0" width="38" height="480" fill="#E63B2E" opacity=".18"/><text x="10" y="472" font-family="Inter" font-size="8" fill="#E63B2E" font-weight="800">ZONE INTERDITE · LÉGENDE / BOUTONS</text><text x="252" y="160" font-family="Inter" font-size="8" fill="#E63B2E" font-weight="800" transform="rotate(90 252 160)">ICÔNES</text></g></svg></div><div>
+    <ul class="notes">
+      <li><b>Titre :</b> en haut, Anton or sur bandeau noir. 3 à 4 mots maximum.</li>
+      <li><b>Personnages :</b> au centre. Le Sensei à gauche (celui qui sait), l'élève à droite.</li>
+      <li><b>Sous-titres :</b> Inter Bold blanc sur bandeau noir, 2 lignes maximum, juste au-dessus de la zone basse.</li>
+      <li><b>Tampon rouge :</b> la règle du jour s'imprime avec un coup de gong. Toujours incliné de −8°.</li>
+      <li><b>Zones interdites (en rouge) :</b> les 250 px du bas (légende, boutons) et les 150 px de droite (icônes j'aime, partage). Rien d'important dedans.</li>
+      <li><b>Logo :</b> petit, en haut à gauche, pendant les 2 premières et les 2 dernières secondes seulement.</li>
+    </ul></div></div><div class="foot"><span>La Voie du Pixel · Bible graphique</span><span>@iampixelsensei · 06</span></div></section><section class="page"><div class="kicker">Boîte à outils</div><h2>Accessoires <em>&amp; charte</em></h2>
+  <div class="props"><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 60"><g class="prop-camera" transform="translate(40 30) scale(1.0)">
+  <rect x="-20" y="-24" width="16" height="9" rx="2" fill="#3A3A3A"/>
+  <rect x="-30" y="-17" width="60" height="34" rx="5" fill="#1B1B1B"/>
+  <rect x="-30" y="-8" width="60" height="5" fill="#F2B33D"/>
+  <circle r="13" fill="#3A3A3A"/><circle r="8" fill="#2F4858"/><circle cx="-3" cy="-3" r="2.5" fill="#fff" opacity=".8"/>
+  <circle cx="22" cy="-11" r="2.5" fill="#E63B2E"/>
+</g></svg><figcaption>Caméra</figcaption></figure><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -12 52 106"><g class="prop-tripod"><path d="M0 90 L22 0 L44 90 M22 0 L22 90" fill="none" stroke="#1B1B1B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="10" y="-8" width="24" height="10" rx="2" fill="#3A3A3A"/></g></svg><figcaption>Trépied</figcaption></figure><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="10 -18 54 116"><g class="prop-gimbal"><rect x="16" y="40" width="12" height="54" rx="6" fill="#1B1B1B"/><path d="M22 40 V22 H44 V6" fill="none" stroke="#3A3A3A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><rect x="30" y="-14" width="30" height="20" rx="3" fill="#1B1B1B"/><rect x="34" y="-10" width="22" height="12" rx="2" fill="#2F4858"/><circle cx="22" cy="62" r="3" fill="#E63B2E"/></g></svg><figcaption>Gimbal</figcaption></figure><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -10 128 106"><g class="prop-slider"><rect x="0" y="40" width="120" height="8" rx="3" fill="#3A3A3A"/><rect x="0" y="48" width="6" height="22" fill="#1B1B1B"/><rect x="114" y="48" width="6" height="22" fill="#1B1B1B"/><rect x="44" y="30" width="30" height="12" rx="2" fill="#F2B33D"/><g class="prop-camera" transform="translate(59 14) scale(0.6)">
+  <rect x="-20" y="-24" width="16" height="9" rx="2" fill="#3A3A3A"/>
+  <rect x="-30" y="-17" width="60" height="34" rx="5" fill="#1B1B1B"/>
+  <rect x="-30" y="-8" width="60" height="5" fill="#F2B33D"/>
+  <circle r="13" fill="#3A3A3A"/><circle r="8" fill="#2F4858"/><circle cx="-3" cy="-3" r="2.5" fill="#fff" opacity=".8"/>
+  <circle cx="22" cy="-11" r="2.5" fill="#E63B2E"/>
+</g><path d="M20 86 H100" fill="none" stroke="#F2B33D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M92 80 L100 86 L92 92" fill="none" stroke="#F2B33D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g></svg><figcaption>Slider</figcaption></figure><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="-26 -6 172 52"><g class="prop-drone"><path d="M0 12 H120" fill="none" stroke="#1B1B1B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="0" cy="0" rx="22" ry="4" fill="#9a9a9a" opacity=".7"/><rect x="-2" y="0" width="4" height="10" fill="#1B1B1B"/><ellipse cx="120" cy="0" rx="22" ry="4" fill="#9a9a9a" opacity=".7"/><rect x="118" y="0" width="4" height="10" fill="#1B1B1B"/><rect x="40" y="4" width="40" height="22" rx="8" fill="#1B1B1B"/><circle cx="60" cy="34" r="8" fill="#3A3A3A"/><circle cx="60" cy="34" r="4" fill="#2F4858"/></g></svg><figcaption>Drone</figcaption></figure><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 44"><g class="prop-phone" transform="translate(14 22) rotate(0)"><rect x="-11" y="-19" width="22" height="38" rx="4" fill="#1B1B1B"/><rect x="-8" y="-15" width="16" height="28" rx="2" fill="#2F4858"/><circle cx="5" cy="-11" r="2" fill="#E63B2E"/></g></svg><figcaption>Smartphone</figcaption></figure></div>
+  <div class="grid2 bottom"><div><div class="kicker">Le tampon</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="-6 -20 216 104" width="260"><g class="prop-stamp" transform="rotate(-8)"><rect x="0" y="0" width="200" height="56" rx="6" fill="#F4EDE1" stroke="#E63B2E" stroke-width="7"/><text x="100.0" y="40" text-anchor="middle" font-family="Anton, Inter, sans-serif" font-size="30" fill="#E63B2E" letter-spacing="1">RÈGLE N°1</text></g></svg>
+      <div class="kicker" style="margin-top:6mm">Typographies</div>
+      <p><span class="anton">ANTON</span> pour les titres et tampons · <b>Inter Bold</b> pour les sous-titres et textes.</p></div>
+    <div><div class="kicker">Palette</div><div class="swatches"><div class="sw"><span style="background:#F4EDE1"></span><b>Papier</b><i>#F4EDE1</i></div><div class="sw"><span style="background:#1B1B1B"></span><b>Encre</b><i>#1B1B1B</i></div><div class="sw"><span style="background:#E63B2E"></span><b>Vermillon</b><i>#E63B2E</i></div><div class="sw"><span style="background:#F2B33D"></span><b>Or</b><i>#F2B33D</i></div><div class="sw"><span style="background:#2F4858"></span><b>Ardoise</b><i>#2F4858</i></div><div class="sw"><span style="background:#7FA37A"></span><b>Végétal</b><i>#7FA37A</i></div></div>
+      <p class="small">Fichiers fournis : <b>personnages/</b>, <b>decors/</b>, <b>accessoires/</b>, <b>maquettes/</b>. SVG vectoriels avec calques nommés (hat, beard, eyes, mouth, arm-left, arm-right…).</p></div>
+  </div><div class="foot"><span>La Voie du Pixel · Bible graphique</span><span>@iampixelsensei · 07</span></div></section></body></html>

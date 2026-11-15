@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 10 200 195"><g class="sensei-head" data-expression="rire">
+  <g id="hair"><path d="M54 84 Q46 124 72 152 L76 96Z" fill="#4A4A4A"/><path d="M146 84 Q154 124 128 152 L124 96Z" fill="#4A4A4A"/></g>
+  <path id="face" d="M68 84 H132 V124 Q132 154 100 154 Q68 154 68 124Z" fill="#F1C9A0"/>
+  <g id="brows" fill="#4A4A4A"><path d="M70 98 Q83 86 97 96 Q84 92 70 98Z"/><path d="M130 98 Q117 86 103 96 Q116 92 130 98Z"/></g>
+  <g id="eyes"><path d="M76 111 Q84 101 92 111" fill="none" stroke="#1B1B1B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M108 111 Q116 101 124 111" fill="none" stroke="#1B1B1B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <path id="nose" d="M96 119 Q100 123 104 119" fill="none" stroke="#B9875E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path id="beard" d="M70 122 Q78 130 90 127 Q100 123 110 127 Q122 130 130 122 Q138 152 124 174 Q114 188 120 198 Q100 196 90 180 Q72 160 70 122Z" fill="#4A4A4A"/>
+  <path id="mouth-area" d="M87 129 Q100 125 113 129 Q111 147 100 153 Q89 147 87 129Z" fill="#F1C9A0"/>
+  <g id="mouth"><path d="M91 134 Q100 152 109 134Z" fill="#7A2A22"/></g>
+  <path id="mustache" d="M78 126 Q90 118 100 125 Q110 118 122 126 Q112 133 100 129 Q88 133 78 126Z" fill="#4A4A4A"/>
+  <path d="M92 158 L100 172 L108 158" fill="#F1C9A0" opacity=".0"/>
+  <g id="hat">
+    <path d="M12 84 L100 20 L188 84 Q100 99 12 84Z" fill="#D9A441"/>
+    <path d="M103 32 Q121 45 116 58 Q134 54 146 64 Q128 72 104 72 Q131 65 124 62 Q106 64 112 54 Q116 44 103 32Z" fill="#F2C766"/>
+    <path d="M30 86 Q100 98 170 86 Q100 104 30 86Z" fill="#8A6420"/>
+    <path d="M12 84 L100 20 L188 84" fill="none" stroke="#8A6420" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</g></svg>

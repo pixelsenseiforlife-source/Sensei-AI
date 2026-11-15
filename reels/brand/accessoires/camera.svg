@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 60"><g class="prop-camera" transform="translate(40 30) scale(1.0)">
+  <rect x="-20" y="-24" width="16" height="9" rx="2" fill="#3A3A3A"/>
+  <rect x="-30" y="-17" width="60" height="34" rx="5" fill="#1B1B1B"/>
+  <rect x="-30" y="-8" width="60" height="5" fill="#F2B33D"/>
+  <circle r="13" fill="#3A3A3A"/><circle r="8" fill="#2F4858"/><circle cx="-3" cy="-3" r="2.5" fill="#fff" opacity=".8"/>
+  <circle cx="22" cy="-11" r="2.5" fill="#E63B2E"/>
+</g></svg>

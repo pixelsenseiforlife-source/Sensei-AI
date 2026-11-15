@@ -100,7 +100,12 @@ Scripts complets : dossier [`scripts/`](scripts/).
 - [ ] Page de capture e-mail → séquence de 5 e-mails → offre formation
 - [ ] Lien en bio : formation + « Réserver une prestation »
 
-## 7. Contacts et liens (à utiliser partout)
+## 7. Identité graphique
+- Bible graphique : [`brand/Bible-graphique-La-Voie-du-Pixel.pdf`](brand/Bible-graphique-La-Voie-du-Pixel.pdf)
+- Fichiers vectoriels pour l'animation : `brand/personnages/`, `brand/decors/`, `brand/accessoires/`, `brand/maquettes/`
+- Pour regénérer : `python3 -I reels/brand/build/build_bible.py && node reels/brand/build/render.js`
+
+## 8. Contacts et liens (à utiliser partout)
 | | |
 |---|---|
 | Réseaux | **@iampixelsensei** (Instagram, TikTok, Facebook, YouTube) |

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 480" width="1080" height="1920"><g class="decor" id="decor-studio">
+  <rect width="270" height="480" fill="#F4EDE1"/>
+  <line x1="45" y1="0" x2="45" y2="330" stroke="#E2D6C2" stroke-width="2"/><line x1="90" y1="0" x2="90" y2="330" stroke="#E2D6C2" stroke-width="2"/><line x1="135" y1="0" x2="135" y2="330" stroke="#E2D6C2" stroke-width="2"/><line x1="180" y1="0" x2="180" y2="330" stroke="#E2D6C2" stroke-width="2"/><line x1="225" y1="0" x2="225" y2="330" stroke="#E2D6C2" stroke-width="2"/>
+  <line x1="0" y1="110" x2="270" y2="110" stroke="#E2D6C2" stroke-width="2"/><line x1="0" y1="220" x2="270" y2="220" stroke="#E2D6C2" stroke-width="2"/>
+  <circle cx="135" cy="170" r="92" fill="#E63B2E"/>
+  <rect x="200" y="40" width="44" height="120" fill="#FBF6EC" stroke="#8A6420" stroke-width="3"/>
+  <text x="222" y="118" font-family="IPAGothic, sans-serif" font-size="34" text-anchor="middle" fill="#1B1B1B">道</text>
+  <rect x="0" y="330" width="270" height="150" fill="#C99A5B"/>
+  <line x1="0" y1="360" x2="270" y2="360" stroke="#B5864A" stroke-width="2"/><line x1="0" y1="390" x2="270" y2="390" stroke="#B5864A" stroke-width="2"/><line x1="0" y1="420" x2="270" y2="420" stroke="#B5864A" stroke-width="2"/><line x1="0" y1="450" x2="270" y2="450" stroke="#B5864A" stroke-width="2"/>
+  <rect x="0" y="326" width="270" height="8" fill="#8A6420"/>
+  <g transform="translate(40 250)"><path d="M0 80 L18 0 L36 80 M18 0 L18 80" fill="none" stroke="#1B1B1B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><g class="prop-camera" transform="translate(18 -10) scale(0.55)">
+  <rect x="-20" y="-24" width="16" height="9" rx="2" fill="#3A3A3A"/>
+  <rect x="-30" y="-17" width="60" height="34" rx="5" fill="#1B1B1B"/>
+  <rect x="-30" y="-8" width="60" height="5" fill="#F2B33D"/>
+  <circle r="13" fill="#3A3A3A"/><circle r="8" fill="#2F4858"/><circle cx="-3" cy="-3" r="2.5" fill="#fff" opacity=".8"/>
+  <circle cx="22" cy="-11" r="2.5" fill="#E63B2E"/>
+</g></g>
+</g><g transform="translate(20 40)"><rect width="210" height="44" rx="4" fill="#1B1B1B"/><text x="105" y="32" text-anchor="middle" font-family="Anton, Inter" font-size="26" fill="#F2B33D">ARRÊTE DE ZOOMER</text></g><g transform="translate(14 186) scale(.5)"><g class="sensei" data-pose="stop"><g id="robe">
+  <path d="M62 160 Q100 150 138 160 L156 408 Q100 418 44 408Z" fill="#2F4858"/>
+  <path d="M84 160 L100 214 L116 160Z" fill="#F4EDE1"/>
+  <path d="M78 160 L100 222 L122 160" fill="none" stroke="#F2B33D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M100 222 L102 408" fill="none" stroke="#24394A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M50 262 Q100 272 150 262 L151 284 Q100 294 49 284Z" fill="#E63B2E"/>
+  <path d="M96 282 L88 318 M104 282 L112 318" fill="none" stroke="#E63B2E" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="78" cy="414" rx="17" ry="7" fill="#1B1B1B"/><ellipse cx="122" cy="414" rx="17" ry="7" fill="#1B1B1B"/>
+</g><g id="arm-left"><path d="M64 166 Q34 222 40 300 L72 300 Q66 240 78 198Z" fill="#24394A"/><circle cx="56" cy="308" r="10" fill="#F1C9A0"/></g><g id="arm-right"><path d="M134 166 Q172 176 178 214 L160 222 Q154 196 128 200Z" fill="#24394A"/>
+  <g fill="#F1C9A0"><rect x="160" y="168" width="28" height="34" rx="9"/><rect x="161" y="150" width="6" height="24" rx="3"/><rect x="168" y="146" width="6" height="26" rx="3"/><rect x="175" y="148" width="6" height="24" rx="3"/><rect x="182" y="154" width="6" height="20" rx="3"/><rect x="152" y="176" width="14" height="7" rx="3.5" transform="rotate(-30 159 179)"/></g></g><g class="sensei-head" data-expression="severe">
+  <g id="hair"><path d="M54 84 Q46 124 72 152 L76 96Z" fill="#4A4A4A"/><path d="M146 84 Q154 124 128 152 L124 96Z" fill="#4A4A4A"/></g>
+  <path id="face" d="M68 84 H132 V124 Q132 154 100 154 Q68 154 68 124Z" fill="#F1C9A0"/>
+  <g id="brows" fill="#4A4A4A"><path d="M69 92 L97 103 L96 97 L71 86Z"/><path d="M131 92 L103 103 L104 97 L129 86Z"/></g>
+  <g id="eyes"><ellipse cx="84" cy="109" rx="4.2" ry="5" fill="#1B1B1B"/><circle cx="85.5" cy="107.3" r="1.3" fill="#fff"/><ellipse cx="116" cy="109" rx="4.2" ry="5" fill="#1B1B1B"/><circle cx="117.5" cy="107.3" r="1.3" fill="#fff"/></g>
+  <path id="nose" d="M96 119 Q100 123 104 119" fill="none" stroke="#B9875E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path id="beard" d="M70 122 Q78 130 90 127 Q100 123 110 127 Q122 130 130 122 Q138 152 124 174 Q114 188 120 198 Q100 196 90 180 Q72 160 70 122Z" fill="#4A4A4A"/>
+  <path id="mouth-area" d="M87 129 Q100 125 113 129 Q111 147 100 153 Q89 147 87 129Z" fill="#F1C9A0"/>
+  <g id="mouth"><ellipse cx="100" cy="140" rx="6" ry="8" fill="#7A2A22"/></g>
+  <path id="mustache" d="M78 126 Q90 118 100 125 Q110 118 122 126 Q112 133 100 129 Q88 133 78 126Z" fill="#4A4A4A"/>
+  <path d="M92 158 L100 172 L108 158" fill="#F1C9A0" opacity=".0"/>
+  <g id="hat">
+    <path d="M12 84 L100 20 L188 84 Q100 99 12 84Z" fill="#D9A441"/>
+    <path d="M103 32 Q121 45 116 58 Q134 54 146 64 Q128 72 104 72 Q131 65 124 62 Q106 64 112 54 Q116 44 103 32Z" fill="#F2C766"/>
+    <path d="M30 86 Q100 98 170 86 Q100 104 30 86Z" fill="#8A6420"/>
+    <path d="M12 84 L100 20 L188 84" fill="none" stroke="#8A6420" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</g></g></g><g transform="translate(126 216) scale(.44)"><g class="eleve" data-pose="filme"><g id="body">
+  <rect x="92" y="148" width="16" height="40" fill="#8D5A3B"/>
+  <path d="M74 178 Q100 196 126 178 Q118 196 100 200 Q82 196 74 178Z" fill="#C98F1F"/>
+  <path d="M60 192 Q100 178 140 192 L148 304 Q100 312 52 304Z" fill="#F2B33D"/>
+  <path d="M74 262 H126 L122 290 H78Z" fill="#E0A42E"/>
+  <path d="M94 200 L92 236 M106 200 L108 236" fill="none" stroke="#F4EDE1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M56 302 H144 L140 404 H106 L100 330 L94 404 H60Z" fill="#2F4858"/>
+  <ellipse cx="78" cy="410" rx="20" ry="9" fill="#fff" stroke="#1B1B1B" stroke-width="2.5"/>
+  <ellipse cx="122" cy="410" rx="20" ry="9" fill="#fff" stroke="#1B1B1B" stroke-width="2.5"/>
+</g><g id="arm-left"><path d="M62 196 Q42 240 46 296 L66 296 Q64 248 76 214Z" fill="#F2B33D"/><circle cx="56" cy="304" r="10" fill="#8D5A3B"/></g><g id="arm-right"><path d="M138 196 Q186 196 190 162 L174 156 Q170 184 128 214Z" fill="#F2B33D"/><g class="prop-phone" transform="translate(186 142) rotate(90)"><rect x="-11" y="-19" width="22" height="38" rx="4" fill="#1B1B1B"/><rect x="-8" y="-15" width="16" height="28" rx="2" fill="#2F4858"/><circle cx="5" cy="-11" r="2" fill="#E63B2E"/></g><circle cx="182" cy="158" r="10" fill="#8D5A3B"/></g><g class="eleve-head" data-expression="confus">
+  <circle cx="52" cy="110" r="9" fill="#8D5A3B"/><circle cx="148" cy="110" r="9" fill="#8D5A3B"/>
+  <circle id="face" cx="100" cy="106" r="48" fill="#8D5A3B"/>
+  <g id="hair"><path d="M54 98 Q54 58 100 56 Q146 58 146 98 Q132 76 100 74 Q68 76 54 98Z" fill="#1B1B1B"/><circle cx="58" cy="86" r="11" fill="#1B1B1B"/><circle cx="68" cy="68" r="11" fill="#1B1B1B"/><circle cx="84" cy="57" r="11" fill="#1B1B1B"/><circle cx="100" cy="53" r="11" fill="#1B1B1B"/><circle cx="116" cy="57" r="11" fill="#1B1B1B"/><circle cx="132" cy="68" r="11" fill="#1B1B1B"/><circle cx="142" cy="86" r="11" fill="#1B1B1B"/></g>
+  <g id="brows"><path d="M75 90 L93 95" fill="none" stroke="#1B1B1B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M107 94 Q116 86 125 91" fill="none" stroke="#1B1B1B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g><g id="eyes"><ellipse cx="84" cy="107" rx="7" ry="8" fill="#fff"/><circle cx="85" cy="108" r="4.5" fill="#1B1B1B"/><circle cx="86.5" cy="106" r="1.4" fill="#fff"/><ellipse cx="116" cy="107" rx="7" ry="8" fill="#fff"/><circle cx="117" cy="108" r="4.5" fill="#1B1B1B"/><circle cx="118.5" cy="106" r="1.4" fill="#fff"/></g>
+  <path id="nose" d="M97 116 Q100 120 103 116" fill="none" stroke="#5E3A26" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g id="mouth"><path d="M88 132 L94 128 L100 132 L106 128 L112 132" fill="none" stroke="#1B1B1B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g><text x="150" y="60" font-family="Anton, Inter, sans-serif" font-size="34" fill="#E63B2E">?</text>
+</g></g></g><g transform="translate(22 368)"><rect width="206" height="30" rx="4" fill="#1B1B1B" opacity=".88"/><text x="103" y="20" text-anchor="middle" font-family="Inter" font-weight="800" font-size="11" fill="#fff">Ces deux plans ont l'air pareils…</text></g><g transform="translate(140 110) scale(.45)"><g class="prop-stamp" transform="rotate(-8)"><rect x="0" y="0" width="170" height="56" rx="6" fill="#F4EDE1" stroke="#E63B2E" stroke-width="7"/><text x="85.0" y="40" text-anchor="middle" font-family="Anton, Inter, sans-serif" font-size="30" fill="#E63B2E" letter-spacing="1">RÈGLE N°2</text></g></g></svg>

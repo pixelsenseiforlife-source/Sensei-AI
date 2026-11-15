@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 0 220 430"><g class="eleve" data-pose="filme"><g id="body">
+  <rect x="92" y="148" width="16" height="40" fill="#8D5A3B"/>
+  <path d="M74 178 Q100 196 126 178 Q118 196 100 200 Q82 196 74 178Z" fill="#C98F1F"/>
+  <path d="M60 192 Q100 178 140 192 L148 304 Q100 312 52 304Z" fill="#F2B33D"/>
+  <path d="M74 262 H126 L122 290 H78Z" fill="#E0A42E"/>
+  <path d="M94 200 L92 236 M106 200 L108 236" fill="none" stroke="#F4EDE1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M56 302 H144 L140 404 H106 L100 330 L94 404 H60Z" fill="#2F4858"/>
+  <ellipse cx="78" cy="410" rx="20" ry="9" fill="#fff" stroke="#1B1B1B" stroke-width="2.5"/>
+  <ellipse cx="122" cy="410" rx="20" ry="9" fill="#fff" stroke="#1B1B1B" stroke-width="2.5"/>
+</g><g id="arm-left"><path d="M62 196 Q42 240 46 296 L66 296 Q64 248 76 214Z" fill="#F2B33D"/><circle cx="56" cy="304" r="10" fill="#8D5A3B"/></g><g id="arm-right"><path d="M138 196 Q186 196 190 162 L174 156 Q170 184 128 214Z" fill="#F2B33D"/><g class="prop-phone" transform="translate(186 142) rotate(90)"><rect x="-11" y="-19" width="22" height="38" rx="4" fill="#1B1B1B"/><rect x="-8" y="-15" width="16" height="28" rx="2" fill="#2F4858"/><circle cx="5" cy="-11" r="2" fill="#E63B2E"/></g><circle cx="182" cy="158" r="10" fill="#8D5A3B"/></g><g class="eleve-head" data-expression="emerveille">
+  <circle cx="52" cy="110" r="9" fill="#8D5A3B"/><circle cx="148" cy="110" r="9" fill="#8D5A3B"/>
+  <circle id="face" cx="100" cy="106" r="48" fill="#8D5A3B"/>
+  <g id="hair"><path d="M54 98 Q54 58 100 56 Q146 58 146 98 Q132 76 100 74 Q68 76 54 98Z" fill="#1B1B1B"/><circle cx="58" cy="86" r="11" fill="#1B1B1B"/><circle cx="68" cy="68" r="11" fill="#1B1B1B"/><circle cx="84" cy="57" r="11" fill="#1B1B1B"/><circle cx="100" cy="53" r="11" fill="#1B1B1B"/><circle cx="116" cy="57" r="11" fill="#1B1B1B"/><circle cx="132" cy="68" r="11" fill="#1B1B1B"/><circle cx="142" cy="86" r="11" fill="#1B1B1B"/></g>
+  <g id="brows"><path d="M74 87 Q84 80 94 86" fill="none" stroke="#1B1B1B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M106 86 Q116 80 126 87" fill="none" stroke="#1B1B1B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g><g id="eyes"><ellipse cx="84" cy="106" rx="8" ry="10" fill="#fff"/><circle cx="84" cy="107" r="5" fill="#1B1B1B"/><circle cx="86" cy="104" r="1.6" fill="#fff"/><ellipse cx="116" cy="106" rx="8" ry="10" fill="#fff"/><circle cx="116" cy="107" r="5" fill="#1B1B1B"/><circle cx="118" cy="104" r="1.6" fill="#fff"/></g>
+  <path id="nose" d="M97 116 Q100 120 103 116" fill="none" stroke="#5E3A26" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g id="mouth"><ellipse cx="100" cy="132" rx="8" ry="10" fill="#7A2A22"/></g>
+</g></g></svg>

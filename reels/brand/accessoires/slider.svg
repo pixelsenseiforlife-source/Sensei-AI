@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -10 128 106"><g class="prop-slider"><rect x="0" y="40" width="120" height="8" rx="3" fill="#3A3A3A"/><rect x="0" y="48" width="6" height="22" fill="#1B1B1B"/><rect x="114" y="48" width="6" height="22" fill="#1B1B1B"/><rect x="44" y="30" width="30" height="12" rx="2" fill="#F2B33D"/><g class="prop-camera" transform="translate(59 14) scale(0.6)">
+  <rect x="-20" y="-24" width="16" height="9" rx="2" fill="#3A3A3A"/>
+  <rect x="-30" y="-17" width="60" height="34" rx="5" fill="#1B1B1B"/>
+  <rect x="-30" y="-8" width="60" height="5" fill="#F2B33D"/>
+  <circle r="13" fill="#3A3A3A"/><circle r="8" fill="#2F4858"/><circle cx="-3" cy="-3" r="2.5" fill="#fff" opacity=".8"/>
+  <circle cx="22" cy="-11" r="2.5" fill="#E63B2E"/>
+</g><path d="M20 86 H100" fill="none" stroke="#F2B33D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M92 80 L100 86 L92 92" fill="none" stroke="#F2B33D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
