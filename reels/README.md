@@ -92,7 +92,8 @@ Scripts complets : dossier [`scripts/`](scripts/).
 3. **Animation** → on cale l'animation sur la voix (la voix d'abord, toujours)
 4. **Sous-titres** → auto (CapCut / Premiere) puis correction manuelle
 5. **Musique** → lo-fi japonisante discrète, −20 dB sous la voix
-6. **Export** → 1080 × 1920, 30 i/s, H.264, ~15 Mb/s
+6. **Signature de fin** → chaque reel se termine par l'outro animée du logo (3,5 s, avec gong) : `brand/outro/outro-pixel-sensei.mp4`
+7. **Export** → 1080 × 1920, 30 i/s, H.264, ~15 Mb/s
 
 ## 6. À préparer pour l'entonnoir
 - [ ] Guide PDF gratuit « La Voie du Pixel : les mouvements de caméra » (aimant à prospects)
@@ -104,6 +105,8 @@ Scripts complets : dossier [`scripts/`](scripts/).
 - Bible graphique : [`brand/Bible-graphique-La-Voie-du-Pixel.pdf`](brand/Bible-graphique-La-Voie-du-Pixel.pdf)
 - Fichiers vectoriels pour l'animation : `brand/personnages/`, `brand/decors/`, `brand/accessoires/`, `brand/maquettes/`
 - Pour regénérer : `python3 -I reels/brand/build/build_bible.py && node reels/brand/build/render.js`
+- Logo détouré (fond transparent) : `brand/logo-pixel-sensei-{noir,creme,gris}.png`
+- Outro animée : `brand/outro/outro-pixel-sensei.mp4` (regénérer : `node reels/brand/outro/render_outro.js`)
 
 ## 8. Contacts et liens (à utiliser partout)
 | | |
