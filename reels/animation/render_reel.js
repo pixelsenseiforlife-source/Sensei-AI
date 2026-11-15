@@ -9,14 +9,17 @@ const slug = scripts[0].replace('.md', '');
 (async () => {
   const dir = path.join(__dirname, id); const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'reel-'));
   const b = await chromium.launch(); const p = await b.newPage({ viewport: { width: 1080, height: 1920 } });
+  const errors = []; p.on('pageerror', e => errors.push(e.message));
   await p.goto('file://' + path.join(dir, 'scene.html'), { waitUntil: 'networkidle' });
+  if (errors.length) { console.error('ERREUR scène', id, errors); process.exit(1); }
   await p.evaluate(() => document.fonts.ready);
-  const { duration, fps, impact } = await p.evaluate(() => ({ duration: DATA.duration, fps: DATA.fps, impact: 23.4 + .3 }));
+  const { duration, fps, impacts } = await p.evaluate(() => ({ duration: DATA.duration, fps: DATA.fps,
+    impacts: (window.IMPACTS && window.IMPACTS.length) ? window.IMPACTS : [23.4 + .3] }));
   if (preview) {
-    for (const t of [0.5, 3.0, 5.0, 7.5, 10.5, 14.0, 16.0, 17.0, 21.0, 24.5, 29.5, 31.5]) {
+    for (const t of Array.from({ length: 12 }, (_, i) => +(0.4 + i * (duration - 0.6) / 11).toFixed(2))) {
       await p.evaluate(t => render(t), t); await p.screenshot({ path: path.join(dir, `preview-${String(t).padStart(4, '0')}.jpg`), type: 'jpeg', quality: 80 });
     }
-    await b.close(); console.log('aperçus ok'); return;
+    await b.close(); if (errors.length) { console.error('ERREUR', errors); process.exit(1); } console.log('aperçus ok', id); return;
   }
   const n = Math.ceil(duration * fps) + Math.round(.4 * fps); // petite respiration avant l'outro
   for (let i = 0; i < n; i++) {
@@ -25,7 +28,7 @@ const slug = scripts[0].replace('.md', '');
   }
   await b.close();
   const gong = path.join(tmp, 'gong.wav');
-  execFileSync('python3', ['-I', path.join(REELS, 'brand', 'outro', 'gong.py'), gong, String(n / fps), String(impact)]);
+  execFileSync('python3', ['-I', path.join(REELS, 'brand', 'outro', 'gong.py'), gong, String(n / fps), impacts.map(x => x.toFixed(3)).join(',')]);
   const body = path.join(tmp, 'body.mp4');
   execFileSync('ffmpeg', ['-v', 'error', '-y', '-framerate', String(fps), '-i', path.join(tmp, '%05d.jpg'),
     '-i', path.join(REELS, 'voiceover', 'audio', slug + '.mp3'), '-i', gong,
