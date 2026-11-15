@@ -25,12 +25,18 @@
   .stamp{ font-family:Anton, sans-serif; color:var(--red); border:2.2mm solid var(--red); border-radius:2mm; padding:2mm 4mm; display:inline-block; transform:rotate(-8deg); text-transform:uppercase; letter-spacing:1px; opacity:.92 }
   .kanji{ font-family:"IPAGothic", sans-serif }
 
+  .logo{ width:34mm; height:34mm; border-radius:50%; background:#F3F0E8 url(../brand/logo-pixel-sensei.jpg) center/122% no-repeat; flex:none; box-shadow:0 0 0 1.2mm rgba(242,179,61,.6) }
+  .brandrow{ display:flex; align-items:center; gap:5mm; position:relative }
+  .brandrow .t1{ font-weight:800; letter-spacing:4px; font-size:10pt; color:var(--gold) }
+  .brandrow .t2{ font-size:9pt; color:#bdb5a8; margin-top:1mm; letter-spacing:1px }
+  .wa{ display:inline-flex; align-items:center; gap:2mm; margin:4mm 3mm 0 0; background:#25D366; color:#0b2e17; font-weight:800; padding:2.5mm 5mm; border-radius:20mm; font-size:10pt; text-decoration:none }
+  .wa svg{ width:4.5mm; height:4.5mm }
   /* Couverture */
   .cover{ background:var(--ink); color:var(--paper); padding:22mm 20mm }
   .cover .sun{ position:absolute; width:150mm; height:150mm; border-radius:50%; background:var(--red); right:-45mm; top:40mm }
   .cover .kanjibig{ position:absolute; right:14mm; top:62mm; font-size:120pt; color:var(--ink); writing-mode:vertical-rl; line-height:1 }
   .cover .brand{ font-weight:800; letter-spacing:4px; font-size:10pt; color:var(--gold) }
-  .cover h1{ font-size:62pt; margin-top:62mm; max-width:120mm; position:relative }
+  .cover h1{ font-size:62pt; margin-top:40mm; max-width:120mm; position:relative }
   .cover h1 span{ color:var(--gold) }
   .cover .sub{ font-size:13pt; line-height:1.5; max-width:110mm; margin-top:8mm; color:#e9e1d3; position:relative }
   .cover .chips{ position:absolute; left:20mm; bottom:24mm; display:flex; gap:3mm }
@@ -100,7 +106,7 @@
 
   /* Fin */
   .end{ background:var(--ink); color:var(--paper) }
-  .end h2{ font-size:44pt; margin-top:8mm }
+  .end h2{ font-size:40pt; margin-top:8mm }
   .offers{ display:grid; gap:6mm; margin-top:8mm }
   .offer{ border-radius:4mm; padding:7mm; background:#26231f; border:1px solid #403b34 }
   .offer.main{ background:var(--red); border:none }
@@ -127,8 +133,8 @@
 <!-- 1. COUVERTURE -->
 <section class="page cover">
   <div class="sun"></div>
-  <div class="kanjibig kanji">道場</div>
-  <div class="brand">LE DOJO DE L'IMAGE</div>
+  <div class="kanjibig kanji">道</div>
+  <div class="brandrow"><div class="logo"></div><div><div class="t1">LA VOIE DU PIXEL</div><div class="t2">par Pixel Sensei · Filmmaker &amp; Photographer</div></div></div>
   <h1>Les mouvements de <span>caméra</span></h1>
   <p class="sub">Le guide du Sensei. 8 mouvements, 4 règles et 7 jours d'entraînement pour filmer avec une intention, au smartphone comme à la caméra.</p>
   <div class="chips"><span class="chip">Vidéaste</span><span class="chip">Créateur de contenu</span><span class="chip">Débutant · Intermédiaire</span></div>
@@ -145,7 +151,7 @@
   <div class="question">
     <div class="kicker" style="color:var(--paper)">La seule question à te poser avant d'appuyer sur REC</div>
     <div class="display">« Pourquoi je bouge ? »</div>
-    <p style="margin-top:3mm;color:#ddd4c4">Si tu n'as pas de réponse : reste fixe. C'est la première règle du dojo.</p>
+    <p style="margin-top:3mm;color:#ddd4c4">Si tu n'as pas de réponse : reste fixe. C'est la première règle de la Voie.</p>
   </div>
   <div class="kicker">Comment utiliser ce guide</div>
   <div class="steps">
@@ -159,7 +165,7 @@
     <div><svg width="40" height="12"><line x1="2" y1="6" x2="36" y2="6" stroke="#F2B33D" stroke-width="3" marker-end="url(#aG)"/></svg>Déplacement</div>
     <div><svg width="40" height="22"><path d="M2 11L38 2M2 11L38 20" stroke="#2F4858" stroke-dasharray="3 3" fill="none"/></svg>Champ de vision</div>
   </div>
-  <div class="foot"><span>Le Dojo de l'Image</span><span>02</span></div>
+  <div class="foot"><span>La Voie du Pixel</span><span>02</span></div>
 </section>
 
 <!-- 3. ANTISÈCHE -->
@@ -182,7 +188,7 @@
     <tr><td><span class="tag" style="background:#1B1B1B"></span>Grue / drone ↑</td><td>Révéler l'ensemble, conclure.</td><td>Fin de séquence, plan final</td></tr>
     <tr><td><span class="tag" style="background:#1B1B1B"></span>Grue / drone ↓</td><td>Entrer dans l'histoire.</td><td>Ouverture, premier plan du film</td></tr>
   </table>
-  <div class="foot"><span>Le Dojo de l'Image</span><span>03</span></div>
+  <div class="foot"><span>La Voie du Pixel</span><span>03</span></div>
 </section>
 
 <!-- 4. FICHES 01-02 -->
@@ -232,7 +238,7 @@
       <div class="row ex"><b>EXERCICE · </b>Fais un tilt lent des chaussures au visage d'un proche. Puis l'inverse. Compare l'effet.</div>
     </div>
   </div>
-  <div class="foot"><span>Le Dojo de l'Image</span><span>04</span></div>
+  <div class="foot"><span>La Voie du Pixel</span><span>04</span></div>
 </section>
 
 <!-- 5. FICHES 03-04 -->
@@ -283,7 +289,7 @@
       <div class="row ex"><b>EXERCICE · </b>Filme un objet sur une table en glissant sur le côté. Recommence avec un verre au premier plan. Compare.</div>
     </div>
   </div>
-  <div class="foot"><span>Le Dojo de l'Image</span><span>05</span></div>
+  <div class="foot"><span>La Voie du Pixel</span><span>05</span></div>
 </section>
 
 <!-- 6. FICHES 05-06 -->
@@ -338,7 +344,7 @@
       <div class="row ex"><b>EXERCICE · </b>Dans un couloir, essaie la version smartphone. 3 essais, garde le meilleur.</div>
     </div>
   </div>
-  <div class="foot"><span>Le Dojo de l'Image</span><span>06</span></div>
+  <div class="foot"><span>La Voie du Pixel</span><span>06</span></div>
 </section>
 
 <!-- 7. FICHES 07-08 -->
@@ -390,21 +396,21 @@
       <div class="row ex"><b>EXERCICE · </b>Ouvre ta prochaine vidéo par une descente, et ferme-la par une montée.</div>
     </div>
   </div>
-  <div class="foot"><span>Le Dojo de l'Image</span><span>07</span></div>
+  <div class="foot"><span>La Voie du Pixel</span><span>07</span></div>
 </section>
 
 <!-- 8. RÈGLES -->
 <section class="page">
-  <div class="kicker">Le code du dojo</div>
+  <div class="kicker">Le code du Sensei</div>
   <h2>Les 4 règles <span class="accent">d'or</span></h2>
   <p class="lead">Tu peux oublier tout le reste. Pas ces quatre règles.</p>
   <div class="rules">
     <div class="rule"><div class="stamp">1</div><div><h3>Un mouvement = une intention</h3><p>Chaque mouvement doit servir l'histoire : suivre, révéler, entrer, conclure. Pas de raison ? Plan fixe. Un plan fixe bien cadré vaut toujours mieux qu'un mouvement gratuit.</p></div></div>
     <div class="rule"><div class="stamp">2</div><div><h3>2 secondes avant, 2 secondes après</h3><p>Lance l'enregistrement, attends 2 secondes, fais ton mouvement, attends encore 2 secondes avant de couper. Ces 4 secondes te donnent des points de coupe propres au montage.</p></div></div>
     <div class="rule"><div class="stamp">3</div><div><h3>Lent et régulier</h3><p>Un mouvement lent paraît professionnel. Un seul à-coup, et le spectateur le voit. Démarre doucement, garde la même vitesse, ralentis doucement à la fin.</p></div></div>
-    <div class="rule"><div class="stamp">4</div><div><h3>Répète avant de filmer</h3><p>Fais ton geste 2 ou 3 fois à vide : trajectoire, vitesse, cadre de fin. Comme au dojo, on s'entraîne avant le combat. Le tournage, c'est l'exécution.</p></div></div>
+    <div class="rule"><div class="stamp">4</div><div><h3>Répète avant de filmer</h3><p>Fais ton geste 2 ou 3 fois à vide : trajectoire, vitesse, cadre de fin. Comme un vrai sensei, on s'entraîne avant le combat. Le tournage, c'est l'exécution.</p></div></div>
   </div>
-  <div class="foot"><span>Le Dojo de l'Image</span><span>08</span></div>
+  <div class="foot"><span>La Voie du Pixel</span><span>08</span></div>
 </section>
 
 <!-- 9. MATÉRIEL -->
@@ -451,13 +457,13 @@
     <div class="tip"><b>Pas de zoom numérique</b><p>Choisis un objectif (0,5× · 1× · 3×) et déplace-toi plutôt que de zoomer.</p></div>
     <div class="tip"><b>Filme en 4K si possible</b><p>Tu pourras recadrer et stabiliser au montage sans perdre en qualité pour un reel en 1080p.</p></div>
   </div>
-  <div class="foot"><span>Le Dojo de l'Image</span><span>09</span></div>
+  <div class="foot"><span>La Voie du Pixel</span><span>09</span></div>
 </section>
 
 <!-- 10. PLAN 7 JOURS -->
 <section class="page">
   <div class="kicker">L'entraînement</div>
-  <h2>7 jours <span class="accent">au dojo</span></h2>
+  <h2>7 jours <span class="accent">sur la Voie</span></h2>
   <p style="margin-bottom:2mm">15 minutes par jour, ton téléphone suffit. Coche chaque jour terminé.</p>
   <div class="days">
     <div class="day"><div class="d">J1</div><div><b>Plan fixe</b><p>5 plans fixes de 10 s où seul le sujet bouge. Verrouille exposition et mise au point.</p></div><div class="box"></div></div>
@@ -466,36 +472,36 @@
     <div class="day"><div class="d">J4</div><div><b>Latéral + premier plan</b><p>3 travellings latéraux, toujours avec un élément au premier plan.</p></div><div class="box"></div></div>
     <div class="day"><div class="d">J5</div><div><b>Zoom contre travelling</b><p>Même cadrage final, obtenu des deux façons. Compare l'arrière-plan.</p></div><div class="box"></div></div>
     <div class="day"><div class="d">J6</div><div><b>Épaule, stabilisé &amp; Vertigo</b><p>Un trajet en épaule, le même stabilisé. Bonus : tente l'effet Vertigo dans un couloir.</p></div><div class="box"></div></div>
-    <div class="day final"><div class="d" style="color:var(--gold)">J7</div><div><b>Ton mini-film de 30 secondes</b><p>Ouvre par une descente, utilise 3 mouvements avec une intention claire, ferme par une montée. Applique les 4 règles. Publie-le et identifie-moi : je regarde et je commente.</p></div><div class="box"></div></div>
+    <div class="day final"><div class="d" style="color:var(--gold)">J7</div><div><b>Ton mini-film de 30 secondes</b><p>Ouvre par une descente, utilise 3 mouvements avec une intention claire, ferme par une montée. Applique les 4 règles. Publie-le et identifie <b>@iampixelsensei</b> : je regarde et je commente.</p></div><div class="box"></div></div>
   </div>
-  <div class="foot"><span>Le Dojo de l'Image</span><span>10</span></div>
+  <div class="foot"><span>La Voie du Pixel</span><span>10</span></div>
 </section>
 
 <!-- 11. FIN -->
 <section class="page end">
-  <div class="brand" style="font-weight:800;letter-spacing:4px;font-size:10pt;color:var(--gold)">LE DOJO DE L'IMAGE</div>
+  <div class="brandrow"><div class="logo"></div><div><div class="t1">LA VOIE DU PIXEL</div><div class="t2">@iampixelsensei</div></div></div>
   <h2>Tu as les bases.<br><span style="color:var(--gold)">Passe au niveau supérieur.</span></h2>
   <p class="lead" style="color:#e2d9ca;max-width:150mm">Connaître les mouvements, c'est la ceinture blanche. Savoir les enchaîner pour raconter une histoire qui retient l'attention et qui vend, c'est la ceinture noire.</p>
   <div class="offers">
     <div class="offer main">
-      <div class="kicker" style="color:var(--paper)">La formation</div>
-      <h3><span class="todo">[NOM DE LA FORMATION]</span></h3>
-      <p>Tournage, cadrage, mouvements, montage et création de contenu : la méthode complète pour produire des vidéos qui font grandir ton audience et ton activité.</p>
-      <span class="link"><span class="todo">[LIEN FORMATION]</span></span>
+      <div class="kicker" style="color:var(--paper)">La formation · bientôt sur Udemy</div>
+      <h3>Pixel Creative Hub</h3>
+      <p>Tournage, cadrage, mouvements, montage et création de contenu : la méthode complète de Pixel Sensei pour produire des vidéos qui font grandir ton audience et ton activité.</p>
+      <a class="wa" href="https://wa.me/23585684441?text=Bonjour%20Pixel%20Sensei%2C%20je%20veux%20%C3%AAtre%20pr%C3%A9venu%28e%29%20de%20la%20sortie%20de%20la%20formation%20Pixel%20Creative%20Hub."><svg viewBox="0 0 24 24"><path fill="#0b2e17" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 1.9 1.1.9 2 1.2 2.3 1.4.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.4.2.5.3.1.2.1.8-.1 1.4z"/></svg>Préviens-moi de la sortie</a>
     </div>
     <div class="offer">
-      <div class="kicker" style="color:var(--gold)">Prestations</div>
+      <div class="kicker" style="color:var(--gold)">Prestations vidéo &amp; photo</div>
       <h3>Besoin d'une vidéo pro ?</h3>
-      <p>Vidéo de marque, portrait, mariage, événement, photographie, contenus pour les réseaux sociaux. On en parle ?</p>
-      <span class="link"><span class="todo">[LIEN RÉSERVATION / CONTACT]</span></span>
+      <p>Vidéo de marque, portrait, mariage, événement, photographie, contenus pour les réseaux sociaux. Écris-moi directement sur WhatsApp.</p>
+      <a class="wa" href="https://wa.me/23585684441?text=Bonjour%20Pixel%20Sensei%2C%20j%27ai%20lu%20le%20guide%20La%20Voie%20du%20Pixel%20et%20j%27aimerais%20parler%20d%27un%20projet%20vid%C3%A9o/photo."><svg viewBox="0 0 24 24"><path fill="#0b2e17" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 1.9 1.1.9 2 1.2 2.3 1.4.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.4.2.5.3.1.2.1.8-.1 1.4z"/></svg>+235 85 68 44 41</a><a class="wa" href="https://wa.me/23595844695?text=Bonjour%20Pixel%20Sensei%2C%20j%27ai%20lu%20le%20guide%20La%20Voie%20du%20Pixel%20et%20j%27aimerais%20parler%20d%27un%20projet%20vid%C3%A9o/photo."><svg viewBox="0 0 24 24"><path fill="#0b2e17" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 1.9 1.1.9 2 1.2 2.3 1.4.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.4.2.5.3.1.2.1.8-.1 1.4z"/></svg>+235 95 84 46 95</a>
     </div>
     <div class="offer">
       <div class="kicker" style="color:var(--gold)">Chaque jour, une leçon</div>
-      <h3>Suis le dojo</h3>
-      <p>Instagram · TikTok · Facebook · YouTube : <span class="todo">[@TON_COMPTE]</span></p>
+      <h3>Suis la Voie du Pixel</h3>
+      <p>Instagram · TikTok · Facebook · YouTube : <b style="color:var(--gold)">@iampixelsensei</b></p>
     </div>
   </div>
-  <div class="foot"><span>Le Dojo de l'Image</span><span class="kanji">道場</span></div>
+  <div class="foot"><span>La Voie du Pixel</span><span class="kanji">道</span></div>
 </section>
 
 </body>

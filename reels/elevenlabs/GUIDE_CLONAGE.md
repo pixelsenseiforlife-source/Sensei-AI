@@ -28,7 +28,7 @@ Le clone copie **tout** : ta voix, mais aussi l'écho de la pièce, le souffle d
 
 Lis-le 2 fois : une fois calme, une fois avec énergie. Pour le Professional, ajoute la lecture des 10 scripts du dossier `scripts/` et des improvisations sur ton métier jusqu'à 30 min minimum.
 
-> Bienvenue au Dojo de l'Image. Ici, on n'apprend pas à filmer pour faire joli. On apprend à filmer pour raconter.
+> Bienvenue sur la Voie du Pixel. Ici, on n'apprend pas à filmer pour faire joli. On apprend à filmer pour raconter.
 > Une caméra qui bouge, ce n'est jamais neutre. Elle avance, et on entre dans l'émotion. Elle recule, et on quitte la scène. Elle monte, et tout devient plus grand. Elle descend, et l'histoire commence.
 > Tu crois que le matériel fait tout ? Faux. Un téléphone bien tenu vaut mieux qu'une caméra de cinéma qui tremble sans raison.
 > Alors, première question : pourquoi tu bouges ? Si tu n'as pas de réponse, reste fixe. Pose ta caméra. Laisse ton sujet vivre dans le cadre.
@@ -37,7 +37,7 @@ Lis-le 2 fois : une fois calme, une fois avec énergie. Pour le Professional, aj
 > Photographie, vidéo, réseaux sociaux : la règle est la même. L'image doit servir le message. Pas l'inverse.
 > Un mariage, une marque, un portrait : chaque client mérite une image qui lui ressemble. Et chaque créateur mérite de savoir la fabriquer.
 > Allez. On s'entraîne. Un, deux, trois… Action !
-> Tu as aimé cette leçon ? Abonne-toi, partage-la à un ami vidéaste, et écris-moi en commentaire quel mouvement tu vas tester en premier. On se retrouve demain, au dojo.
+> Tu as aimé cette leçon ? Abonne-toi, partage-la à un ami vidéaste, et écris-moi en commentaire quel mouvement tu vas tester en premier. On se retrouve demain, sur la Voie du Pixel.
 
 ## Créer le clone
 

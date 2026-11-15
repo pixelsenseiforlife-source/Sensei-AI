@@ -1,4 +1,4 @@
-# Le Dojo de l'Image — Série de reels animés 2D
+# La Voie du Pixel — Série de reels animés 2D par Pixel Sensei (@iampixelsensei)
 
 Série de reels courts (25–35 s) sur les **mouvements de caméra**, en animation 2D, avec **ta voix clonée** sur ElevenLabs.
 Diffusion : Instagram Reels, TikTok, Facebook Reels, YouTube Shorts.
@@ -13,10 +13,10 @@ Diffusion : Instagram Reels, TikTok, Facebook Reels, YouTube Shorts.
 | Objectif | Comment la série y répond |
 |---|---|
 | **Grossir l'audience** | 1 notion = 1 reel, accroche en 2 s, format « erreur → correction » qui pousse au partage et à l'enregistrement |
-| **Vendre la formation** | Aimant à prospects : « Commente DOJO » → guide PDF gratuit → liste e-mail → formation |
+| **Vendre la formation** | Aimant à prospects : « Commente SENSEI » → guide PDF gratuit → liste e-mail → formation |
 | **Vendre les prestations** | Chaque reel prouve ton expertise. CTA prestation dans la légende sur les reels « client » (portrait, mariage, marque) |
 
-Rotation des appels à l'action : **70 %** engagement / abonnement · **20 %** aimant (DOJO) · **10 %** prestation.
+Rotation des appels à l'action : **70 %** engagement / abonnement · **20 %** aimant (SENSEI) · **10 %** prestation.
 
 ---
 
@@ -25,7 +25,7 @@ Rotation des appels à l'action : **70 %** engagement / abonnement · **20 %** a
 Là où la vidéo d'origine est un **cours magistral**, on fait une **mini-histoire** à chaque reel :
 
 1. **L'élève** (jeune créateur, smartphone à la main) fait une erreur classique.
-2. **Le Sensei** (vieux maître, bandeau, caméra vintage) l'arrête — « Stop. »
+2. **Le Sensei** l'arrête — « Stop. » C'est le maître du logo Pixel Sensei : chapeau conique, sourcils épais, longue barbe, une caméra à la main. Le personnage animé = ta marque.
 3. **Démonstration** : l'écran se divise, on voit le bon mouvement et son effet.
 4. **Le tampon rouge** : la règle du jour s'imprime à l'écran comme un sceau (« RÈGLE N°3 »).
 
@@ -35,7 +35,8 @@ La voix off, c'est **toi** = le Sensei. Tu parles au spectateur en le tutoyant, 
 
 | Élément | Choix |
 |---|---|
-| Fond | Papier crème `#F4EDE1` (texture légère) |
+| Logo | `brand/logo-pixel-sensei.jpg` : gris anthracite sur crème |
+| Fond | Papier crème `#F4EDE1` (texture légère), comme le logo |
 | Encre / traits | Noir encre `#1B1B1B` |
 | Accent principal | Rouge vermillon `#E63B2E` (tampons, erreurs, flèches) |
 | Accent secondaire | Or `#F2B33D` (règles, titres) |
@@ -63,7 +64,7 @@ La voix off, c'est **toi** = le Sensei. Tu parles au spectateur en le tutoyant, 
 | 07 | Caméra qui tremble : erreur ? | Épaule vs stabilisé | Commentaire + **prestation** |
 | 08 | Ton drone, au début ou à la fin ? | Grue / drone | Enregistrer |
 | 09 | Ton monteur te déteste | Règle des 2 secondes | Enregistrer |
-| 10 | Les 4 règles du dojo | Récap des règles d'or | **DOJO → guide → formation** |
+| 10 | Les 4 règles de la Voie | Récap des règles d'or | **SENSEI → guide → formation** |
 
 Scripts complets : dossier [`scripts/`](scripts/).
 
@@ -76,7 +77,7 @@ Scripts complets : dossier [`scripts/`](scripts/).
 | 1 | 01 Plan fixe | 02 Zoom vs travelling | 03 Vertigo |
 | 2 | 04 Avant / arrière | 05 Parallaxe | 06 Panoramique |
 | 3 | 07 Épaule / stabilisé | 08 Drone | 09 Règle des 2 s |
-| 4 | 10 Les 4 règles (DOJO) | Repost du meilleur reel | **Version longue YouTube** (compilation 3–4 min) |
+| 4 | 10 Les 4 règles (SENSEI) | Repost du meilleur reel | **Version longue YouTube** (compilation 3–4 min) |
 
 - **Même vidéo sur les 4 plateformes**, sans filigrane TikTok (exporter depuis ton logiciel, pas depuis l'appli).
 - Heures à tester : 12 h et 19 h. On ajuste après 2 semaines selon les stats.
@@ -94,7 +95,16 @@ Scripts complets : dossier [`scripts/`](scripts/).
 6. **Export** → 1080 × 1920, 30 i/s, H.264, ~15 Mb/s
 
 ## 6. À préparer pour l'entonnoir
-- [ ] Guide PDF gratuit « Les mouvements de caméra du Dojo » (aimant à prospects)
-- [ ] Réponse automatique au mot « DOJO » (ManyChat pour Instagram / Facebook, message épinglé sur TikTok)
+- [ ] Guide PDF gratuit « La Voie du Pixel : les mouvements de caméra » (aimant à prospects)
+- [ ] Réponse automatique au mot « SENSEI » (ManyChat pour Instagram / Facebook, message épinglé sur TikTok)
 - [ ] Page de capture e-mail → séquence de 5 e-mails → offre formation
 - [ ] Lien en bio : formation + « Réserver une prestation »
+
+## 7. Contacts et liens (à utiliser partout)
+| | |
+|---|---|
+| Réseaux | **@iampixelsensei** (Instagram, TikTok, Facebook, YouTube) |
+| Formation | **Pixel Creative Hub**, bientôt sur Udemy (ajouter le lien à la sortie) |
+| WhatsApp | +235 85 68 44 41 · https://wa.me/23585684441 |
+| WhatsApp | +235 95 84 46 95 · https://wa.me/23595844695 |
+| Mot-clé aimant | **SENSEI** → guide gratuit « La Voie du Pixel » |

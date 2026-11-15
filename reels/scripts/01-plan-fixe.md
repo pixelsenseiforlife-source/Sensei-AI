@@ -10,7 +10,7 @@ Tu bouges ta caméra tout le temps ? <break time="0.4s" /> Arrête.
 Le mouvement le plus puissant, c'est souvent… de ne pas bouger.
 Le plan fixe : caméra posée, sur un trépied ou contre un mur. Et c'est ton sujet qui fait l'action. Il entre, il agit, il sort du cadre.
 Le spectateur ne regarde plus ta technique. Il regarde l'histoire.
-Règle du dojo : si ton mouvement n'a pas de raison… reste fixe.
+Première règle de la Voie : si ton mouvement n'a pas de raison… reste fixe.
 Abonne-toi. Demain, on fait bouger la caméra. Mais avec une intention.
 ```
 
@@ -28,7 +28,7 @@ Abonne-toi. Demain, on fait bouger la caméra. Mais avec une intention.
 ## Légende
 Le mouvement le plus puissant ? Ne pas bouger. 🎥
 Un plan fixe bien pensé raconte plus qu'un mouvement sans intention.
-👉 Abonne-toi : chaque jour, une leçon du Dojo de l'Image.
+👉 Abonne-toi : chaque jour, une leçon de la Voie du Pixel.
 
 **Hashtags :** #videographie #tournage #mouvementdecamera #astucevideo #filmmaking #creationdecontenu #planfixe
 **Titre YouTube Shorts :** Le mouvement de caméra le plus puissant (ce n'en est pas un)

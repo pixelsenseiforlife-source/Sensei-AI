@@ -11,7 +11,7 @@ Le panoramique : ta caméra reste au même endroit, elle pivote sur elle-même.
 À l'horizontale, tu suis quelqu'un qui marche, ou tu révèles un paysage.
 À la verticale, c'est le tilt. Pars des pieds, monte lentement jusqu'au visage… et ton personnage gagne en grandeur, en présence.
 Fais l'inverse, du ciel vers le sol, pour présenter un lieu.
-Teste-le sur ton prochain portrait client. Et abonne-toi pour la suite du dojo.
+Teste-le sur ton prochain portrait client. Et abonne-toi pour la suite de la Voie du Pixel.
 ```
 
 ## Découpage animation
@@ -27,7 +27,7 @@ Teste-le sur ton prochain portrait client. Et abonne-toi pour la suite du dojo.
 ## Légende
 Le tilt : le mouvement le plus simple pour donner de la prestance à quelqu'un. 👑
 Des pieds au visage, lentement. C'est tout.
-👉 Abonne-toi pour la suite du Dojo de l'Image.
+👉 Abonne-toi pour la suite de la Voie du Pixel.
 📸 Portrait vidéo pro pour ton activité ? Écris-moi en message privé.
 
 **Hashtags :** #panoramique #tilt #portraitvideo #videographie #personalbranding #filmmaking
