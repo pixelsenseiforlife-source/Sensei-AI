@@ -14,6 +14,16 @@ Quatre : répète ton geste avant de filmer. Comme un vrai sensei : on s'entraî
 Je t'ai préparé un guide gratuit avec ces règles et tous les mouvements à connaître. Écris SENSEI en commentaire, et je te l'envoie.
 ```
 
+### Voix off jouée (modèle ElevenLabs v3)
+```voix-off-v3
+[confident] Quatre règles. [short pause] Et tes mouvements de caméra ne feront plus JAMAIS amateurs.
+[firmly] Un : un mouvement, une intention. Pas de raison ? Reste fixe.
+[firmly] Deux : deux secondes fixes avant et après, pour ton montage.
+[firmly] Trois : lent et régulier. Un seul à-coup… et tout le monde le voit.
+[wise] Quatre : répète ton geste avant de filmer. Comme un vrai sensei : on s'entraîne avant le combat.
+[warmly] Je t'ai préparé un guide gratuit avec ces règles et tous les mouvements à connaître. [excited] Écris SENSEI en commentaire, et je te l'envoie !
+```
+
 ## Découpage animation
 | Temps | Image | Texte écran |
 |---|---|---|

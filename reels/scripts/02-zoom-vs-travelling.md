@@ -13,6 +13,15 @@ Le zoom n'est pas interdit. Mais utilise-le avec modération.
 Tu savais faire la différence ? <break time="0.3s" /> Dis-le-moi en commentaire.
 ```
 
+### Voix off jouée (modèle ElevenLabs v3)
+```voix-off-v3
+[intrigued] Ces deux plans ont l'air pareils. [short pause] Pourtant… l'un des deux est une ERREUR de débutant.
+[explaining] En haut : un zoom. La caméra ne bouge pas, c'est l'objectif qui change de focale. Le sujet et le décor grossissent ENSEMBLE. [disappointed] L'image paraît plate.
+[enthusiastic] En bas : un travelling. La caméra avance VRAIMENT. Le décor change de taille par rapport au sujet… [amazed] et là, tu sens la profondeur.
+[calm] Le zoom n'est pas interdit. Mais utilise-le… avec modération.
+[playfully] Tu savais faire la différence ? Dis-le-moi en commentaire.
+```
+
 ## Découpage animation
 | Temps | Image | Texte écran |
 |---|---|---|

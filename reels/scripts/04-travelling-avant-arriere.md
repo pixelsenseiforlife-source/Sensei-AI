@@ -13,6 +13,15 @@ Avancer, c'est entrer. Reculer, c'est révéler, ou quitter.
 Et toi, lequel tu utilises le plus ? Écris AVANT ou ARRIÈRE.
 ```
 
+### Voix off jouée (modèle ElevenLabs v3)
+```voix-off-v3
+[intrigued] Même scène. Deux émotions OPPOSÉES. [short pause] Juste en déplaçant ta caméra.
+[softly] Travelling avant : tu t'approches du sujet. Le spectateur entre dans sa tête… dans son émotion. Parfait pour une confidence, une décision, une tension qui monte.
+[melancholic] Travelling arrière : tu t'éloignes. Tu révèles le décor… ou tu laisses ton personnage seul. Idéal pour une fin, une solitude, un adieu.
+[wise] Avancer, c'est ENTRER. Reculer, c'est révéler… ou quitter.
+[playfully] Et toi, lequel tu utilises le plus ? Écris AVANT… ou ARRIÈRE.
+```
+
 ## Découpage animation
 | Temps | Image | Texte écran |
 |---|---|---|

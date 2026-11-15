@@ -48,9 +48,27 @@ def is_v3() -> bool:
 def for_tts(text: str) -> str:
     for a, b in PRONONCIATION.items():
         text = text.replace(a, b)
+    # « tout » : le T final ne se prononce pas devant une consonne ni en fin de phrase
+    text = re.sub(r"\b([Tt])out(?=\s+(?:\[[^\]]*\]\s*)?[^aeiouyhéèêàâîôûœAEIOUYHÉÈÀ\s\[])", r"\1ou", text)
+    text = re.sub(r"\b([Tt])out(?=\s*[.!?…,;:])", r"\1ou", text)
     if is_v3():  # v3 ne lit pas les balises <break> : on les remplace par une pause écrite
         text = re.sub(r"\s*<break[^>]*/>\s*", "… ", text)
+        text = text.rstrip()
+        if text[-1] not in ".!?…":
+            text += "."
     return text
+
+
+def ends_cleanly(path: Path) -> bool:
+    """Vrai si les 150 dernières ms sont quasi silencieuses (mot final non coupé)."""
+    import math, struct, subprocess
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-sseof", "-0.15", "-i", str(path), "-ac", "1", "-ar", "8000",
+                          "-f", "s16le", "-"], capture_output=True).stdout
+    n = len(raw) // 2
+    if n == 0:
+        return False
+    samples = struct.unpack(f"<{n}h", raw)
+    return math.sqrt(sum(x * x for x in samples) / n) < 400
 
 
 def extract(path: Path) -> str:
@@ -61,7 +79,14 @@ def extract(path: Path) -> str:
     return " ".join(line.strip() for line in m.group(1).splitlines() if line.strip())
 
 
+# v3 tronque parfois la fin au hasard : on ajoute une phrase tampon après le texte,
+# on récupère l'horodatage de chaque caractère, puis on coupe juste après le vrai dernier mot.
+TAMPON = " [long pause] Voilà, c'est tout pour aujourd'hui."
+
+
 def synthesize(text: str, dest: Path, key: str, voice: str) -> None:
+    if is_v3():
+        return synthesize_v3_trimmed(text, dest, key, voice)
     body = {
         "text": for_tts(text),
         "model_id": os.environ.get("ELEVENLABS_MODEL", "eleven_v3"),
@@ -80,6 +105,42 @@ def synthesize(text: str, dest: Path, key: str, voice: str) -> None:
     )
     with urllib.request.urlopen(req, timeout=120) as resp:
         dest.write_bytes(resp.read())
+
+
+def synthesize_v3_trimmed(text: str, dest: Path, key: str, voice: str) -> None:
+    import base64, subprocess, tempfile
+    real = for_tts(text)
+    body = {
+        "text": real + TAMPON,
+        "model_id": os.environ.get("ELEVENLABS_MODEL", "eleven_v3"),
+        "voice_settings": {
+            "stability": float(os.environ.get("ELEVENLABS_STABILITY", 1.0)),
+            "similarity_boost": float(os.environ.get("ELEVENLABS_SIMILARITY", 1.0)),
+            "style": float(os.environ.get("ELEVENLABS_STYLE", 0.0)),
+            "use_speaker_boost": True,
+        },
+    }
+    req = urllib.request.Request(
+        f"https://api.elevenlabs.io/v1/text-to-speech/{voice}/with-timestamps?output_format=mp3_44100_128",
+        data=json.dumps(body).encode(),
+        headers={"xi-api-key": key, "Content-Type": "application/json"},
+        method="POST",
+    )
+    with urllib.request.urlopen(req, timeout=180) as resp:
+        data = json.load(resp)
+    al = data.get("alignment") or {}
+    ends, starts = al.get("character_end_times_seconds", []), al.get("character_start_times_seconds", [])
+    if len(ends) < len(real) + 5:
+        raise RuntimeError("horodatage incomplet")
+    last_end = ends[len(real) - 1]
+    # début du mot « Voilà » du tampon
+    tampon_start = starts[len(real) + TAMPON.index("Voilà")]
+    cut = min(last_end + 0.45, tampon_start - 0.05)
+    with tempfile.NamedTemporaryFile(suffix=".mp3", delete=False) as tmp:
+        tmp.write(base64.b64decode(data["audio_base64"]))
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", tmp.name, "-t", f"{cut:.3f}",
+                    "-af", f"afade=t=out:st={max(cut - 0.15, 0):.3f}:d=0.15", "-b:a", "128k", str(dest)], check=True)
+    os.unlink(tmp.name)
 
 
 def main() -> int:
@@ -107,8 +168,14 @@ def main() -> int:
                 print("  MP3 déjà présent, ignoré (--force pour régénérer)")
                 continue
             try:
-                synthesize(text, dest, key, voice)
-                print(f"  -> {dest.relative_to(ROOT)}")
+                for attempt in range(1, 4):
+                    synthesize(text, dest, key, voice)
+                    if ends_cleanly(dest):
+                        print(f"  -> {dest.relative_to(ROOT)} (fin vérifiée, essai {attempt})")
+                        break
+                    print(f"  fin coupée, nouvel essai ({attempt}/3)")
+                else:
+                    print(f"  ATTENTION : fin toujours coupée, à vérifier à l'oreille : {dest.name}")
             except urllib.error.HTTPError as e:
                 print(f"  ERREUR {e.code}: {e.read().decode(errors='replace')[:300]}")
                 return 1

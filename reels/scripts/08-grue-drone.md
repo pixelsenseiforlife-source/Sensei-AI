@@ -13,6 +13,15 @@ Pas de drone ? Une perche, ou ton téléphone levé à bout de bras, fait déjà
 Monter pour finir. Descendre pour commencer. Enregistre-le.
 ```
 
+### Voix off jouée (modèle ElevenLabs v3)
+```voix-off-v3
+[curious] Ton drone, tu l'utilises au début de ta vidéo… ou à la fin ? [short pause] Parce que ça change tout.
+[awe] Quand la caméra monte, elle révèle le lieu. Ton personnage devient tout petit dans un grand décor. C'est parfait pour CONCLURE une séquence.
+[warmly] Quand la caméra descend, c'est l'inverse : on entre dans l'histoire. Du ciel… jusqu'au personnage. C'est ton ouverture idéale.
+[friendly] Pas de drone ? Une perche, ou ton téléphone levé à bout de bras, fait déjà le travail.
+[wise] Monter pour finir. Descendre pour commencer. [confident] Enregistre-le.
+```
+
 ## Découpage animation
 | Temps | Image | Texte écran |
 |---|---|---|

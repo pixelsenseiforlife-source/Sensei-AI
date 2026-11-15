@@ -14,6 +14,16 @@ Fais l'inverse, du ciel vers le sol, pour présenter un lieu.
 Teste-le sur ton prochain portrait client. Et abonne-toi pour la suite de la Voie du Pixel.
 ```
 
+### Voix off jouée (modèle ElevenLabs v3)
+```voix-off-v3
+[intrigued] Tu veux rendre quelqu'un PUISSANT à l'image ? [short pause] Un seul mouvement suffit.
+[explaining] Le panoramique : ta caméra reste au même endroit, elle pivote sur elle-même.
+[calm] À l'horizontale, tu suis quelqu'un qui marche, ou tu révèles un paysage.
+[slowly] À la verticale, c'est le tilt. Pars des pieds… monte lentement jusqu'au visage… [impressed] et ton personnage gagne en grandeur, en présence.
+[explaining] Fais l'inverse, du ciel vers le sol, pour présenter un lieu.
+[warmly] Teste-le sur ton prochain portrait client. [excited] Et abonne-toi pour la suite de la Voie du Pixel !
+```
+
 ## Découpage animation
 | Temps | Image | Texte écran |
 |---|---|---|

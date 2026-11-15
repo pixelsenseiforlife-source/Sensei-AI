@@ -13,6 +13,15 @@ Le problème, ce n'est pas le tremblement. C'est le tremblement sans raison.
 Et toi, tu es plutôt épaule… ou stabilisé ?
 ```
 
+### Voix off jouée (modèle ElevenLabs v3)
+```voix-off-v3
+[curious] Une caméra qui tremble : erreur… ou choix artistique ? [short pause] Ça dépend de ton INTENTION.
+[energetic] Caméra à l'épaule : l'image vit, elle respire, elle tremble un peu. C'est nerveux, immersif. Parfait pour le reportage, l'action, les coulisses.
+[smoothly] Caméra stabilisée : même mouvement, mais fluide… élégant. Un gimbal, ou la stabilisation de ton téléphone. Idéal pour un mariage, une pub, un produit.
+[serious] Le problème, ce n'est pas le tremblement. C'est le tremblement SANS RAISON.
+[playfully] Et toi, tu es plutôt épaule… ou stabilisé ?
+```
+
 ## Découpage animation
 | Temps | Image | Texte écran |
 |---|---|---|

@@ -13,6 +13,15 @@ Au montage, ces quatre secondes vont te sauver la vie. Et si c'est toi le monteu
 Enregistre ce reel, et applique-le dès ton prochain tournage.
 ```
 
+### Voix off jouée (modèle ElevenLabs v3)
+```voix-off-v3
+[teasing] Ton monteur te déteste. [short pause] Et voici pourquoi.
+[explaining] Tu lances l'enregistrement… et tu bouges tout de suite. Tu finis ton mouvement… et tu coupes tout de suite. [frustrated] Résultat : impossible de faire une coupe propre.
+[firmly] La règle des DEUX secondes : garde deux secondes fixes avant ton mouvement, et deux secondes fixes après.
+[relieved] Au montage, ces quatre secondes vont te sauver la vie. [laughs softly] Et si c'est toi le monteur… tu vas me remercier.
+[confident] Enregistre ce reel, et applique-le dès ton prochain tournage.
+```
+
 ## Découpage animation
 | Temps | Image | Texte écran |
 |---|---|---|

@@ -14,6 +14,16 @@ Pas de rail ? Marche lentement, genoux fléchis, avec un stabilisateur.
 Envoie ce reel à un ami vidéaste qui filme plat.
 ```
 
+### Voix off jouée (modèle ElevenLabs v3)
+```voix-off-v3
+[curious] Pourquoi certaines vidéos ont l'air en 3D… et les tiennes, toutes plates ?
+[confident] Le secret s'appelle… la parallaxe.
+[explaining] Fais un travelling latéral : ta caméra glisse sur le côté, à côté de ton sujet. Regarde : le premier plan défile VITE, l'arrière-plan défile lentement. Ce décalage… c'est ça, la profondeur.
+[wise] L'astuce du Sensei : place TOUJOURS un élément au premier plan. Une branche, un poteau, une table.
+[friendly] Pas de rail ? Marche lentement, genoux fléchis, avec un stabilisateur.
+[playfully] Envoie ce reel à un ami vidéaste… qui filme plat.
+```
+
 ## Découpage animation
 | Temps | Image | Texte écran |
 |---|---|---|

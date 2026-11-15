@@ -14,6 +14,16 @@ Astuce : sur smartphone, avance lentement et recadre progressivement au montage.
 Enregistre ce reel. Tu le testes ce week-end.
 ```
 
+### Voix off jouée (modèle ElevenLabs v3)
+```voix-off-v3
+[mysterious] Regarde le décor derrière lui. [pause] Il se déforme… [whispers] alors que lui ne bouge pas.
+[dramatic] C'est l'effet Vertigo.
+[explaining] Le secret : tu AVANCES la caméra vers ton sujet, et en même temps, tu zoomes en ARRIÈRE. Ton sujet garde exactement la même taille… mais tout l'arrière-plan s'étire autour de lui.
+[intense] Effet garanti pour un choc, une révélation, une prise de conscience.
+[friendly] Astuce : sur smartphone, avance lentement, et recadre progressivement au montage.
+[excited] Enregistre ce reel. Tu le testes ce week-end !
+```
+
 ## Découpage animation
 | Temps | Image | Texte écran |
 |---|---|---|
