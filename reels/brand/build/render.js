@@ -7,7 +7,10 @@ const path = require('path'); const { chromium } = require('playwright');
   await p.evaluate(() => document.fonts.ready);
   await p.pdf({ path: path.join(__dirname, '..', 'Bible-graphique-La-Voie-du-Pixel.pdf'), printBackground: true, preferCSSPageSize: true });
   const m = await b.newPage({ viewport: { width: 1080, height: 1920 } });
-  await m.goto('file://' + path.join(__dirname, '..', 'maquettes', 'maquette-reel.svg'));
+  const svg = require('fs').readFileSync(path.join(__dirname, '..', 'maquettes', 'maquette-reel.svg'), 'utf8');
+  await m.setContent('<html><head><link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">'
+    + '<style>body{margin:0}svg{display:block}</style></head><body>' + svg + '</body></html>', { waitUntil: 'networkidle' });
+  await m.evaluate(() => document.fonts.ready);
   await m.screenshot({ path: path.join(__dirname, '..', 'maquettes', 'maquette-reel.png') });
   await b.close(); console.log('rendu ok');
 })();
