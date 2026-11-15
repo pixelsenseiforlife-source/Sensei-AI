@@ -108,7 +108,13 @@ Scripts complets : dossier [`scripts/`](scripts/).
 - Logo détouré (fond transparent) : `brand/logo-pixel-sensei-{noir,creme,gris}.png`
 - Outro animée : `brand/outro/outro-pixel-sensei.mp4` (regénérer : `node reels/brand/outro/render_outro.js`)
 
-## 8. Contacts et liens (à utiliser partout)
+## 8. Animation et export
+- Reel 01 animé : `export/01-plan-fixe.mp4` (1080 × 1920, 30 i/s, −14 LUFS, outro incluse)
+- Pour le recréer : `python3 -I reels/animation/build_reel01.py && node reels/animation/render_reel.js 01`
+- Aperçu rapide (12 images) : ajouter `--preview`
+- La synchro voix/animation vient de `animation/01/timing.json` (horodatage des mots par ElevenLabs)
+
+## 9. Contacts et liens (à utiliser partout)
 | | |
 |---|---|
 | Réseaux | **@iampixelsensei** (Instagram, TikTok, Facebook, YouTube) |
