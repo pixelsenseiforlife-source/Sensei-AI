@@ -14,6 +14,16 @@ Première règle de la Voie : si ton mouvement n'a pas de raison… reste fixe.
 Abonne-toi. Demain, on fait bouger la caméra. Mais avec une intention.
 ```
 
+### Voix off jouée (modèle ElevenLabs v3)
+```voix-off-v3
+[curious] Tu bouges ta caméra tout le temps ? [short pause] [firmly] Arrête.
+[thoughtful] Le mouvement le plus puissant, c'est souvent… [softly] de NE PAS bouger.
+[calm] Le plan fixe : caméra posée, sur un trépied, ou contre un mur. Et c'est TON SUJET qui fait l'action. Il entre… il agit… il sort du cadre.
+[warmly] Le spectateur ne regarde plus ta technique. Il regarde L'HISTOIRE.
+[serious] Première règle de la Voie : si ton mouvement n'a pas de raison… reste fixe.
+[excited] Abonne-toi ! Demain, on fait bouger la caméra. [playfully] Mais… avec une intention.
+```
+
 ## Découpage animation
 | Temps | Image | Texte écran |
 |---|---|---|

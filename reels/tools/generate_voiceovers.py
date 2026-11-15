@@ -12,7 +12,11 @@ Utilisation :
     python3 reels/tools/generate_voiceovers.py --force    # régénère les MP3 existants
 
 Variables d'environnement optionnelles :
-    ELEVENLABS_MODEL (défaut : eleven_multilingual_v2)
+    ELEVENLABS_MODEL (défaut : eleven_v3 ; sinon eleven_multilingual_v2)
+    ELEVENLABS_OUT   (sous-dossier de sortie, défaut : audio)
+
+Avec eleven_v3, le bloc ```voix-off-v3``` du script est utilisé s'il existe : il contient
+des indications de jeu entre crochets ([firmly], [whispers]...) et des MAJUSCULES d'insistance.
     ELEVENLABS_STABILITY, ELEVENLABS_SIMILARITY, ELEVENLABS_STYLE (0 à 1)
 """
 import json
@@ -26,12 +30,32 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SCRIPTS = ROOT / "scripts"
 OUT = ROOT / "voiceover"
-AUDIO = OUT / "audio"
+AUDIO = OUT / os.environ.get("ELEVENLABS_OUT", "audio")
 BLOCK = re.compile(r"```voix-off\n(.*?)```", re.S)
+BLOCK_V3 = re.compile(r"```voix-off-v3\n(.*?)```", re.S)
+
+# Corrections de prononciation : appliquées uniquement au texte envoyé à ElevenLabs.
+PRONONCIATION = {
+    "tout le temps": "tou le temps",
+    "Tout le temps": "Tou le temps",
+}
+
+
+def is_v3() -> bool:
+    return os.environ.get("ELEVENLABS_MODEL", "eleven_v3").startswith("eleven_v3")
+
+
+def for_tts(text: str) -> str:
+    for a, b in PRONONCIATION.items():
+        text = text.replace(a, b)
+    if is_v3():  # v3 ne lit pas les balises <break> : on les remplace par une pause écrite
+        text = re.sub(r"\s*<break[^>]*/>\s*", "… ", text)
+    return text
 
 
 def extract(path: Path) -> str:
-    m = BLOCK.search(path.read_text(encoding="utf-8"))
+    content = path.read_text(encoding="utf-8")
+    m = (BLOCK_V3.search(content) if is_v3() else None) or BLOCK.search(content)
     if not m:
         raise ValueError(f"Pas de bloc voix-off dans {path.name}")
     return " ".join(line.strip() for line in m.group(1).splitlines() if line.strip())
@@ -39,12 +63,12 @@ def extract(path: Path) -> str:
 
 def synthesize(text: str, dest: Path, key: str, voice: str) -> None:
     body = {
-        "text": text,
-        "model_id": os.environ.get("ELEVENLABS_MODEL", "eleven_multilingual_v2"),
+        "text": for_tts(text),
+        "model_id": os.environ.get("ELEVENLABS_MODEL", "eleven_v3"),
         "voice_settings": {
-            "stability": float(os.environ.get("ELEVENLABS_STABILITY", 0.5)),
+            "stability": float(os.environ.get("ELEVENLABS_STABILITY", 0.5 if is_v3() else 0.3)),
             "similarity_boost": float(os.environ.get("ELEVENLABS_SIMILARITY", 0.8)),
-            "style": float(os.environ.get("ELEVENLABS_STYLE", 0.15)),
+            "style": float(os.environ.get("ELEVENLABS_STYLE", 0.0 if is_v3() else 0.45)),
             "use_speaker_boost": True,
         },
     }
