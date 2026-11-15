@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Le guide du Sensei — Les mouvements de caméra</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4EDE1; --paper2:#EAE0CF; --ink:#1B1B1B; --red:#E63B2E; --gold:#F2B33D; --slate:#2F4858; --muted:#5b5650;
+  }
+  @page{ size:A4; margin:0 }
+  *{ box-sizing:border-box; margin:0; padding:0 }
+  body{ font-family:Inter, "DejaVu Sans", sans-serif; color:var(--ink); background:#888; -webkit-print-color-adjust:exact; print-color-adjust:exact }
+  .page{ width:210mm; height:297mm; background:var(--paper); position:relative; overflow:hidden; padding:18mm 17mm 16mm; page-break-after:always; display:flex; flex-direction:column }
+  .page:last-child{ page-break-after:auto }
+  h1,h2,h3,.display{ font-family:Anton, "Inter", sans-serif; font-weight:400; letter-spacing:.5px; text-transform:uppercase; line-height:1.02 }
+  h2{ font-size:30pt; margin-bottom:5mm }
+  h2 .accent{ color:var(--red) }
+  .kicker{ font-weight:800; font-size:8.5pt; letter-spacing:2.5px; text-transform:uppercase; color:var(--red); margin-bottom:2mm }
+  p, li{ font-size:10pt; line-height:1.5 }
+  .lead{ font-size:12pt; line-height:1.55 }
+  .foot{ position:absolute; left:17mm; right:17mm; bottom:9mm; display:flex; justify-content:space-between; font-size:7.5pt; letter-spacing:1.5px; text-transform:uppercase; color:var(--muted); border-top:1px solid #d6cbb7; padding-top:2.5mm }
+  .brush{ height:3mm; width:38mm; background:var(--red); border-radius:2mm 6mm 3mm 5mm; margin:1mm 0 6mm; transform:skewX(-12deg) }
+  .stamp{ font-family:Anton, sans-serif; color:var(--red); border:2.2mm solid var(--red); border-radius:2mm; padding:2mm 4mm; display:inline-block; transform:rotate(-8deg); text-transform:uppercase; letter-spacing:1px; opacity:.92 }
+  .kanji{ font-family:"IPAGothic", sans-serif }
+
+  /* Couverture */
+  .cover{ background:var(--ink); color:var(--paper); padding:22mm 20mm }
+  .cover .sun{ position:absolute; width:150mm; height:150mm; border-radius:50%; background:var(--red); right:-45mm; top:40mm }
+  .cover .kanjibig{ position:absolute; right:14mm; top:62mm; font-size:120pt; color:var(--ink); writing-mode:vertical-rl; line-height:1 }
+  .cover .brand{ font-weight:800; letter-spacing:4px; font-size:10pt; color:var(--gold) }
+  .cover h1{ font-size:62pt; margin-top:62mm; max-width:120mm; position:relative }
+  .cover h1 span{ color:var(--gold) }
+  .cover .sub{ font-size:13pt; line-height:1.5; max-width:110mm; margin-top:8mm; color:#e9e1d3; position:relative }
+  .cover .chips{ position:absolute; left:20mm; bottom:24mm; display:flex; gap:3mm }
+  .chip{ border:1px solid #6b655c; border-radius:20mm; padding:2mm 5mm; font-size:9pt; font-weight:600 }
+  .cover .stamp{ position:absolute; right:22mm; bottom:22mm; font-size:16pt; background:var(--paper); }
+
+  /* Intro */
+  .question{ background:var(--ink); color:var(--paper); border-radius:4mm; padding:9mm 10mm; margin:8mm 0 }
+  .question .display{ font-size:34pt; color:var(--gold); margin-top:2mm }
+  .steps{ display:grid; grid-template-columns:repeat(3,1fr); gap:5mm; margin-top:4mm }
+  .step{ background:var(--paper2); border-radius:3mm; padding:5mm }
+  .step .n{ font-family:Anton,sans-serif; font-size:24pt; color:var(--red) }
+  .legend{ display:grid; grid-template-columns:repeat(4,1fr); gap:3mm; margin-top:7mm; align-items:center }
+  .legend div{ display:flex; align-items:center; gap:2mm; font-size:9pt }
+
+  /* Antisèche */
+  table{ width:100%; border-collapse:collapse; font-size:9.3pt }
+  th{ text-align:left; font-weight:800; text-transform:uppercase; font-size:8pt; letter-spacing:1.2px; padding:3mm 3mm; background:var(--ink); color:var(--paper) }
+  td{ padding:2.6mm 3mm; border-bottom:1px solid #d9cfbd; vertical-align:top; line-height:1.4 }
+  tr:nth-child(even) td{ background:#efe6d6 }
+  td:first-child{ font-weight:800; white-space:nowrap }
+  .tag{ display:inline-block; width:2.5mm; height:2.5mm; border-radius:50%; margin-right:2mm; vertical-align:middle }
+
+  /* Fiches */
+  .fiche{ flex:1; display:grid; grid-template-columns:62mm 1fr; gap:6mm; padding:6mm 0; border-bottom:1.5px dashed #cbbfa9 }
+  .fiche:last-of-type{ border-bottom:none }
+  .fiche .num{ font-family:Anton,sans-serif; font-size:40pt; color:var(--red); line-height:.9 }
+  .fiche h3{ font-size:20pt; margin:1mm 0 3mm }
+  .fiche .tagline{ font-weight:700; font-size:10pt; color:var(--slate); margin-bottom:3mm }
+  .fiche svg{ width:100%; height:auto; background:#fbf7f0; border-radius:3mm; border:1px solid #e1d6c3 }
+  .fiche .cap{ font-size:7.5pt; color:var(--muted); text-align:center; margin-top:1.5mm; text-transform:uppercase; letter-spacing:1px }
+  .rows{ display:grid; gap:2.4mm }
+  .row b{ display:block; font-size:7.5pt; letter-spacing:1.5px; text-transform:uppercase; color:var(--muted); margin-bottom:.5mm }
+  .row p{ font-size:9.4pt; line-height:1.45 }
+  .err{ border-left:1.2mm solid var(--red); padding-left:3mm }
+  .ex{ font-size:9.4pt; line-height:1.45; background:var(--ink); color:var(--paper); border-radius:2.5mm; padding:2.5mm 3.5mm }
+  .ex b{ color:var(--gold) }
+
+  /* Règles */
+  .rules{ display:grid; gap:6mm; margin-top:4mm }
+  .rule{ display:grid; grid-template-columns:28mm 1fr; gap:6mm; align-items:center; background:var(--paper2); border-radius:4mm; padding:6mm }
+  .rule .stamp{ font-size:26pt; text-align:center; padding:1mm 3mm }
+  .rule h3{ font-size:18pt; margin-bottom:2mm }
+
+  /* Matériel */
+  .levels{ display:grid; grid-template-columns:repeat(3,1fr); gap:5mm; margin-top:4mm }
+  .level{ border-radius:4mm; padding:6mm 5mm; background:var(--paper2) }
+  .level.pro{ background:var(--ink); color:var(--paper) }
+  .level h3{ font-size:16pt; margin:1mm 0 4mm }
+  .level ul{ list-style:none; display:grid; gap:2.5mm }
+  .level li{ font-size:9.3pt; padding-left:4mm; position:relative }
+  .level li::before{ content:""; position:absolute; left:0; top:2mm; width:1.8mm; height:1.8mm; background:var(--red); border-radius:50% }
+  .tips{ margin-top:7mm; display:grid; grid-template-columns:1fr 1fr; gap:4mm }
+  .tip{ border:1.5px solid var(--ink); border-radius:3mm; padding:4mm }
+  .tip b{ display:block; font-size:9.5pt; margin-bottom:1mm }
+
+  /* Plan 7 jours */
+  .days{ display:grid; gap:3.2mm; margin-top:3mm }
+  .day{ display:grid; grid-template-columns:18mm 1fr 8mm; gap:4mm; align-items:center; background:var(--paper2); border-radius:3mm; padding:3.6mm 4mm }
+  .day .d{ font-family:Anton,sans-serif; font-size:20pt; color:var(--red); text-align:center }
+  .day b{ font-size:10.5pt }
+  .day p{ font-size:9.2pt; color:#3a3631 }
+  .box{ width:7mm; height:7mm; border:1.6px solid var(--ink); border-radius:1.5mm }
+  .day.final{ background:var(--ink); color:var(--paper) }
+  .day.final p{ color:#ddd4c4 }
+  .day.final .box{ border-color:var(--gold) }
+
+  /* Fin */
+  .end{ background:var(--ink); color:var(--paper) }
+  .end h2{ font-size:44pt; margin-top:8mm }
+  .offers{ display:grid; gap:6mm; margin-top:8mm }
+  .offer{ border-radius:4mm; padding:7mm; background:#26231f; border:1px solid #403b34 }
+  .offer.main{ background:var(--red); border:none }
+  .offer h3{ font-size:20pt; margin-bottom:2mm }
+  .offer p{ color:#efe7da }
+  .offer .link{ margin-top:4mm; display:inline-block; background:var(--paper); color:var(--ink); font-weight:800; padding:2.5mm 6mm; border-radius:20mm; font-size:10pt }
+  .end .foot{ color:#9d958a; border-color:#3d3933 }
+  .todo{ background:var(--gold); color:var(--ink); padding:0 1.5mm; border-radius:1mm }
+</style>
+</head>
+<body>
+
+<!-- Définitions SVG partagées -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <marker id="aG" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#F2B33D"/></marker>
+    <marker id="aR" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#E63B2E"/></marker>
+    <marker id="aK" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1B1B1B"/></marker>
+    <g id="cam"><rect x="-13" y="-8" width="20" height="16" rx="3" fill="#2F4858"/><path d="M7 -5L15 -9L15 9L7 5Z" fill="#2F4858"/></g>
+    <g id="subj"><circle r="8" fill="#E63B2E"/><circle r="3" cy="-2" fill="#F4EDE1"/></g>
+  </defs>
+</svg>
+
+<!-- 1. COUVERTURE -->
+<section class="page cover">
+  <div class="sun"></div>
+  <div class="kanjibig kanji">道場</div>
+  <div class="brand">LE DOJO DE L'IMAGE</div>
+  <h1>Les mouvements de <span>caméra</span></h1>
+  <p class="sub">Le guide du Sensei. 8 mouvements, 4 règles et 7 jours d'entraînement pour filmer avec une intention, au smartphone comme à la caméra.</p>
+  <div class="chips"><span class="chip">Vidéaste</span><span class="chip">Créateur de contenu</span><span class="chip">Débutant · Intermédiaire</span></div>
+  <div class="stamp">Guide gratuit</div>
+</section>
+
+<!-- 2. INTRO -->
+<section class="page">
+  <div class="kicker">Avant de commencer</div>
+  <h2>La caméra parle.<br><span class="accent">Qu'est-ce qu'elle dit ?</span></h2>
+  <div class="brush"></div>
+  <p class="lead">Une caméra qui bouge n'est jamais neutre. Quand elle avance, on entre dans l'émotion. Quand elle recule, on quitte la scène. Quand elle monte, tout devient plus grand. Le spectateur ne le sait pas, mais il le ressent.</p>
+  <p class="lead" style="margin-top:4mm">Le problème des vidéos amateurs, ce n'est pas le matériel. C'est le mouvement sans raison. Ce guide t'apprend à choisir chaque mouvement pour ce qu'il raconte.</p>
+  <div class="question">
+    <div class="kicker" style="color:var(--paper)">La seule question à te poser avant d'appuyer sur REC</div>
+    <div class="display">« Pourquoi je bouge ? »</div>
+    <p style="margin-top:3mm;color:#ddd4c4">Si tu n'as pas de réponse : reste fixe. C'est la première règle du dojo.</p>
+  </div>
+  <div class="kicker">Comment utiliser ce guide</div>
+  <div class="steps">
+    <div class="step"><div class="n">1</div><p><b>Lis la fiche.</b> Ce que fait le mouvement, et surtout ce qu'il raconte.</p></div>
+    <div class="step"><div class="n">2</div><p><b>Regarde le schéma.</b> Vue de dessus : où est la caméra, où va-t-elle.</p></div>
+    <div class="step"><div class="n">3</div><p><b>Fais l'exercice.</b> Avec ton téléphone, tout de suite. On apprend en filmant.</p></div>
+  </div>
+  <div class="legend">
+    <div><svg width="34" height="22" viewBox="-17 -11 34 22"><use href="#cam"/></svg>Caméra</div>
+    <div><svg width="22" height="22" viewBox="-11 -11 22 22"><use href="#subj"/></svg>Sujet</div>
+    <div><svg width="40" height="12"><line x1="2" y1="6" x2="36" y2="6" stroke="#F2B33D" stroke-width="3" marker-end="url(#aG)"/></svg>Déplacement</div>
+    <div><svg width="40" height="22"><path d="M2 11L38 2M2 11L38 20" stroke="#2F4858" stroke-dasharray="3 3" fill="none"/></svg>Champ de vision</div>
+  </div>
+  <div class="foot"><span>Le Dojo de l'Image</span><span>02</span></div>
+</section>
+
+<!-- 3. ANTISÈCHE -->
+<section class="page">
+  <div class="kicker">L'antisèche</div>
+  <h2>12 mouvements, <span class="accent">12 émotions</span></h2>
+  <p style="margin-bottom:5mm">Garde cette page dans ton téléphone. Avant chaque plan, cherche l'émotion que tu veux, et prends le mouvement qui va avec.</p>
+  <table>
+    <tr><th>Mouvement</th><th>Ce que ça raconte</th><th>Utilise-le pour</th></tr>
+    <tr><td><span class="tag" style="background:#2F4858"></span>Plan fixe</td><td>Stabilité. Le sujet agit, la caméra observe.</td><td>Interview, dialogue, action dans le cadre</td></tr>
+    <tr><td><span class="tag" style="background:#2F4858"></span>Panoramique</td><td>Suivre, révéler ce qu'il y a à côté.</td><td>Personne qui marche, paysage, lieu</td></tr>
+    <tr><td><span class="tag" style="background:#2F4858"></span>Tilt (vertical)</td><td>Grandeur, présence, présentation.</td><td>Portrait, bâtiment, produit</td></tr>
+    <tr><td><span class="tag" style="background:#F2B33D"></span>Travelling avant</td><td>On entre dans l'émotion, la tension monte.</td><td>Confidence, décision, moment clé</td></tr>
+    <tr><td><span class="tag" style="background:#F2B33D"></span>Travelling arrière</td><td>On révèle, ou on quitte.</td><td>Fin, solitude, découverte du lieu</td></tr>
+    <tr><td><span class="tag" style="background:#F2B33D"></span>Travelling latéral</td><td>On accompagne. Profondeur (parallaxe).</td><td>Marche, vitrine, produit, ambiance</td></tr>
+    <tr><td><span class="tag" style="background:#E63B2E"></span>Zoom</td><td>Attirer l'œil, mais l'image s'aplatit.</td><td>Reportage, effet voulu. Avec modération</td></tr>
+    <tr><td><span class="tag" style="background:#E63B2E"></span>Effet Vertigo</td><td>Choc, vertige, le monde bascule.</td><td>Révélation, prise de conscience</td></tr>
+    <tr><td><span class="tag" style="background:#1B1B1B"></span>Caméra à l'épaule</td><td>Énergie, urgence, « on y est ».</td><td>Reportage, coulisses, action</td></tr>
+    <tr><td><span class="tag" style="background:#1B1B1B"></span>Stabilisé</td><td>Fluidité, élégance, haut de gamme.</td><td>Mariage, pub, immobilier</td></tr>
+    <tr><td><span class="tag" style="background:#1B1B1B"></span>Grue / drone ↑</td><td>Révéler l'ensemble, conclure.</td><td>Fin de séquence, plan final</td></tr>
+    <tr><td><span class="tag" style="background:#1B1B1B"></span>Grue / drone ↓</td><td>Entrer dans l'histoire.</td><td>Ouverture, premier plan du film</td></tr>
+  </table>
+  <div class="foot"><span>Le Dojo de l'Image</span><span>03</span></div>
+</section>
+
+<!-- 4. FICHES 01-02 -->
+<section class="page">
+  <div class="kicker">Les fiches du Sensei</div>
+  <div class="fiche">
+    <div>
+      <div class="num">01</div><h3>Le plan fixe</h3>
+      <svg viewBox="0 0 240 150">
+        <path d="M58 75L230 15M58 75L230 135" stroke="#2F4858" stroke-dasharray="4 4" fill="none"/>
+        <g transform="translate(45 75)"><use href="#cam"/></g>
+        <path d="M175 20 C150 60 200 95 170 132" stroke="#E63B2E" stroke-width="2.5" fill="none" stroke-dasharray="5 4" marker-end="url(#aR)"/>
+        <g transform="translate(168 70)"><use href="#subj"/></g>
+        <text x="45" y="105" font-size="10" text-anchor="middle" fill="#5b5650" font-family="Inter">fixe</text>
+      </svg>
+      <div class="cap">La caméra ne bouge pas. Le sujet traverse.</div>
+    </div>
+    <div class="rows">
+      <div class="tagline">« Le mouvement le plus puissant, c'est souvent de ne pas bouger. »</div>
+      <div class="row"><b>Ce que c'est</b><p>Caméra posée (trépied, mur, table). C'est le sujet qui entre, agit et sort du cadre.</p></div>
+      <div class="row"><b>Ce que ça raconte</b><p>Stabilité, sérieux, attention. Le spectateur regarde l'histoire, pas la technique.</p></div>
+      <div class="row"><b>Comment faire</b><p>Trépied ou appui stable. Au smartphone : verrouille la mise au point et l'exposition (appui long sur l'écran) pour que l'image ne « respire » pas.</p></div>
+      <div class="row err"><b>L'erreur à éviter</b><p>Bouger « pour faire dynamique ». Le dynamisme vient du sujet et du montage.</p></div>
+      <div class="row ex"><b>EXERCICE · </b>Filme 3 plans fixes de 10 s où seul ton sujet bouge : il entre, il fait un geste, il sort.</div>
+    </div>
+  </div>
+  <div class="fiche">
+    <div>
+      <div class="num">02</div><h3>Panoramique &amp; tilt</h3>
+      <svg viewBox="0 0 240 150">
+        <path d="M70 80L225 20M70 80L225 105" stroke="#2F4858" stroke-dasharray="4 4" fill="none" opacity=".35"/>
+        <path d="M70 80L150 140M70 80L210 125" stroke="#2F4858" stroke-dasharray="4 4" fill="none"/>
+        <g transform="translate(60 80) rotate(25)"><use href="#cam"/></g>
+        <path d="M95 55 A40 40 0 0 1 100 112" stroke="#F2B33D" stroke-width="3" fill="none" marker-end="url(#aG)"/>
+        <g transform="translate(205 45)"><use href="#subj"/></g>
+        <line x1="205" y1="58" x2="185" y2="118" stroke="#E63B2E" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#aR)"/>
+        <text x="60" y="112" font-size="10" text-anchor="middle" fill="#5b5650" font-family="Inter">pivote</text>
+      </svg>
+      <div class="cap">La caméra reste sur place et pivote.</div>
+    </div>
+    <div class="rows">
+      <div class="tagline">« Suivre, révéler, ou rendre quelqu'un plus grand. »</div>
+      <div class="row"><b>Ce que c'est</b><p>La caméra pivote sur elle-même. À l'horizontale : panoramique. À la verticale : tilt.</p></div>
+      <div class="row"><b>Ce que ça raconte</b><p>Horizontal : on suit quelqu'un, on découvre un lieu. Tilt des pieds au visage : grandeur, prestance. Du ciel au sol : on présente un lieu.</p></div>
+      <div class="row"><b>Comment faire</b><p>Tête fluide sur trépied. À main levée : bloque les coudes contre le corps et tourne avec le buste, pas avec les poignets.</p></div>
+      <div class="row err"><b>L'erreur à éviter</b><p>Aller trop vite : l'image saccade et le spectateur ne voit rien. Compte 4 à 6 secondes pour un panoramique.</p></div>
+      <div class="row ex"><b>EXERCICE · </b>Fais un tilt lent des chaussures au visage d'un proche. Puis l'inverse. Compare l'effet.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Le Dojo de l'Image</span><span>04</span></div>
+</section>
+
+<!-- 5. FICHES 03-04 -->
+<section class="page">
+  <div class="kicker">Les fiches du Sensei</div>
+  <div class="fiche">
+    <div>
+      <div class="num">03</div><h3>Travelling avant / arrière</h3>
+      <svg viewBox="0 0 240 150">
+        <path d="M78 75L230 30M78 75L230 120" stroke="#2F4858" stroke-dasharray="4 4" fill="none"/>
+        <g transform="translate(65 75)"><use href="#cam"/></g>
+        <line x1="85" y1="55" x2="160" y2="55" stroke="#F2B33D" stroke-width="3" marker-end="url(#aG)"/>
+        <line x1="160" y1="97" x2="20" y2="97" stroke="#E63B2E" stroke-width="3" marker-end="url(#aR)"/>
+        <g transform="translate(195 75)"><use href="#subj"/></g>
+        <text x="122" y="47" font-size="10" text-anchor="middle" fill="#1B1B1B" font-family="Inter" font-weight="700">avant : entrer</text>
+        <text x="90" y="115" font-size="10" text-anchor="middle" fill="#1B1B1B" font-family="Inter" font-weight="700">arrière : révéler, quitter</text>
+      </svg>
+      <div class="cap">La caméra se déplace physiquement.</div>
+    </div>
+    <div class="rows">
+      <div class="tagline">« Avancer, c'est entrer. Reculer, c'est révéler ou quitter. »</div>
+      <div class="row"><b>Ce que c'est</b><p>La caméra s'approche du sujet (avant) ou s'en éloigne (arrière).</p></div>
+      <div class="row"><b>Ce que ça raconte</b><p>Avant : intimité, tension, décision. Arrière : révélation du décor, solitude, fin.</p></div>
+      <div class="row"><b>Comment faire</b><p>Gimbal, slider, ou marche lente « en canard », genoux fléchis, en déroulant le pied du talon vers la pointe. Au smartphone : grand-angle (0,5×) pour lisser les secousses.</p></div>
+      <div class="row err"><b>L'erreur à éviter</b><p>Remplacer le travelling par un zoom. Ce n'est pas la même chose (voir fiche 05).</p></div>
+      <div class="row ex"><b>EXERCICE · </b>Même scène (quelqu'un assis, pensif) : une version en avant, une en arrière. Montre les deux à un proche : quelle émotion ressent-il ?</div>
+    </div>
+  </div>
+  <div class="fiche">
+    <div>
+      <div class="num">04</div><h3>Le travelling latéral</h3>
+      <svg viewBox="0 0 240 150">
+        <rect x="20" y="10" width="200" height="16" rx="3" fill="#cfe0d6"/><text x="120" y="22" font-size="9" text-anchor="middle" fill="#2F4858" font-family="Inter">arrière-plan : défile lentement</text>
+        <g transform="translate(120 55)"><use href="#subj"/></g>
+        <rect x="95" y="84" width="10" height="16" fill="#1B1B1B"/><text x="140" y="96" font-size="9" fill="#1B1B1B" font-family="Inter">1er plan : défile vite</text>
+        <path d="M100 128L60 70M100 128L170 70" stroke="#2F4858" stroke-dasharray="4 4" fill="none"/>
+        <g transform="translate(100 130) rotate(-90)"><use href="#cam"/></g>
+        <line x1="40" y1="140" x2="180" y2="140" stroke="#F2B33D" stroke-width="3" marker-end="url(#aG)"/>
+      </svg>
+      <div class="cap">La caméra glisse à côté du sujet.</div>
+    </div>
+    <div class="rows">
+      <div class="tagline">« Le secret des images qui ont l'air en 3D. »</div>
+      <div class="row"><b>Ce que c'est</b><p>La caméra glisse sur le côté, parallèlement au sujet.</p></div>
+      <div class="row"><b>Ce que ça raconte</b><p>On accompagne le personnage. Le premier plan défile vite, le fond lentement : c'est la parallaxe, et elle crée la profondeur.</p></div>
+      <div class="row"><b>Comment faire</b><p>Place <strong>toujours</strong> un élément au premier plan : branche, poteau, verre, table. Slider, rail, ou pas chassés lents avec un stabilisateur.</p></div>
+      <div class="row err"><b>L'erreur à éviter</b><p>Un décor vide devant la caméra : sans premier plan, pas de parallaxe, l'image reste plate.</p></div>
+      <div class="row ex"><b>EXERCICE · </b>Filme un objet sur une table en glissant sur le côté. Recommence avec un verre au premier plan. Compare.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Le Dojo de l'Image</span><span>05</span></div>
+</section>
+
+<!-- 6. FICHES 05-06 -->
+<section class="page">
+  <div class="kicker">Les fiches du Sensei</div>
+  <div class="fiche">
+    <div>
+      <div class="num">05</div><h3>Zoom ≠ travelling</h3>
+      <svg viewBox="0 0 240 150">
+        <text x="12" y="20" font-size="10" fill="#E63B2E" font-family="Inter" font-weight="800">ZOOM</text>
+        <g transform="translate(40 45)"><use href="#cam"/></g>
+        <path d="M55 45L215 15M55 45L215 75" stroke="#2F4858" stroke-dasharray="4 4" fill="none" opacity=".35"/>
+        <path d="M55 45L215 33M55 45L215 57" stroke="#E63B2E" stroke-dasharray="4 4" fill="none"/>
+        <g transform="translate(180 45)"><use href="#subj"/></g>
+        <line x1="10" y1="80" x2="230" y2="80" stroke="#d6cbb7"/>
+        <text x="12" y="98" font-size="10" fill="#b8860b" font-family="Inter" font-weight="800">TRAVELLING</text>
+        <g transform="translate(40 120)"><use href="#cam"/></g>
+        <line x1="62" y1="120" x2="130" y2="120" stroke="#F2B33D" stroke-width="3" marker-end="url(#aG)"/>
+        <g transform="translate(180 120)"><use href="#subj"/></g>
+      </svg>
+      <div class="cap">Zoom : l'objectif change. Travelling : la caméra bouge.</div>
+    </div>
+    <div class="rows">
+      <div class="tagline">« Le piège n°1 des débutants. »</div>
+      <div class="row"><b>Ce que c'est</b><p>Le zoom n'est pas un mouvement de caméra : la caméra reste à sa place, seule la focale change.</p></div>
+      <div class="row"><b>Ce que ça change</b><p>Zoom : sujet et décor grossissent ensemble, l'image paraît plate. Travelling : le décor change de taille par rapport au sujet, on sent la profondeur.</p></div>
+      <div class="row"><b>Comment choisir</b><p>Tu veux de l'émotion et du relief : avance. Tu veux un effet nerveux, reportage, ou tu ne peux pas t'approcher : zoome, mais lentement.</p></div>
+      <div class="row err"><b>L'erreur à éviter</b><p>Le zoom numérique du smartphone : il dégrade l'image. Passe d'un objectif à l'autre (0,5× · 1× · 3×) sans zoomer entre deux.</p></div>
+      <div class="row ex"><b>EXERCICE · </b>Même cadrage final, obtenu une fois en zoomant, une fois en avançant. Regarde l'arrière-plan.</div>
+    </div>
+  </div>
+  <div class="fiche">
+    <div>
+      <div class="num">06</div><h3>L'effet Vertigo</h3>
+      <svg viewBox="0 0 240 150">
+        <g transform="translate(35 75)"><use href="#cam"/></g>
+        <path d="M50 75L230 40M50 75L230 110" stroke="#2F4858" stroke-dasharray="4 4" fill="none" opacity=".35"/>
+        <path d="M50 75L230 10M50 75L230 140" stroke="#E63B2E" stroke-dasharray="4 4" fill="none"/>
+        <line x1="55" y1="100" x2="130" y2="100" stroke="#F2B33D" stroke-width="3" marker-end="url(#aG)"/>
+        <g transform="translate(170 75)"><use href="#subj"/></g>
+        <text x="92" y="118" font-size="9.5" text-anchor="middle" fill="#1B1B1B" font-family="Inter" font-weight="700">on avance…</text>
+        <text x="200" y="20" font-size="9.5" text-anchor="middle" fill="#E63B2E" font-family="Inter" font-weight="700">…et on dézoome</text>
+      </svg>
+      <div class="cap">Travelling avant + zoom arrière, en même temps.</div>
+    </div>
+    <div class="rows">
+      <div class="tagline">« Le sujet ne bouge pas. Le monde, si. »</div>
+      <div class="row"><b>Ce que c'est</b><p>On avance vers le sujet en zoomant en arrière (ou l'inverse). Le sujet garde la même taille, le décor s'étire ou se resserre.</p></div>
+      <div class="row"><b>Ce que ça raconte</b><p>Le choc, le vertige, la prise de conscience. Un effet fort : une fois par vidéo, pas plus.</p></div>
+      <div class="row"><b>Comment faire</b><p>Caméra avec zoom + slider ou gimbal. Au smartphone : recule lentement en grand-angle, puis au montage, recadre progressivement pour garder le sujet à la même taille.</p></div>
+      <div class="row err"><b>L'erreur à éviter</b><p>Un décor trop proche ou uni : l'effet ne se voit pas. Il faut de la profondeur derrière le sujet (rue, couloir).</p></div>
+      <div class="row ex"><b>EXERCICE · </b>Dans un couloir, essaie la version smartphone. 3 essais, garde le meilleur.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Le Dojo de l'Image</span><span>06</span></div>
+</section>
+
+<!-- 7. FICHES 07-08 -->
+<section class="page">
+  <div class="kicker">Les fiches du Sensei</div>
+  <div class="fiche">
+    <div>
+      <div class="num">07</div><h3>Épaule ou stabilisé ?</h3>
+      <svg viewBox="0 0 240 150">
+        <text x="12" y="22" font-size="10" fill="#E63B2E" font-family="Inter" font-weight="800">ÉPAULE</text>
+        <path d="M20 50 l12 -8 l10 10 l12 -12 l10 12 l12 -9 l10 11 l12 -10 l10 9 l12 -12 l10 10 l12 -8 l10 11 l12 -10 l10 9 l12 -10 l10 6" stroke="#E63B2E" stroke-width="2.5" fill="none" marker-end="url(#aR)"/>
+        <line x1="10" y1="78" x2="230" y2="78" stroke="#d6cbb7"/>
+        <text x="12" y="98" font-size="10" fill="#b8860b" font-family="Inter" font-weight="800">STABILISÉ</text>
+        <path d="M20 125 C80 110 150 135 220 120" stroke="#F2B33D" stroke-width="3" fill="none" marker-end="url(#aG)"/>
+      </svg>
+      <div class="cap">Même trajet, deux sensations.</div>
+    </div>
+    <div class="rows">
+      <div class="tagline">« Le tremblement n'est pas un défaut. Le tremblement sans raison, oui. »</div>
+      <div class="row"><b>Ce que c'est</b><p>Caméra portée à la main ou à l'épaule, contre caméra sur gimbal ou avec stabilisation.</p></div>
+      <div class="row"><b>Ce que ça raconte</b><p>Épaule : énergie, urgence, immersion (reportage, coulisses, sport). Stabilisé : fluidité, élégance (mariage, pub, immobilier, produit).</p></div>
+      <div class="row"><b>Comment faire</b><p>Épaule : tremblement léger et régulier, jamais chaotique. Stabilisé : gimbal, ou mode stabilisation renforcée du téléphone (souvent appelé « mode action »).</p></div>
+      <div class="row err"><b>L'erreur à éviter</b><p>Mélanger les deux sans raison dans la même séquence. Choisis un style par scène.</p></div>
+      <div class="row ex"><b>EXERCICE · </b>Filme quelqu'un qui marche, une fois à l'épaule, une fois stabilisé. Monte les deux avec la même musique.</div>
+    </div>
+  </div>
+  <div class="fiche">
+    <div>
+      <div class="num">08</div><h3>Grue &amp; drone</h3>
+      <svg viewBox="0 0 240 150">
+        <line x1="10" y1="135" x2="230" y2="135" stroke="#1B1B1B" stroke-width="2"/>
+        <text x="200" y="148" font-size="8" fill="#5b5650" font-family="Inter">vue de profil</text>
+        <g transform="translate(150 125)"><use href="#subj"/></g>
+        <g transform="translate(60 105) rotate(20)"><use href="#cam"/></g>
+        <g transform="translate(60 30) rotate(45)" opacity=".5"><use href="#cam"/></g>
+        <line x1="40" y1="95" x2="40" y2="35" stroke="#F2B33D" stroke-width="3" marker-end="url(#aG)"/>
+        <line x1="85" y1="35" x2="85" y2="95" stroke="#E63B2E" stroke-width="3" marker-end="url(#aR)"/>
+        <text x="20" y="20" font-size="9.5" fill="#1B1B1B" font-family="Inter" font-weight="700">↑ monter : conclure</text>
+        <text x="100" y="60" font-size="9.5" fill="#1B1B1B" font-family="Inter" font-weight="700">↓ descendre : commencer</text>
+      </svg>
+      <div class="cap">La caméra s'élève ou descend.</div>
+    </div>
+    <div class="rows">
+      <div class="tagline">« Monter pour finir. Descendre pour commencer. »</div>
+      <div class="row"><b>Ce que c'est</b><p>La caméra s'élève ou descend : grue, perche, drone, ou simplement bras levé.</p></div>
+      <div class="row"><b>Ce que ça raconte</b><p>Monter : le personnage devient petit dans un grand décor, on conclut. Descendre : on entre dans l'histoire, on ouvre.</p></div>
+      <div class="row"><b>Comment faire</b><p>Pas de drone ? Téléphone sur perche ou à bout de bras, en montant lentement depuis le sol. Pour le drone : renseigne-toi sur la réglementation de ton pays avant de voler.</p></div>
+      <div class="row err"><b>L'erreur à éviter</b><p>Mettre des plans de drone partout « parce que c'est beau ». C'est de la ponctuation, pas du remplissage.</p></div>
+      <div class="row ex"><b>EXERCICE · </b>Ouvre ta prochaine vidéo par une descente, et ferme-la par une montée.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Le Dojo de l'Image</span><span>07</span></div>
+</section>
+
+<!-- 8. RÈGLES -->
+<section class="page">
+  <div class="kicker">Le code du dojo</div>
+  <h2>Les 4 règles <span class="accent">d'or</span></h2>
+  <p class="lead">Tu peux oublier tout le reste. Pas ces quatre règles.</p>
+  <div class="rules">
+    <div class="rule"><div class="stamp">1</div><div><h3>Un mouvement = une intention</h3><p>Chaque mouvement doit servir l'histoire : suivre, révéler, entrer, conclure. Pas de raison ? Plan fixe. Un plan fixe bien cadré vaut toujours mieux qu'un mouvement gratuit.</p></div></div>
+    <div class="rule"><div class="stamp">2</div><div><h3>2 secondes avant, 2 secondes après</h3><p>Lance l'enregistrement, attends 2 secondes, fais ton mouvement, attends encore 2 secondes avant de couper. Ces 4 secondes te donnent des points de coupe propres au montage.</p></div></div>
+    <div class="rule"><div class="stamp">3</div><div><h3>Lent et régulier</h3><p>Un mouvement lent paraît professionnel. Un seul à-coup, et le spectateur le voit. Démarre doucement, garde la même vitesse, ralentis doucement à la fin.</p></div></div>
+    <div class="rule"><div class="stamp">4</div><div><h3>Répète avant de filmer</h3><p>Fais ton geste 2 ou 3 fois à vide : trajectoire, vitesse, cadre de fin. Comme au dojo, on s'entraîne avant le combat. Le tournage, c'est l'exécution.</p></div></div>
+  </div>
+  <div class="foot"><span>Le Dojo de l'Image</span><span>08</span></div>
+</section>
+
+<!-- 9. MATÉRIEL -->
+<section class="page">
+  <div class="kicker">L'équipement</div>
+  <h2>Le kit du disciple <span class="accent">au maître</span></h2>
+  <p class="lead">Commence avec ce que tu as. Le matériel ne remplace pas l'intention, il la rend plus facile.</p>
+  <div class="levels">
+    <div class="level">
+      <div class="kicker">Niveau 1</div><h3>Smartphone</h3>
+      <ul>
+        <li>Ton téléphone, objectif nettoyé</li>
+        <li>Mini-trépied ou support de table</li>
+        <li>Stabilisation intégrée activée</li>
+        <li>Une appli caméra manuelle pour bloquer exposition et mise au point</li>
+        <li>Ton corps : genoux fléchis, coudes serrés</li>
+      </ul>
+    </div>
+    <div class="level">
+      <div class="kicker">Niveau 2</div><h3>Créateur</h3>
+      <ul>
+        <li>Gimbal pour smartphone</li>
+        <li>Trépied avec tête fluide</li>
+        <li>Petit slider</li>
+        <li>Micro-cravate sans fil</li>
+        <li>Panneau LED compact</li>
+      </ul>
+    </div>
+    <div class="level pro">
+      <div class="kicker" style="color:var(--gold)">Niveau 3</div><h3>Pro</h3>
+      <ul>
+        <li>Hybride + objectif stabilisé</li>
+        <li>Gimbal caméra</li>
+        <li>Slider motorisé</li>
+        <li>Drone (selon la réglementation)</li>
+        <li>Moniteur externe</li>
+      </ul>
+    </div>
+  </div>
+  <div class="kicker" style="margin-top:9mm">4 réglages qui changent tout au smartphone</div>
+  <div class="tips">
+    <div class="tip"><b>Verrouille l'exposition et la mise au point</b><p>Appui long sur le sujet. Sinon l'image change de luminosité pendant ton mouvement.</p></div>
+    <div class="tip"><b>Grand-angle pour bouger</b><p>Le 0,5× atténue les secousses. Garde le téléobjectif pour les plans fixes.</p></div>
+    <div class="tip"><b>Pas de zoom numérique</b><p>Choisis un objectif (0,5× · 1× · 3×) et déplace-toi plutôt que de zoomer.</p></div>
+    <div class="tip"><b>Filme en 4K si possible</b><p>Tu pourras recadrer et stabiliser au montage sans perdre en qualité pour un reel en 1080p.</p></div>
+  </div>
+  <div class="foot"><span>Le Dojo de l'Image</span><span>09</span></div>
+</section>
+
+<!-- 10. PLAN 7 JOURS -->
+<section class="page">
+  <div class="kicker">L'entraînement</div>
+  <h2>7 jours <span class="accent">au dojo</span></h2>
+  <p style="margin-bottom:2mm">15 minutes par jour, ton téléphone suffit. Coche chaque jour terminé.</p>
+  <div class="days">
+    <div class="day"><div class="d">J1</div><div><b>Plan fixe</b><p>5 plans fixes de 10 s où seul le sujet bouge. Verrouille exposition et mise au point.</p></div><div class="box"></div></div>
+    <div class="day"><div class="d">J2</div><div><b>Panoramique &amp; tilt</b><p>Suis une personne qui marche. Puis un tilt lent des pieds au visage.</p></div><div class="box"></div></div>
+    <div class="day"><div class="d">J3</div><div><b>Avant / arrière</b><p>Une même scène, deux versions. Note l'émotion de chacune.</p></div><div class="box"></div></div>
+    <div class="day"><div class="d">J4</div><div><b>Latéral + premier plan</b><p>3 travellings latéraux, toujours avec un élément au premier plan.</p></div><div class="box"></div></div>
+    <div class="day"><div class="d">J5</div><div><b>Zoom contre travelling</b><p>Même cadrage final, obtenu des deux façons. Compare l'arrière-plan.</p></div><div class="box"></div></div>
+    <div class="day"><div class="d">J6</div><div><b>Épaule, stabilisé &amp; Vertigo</b><p>Un trajet en épaule, le même stabilisé. Bonus : tente l'effet Vertigo dans un couloir.</p></div><div class="box"></div></div>
+    <div class="day final"><div class="d" style="color:var(--gold)">J7</div><div><b>Ton mini-film de 30 secondes</b><p>Ouvre par une descente, utilise 3 mouvements avec une intention claire, ferme par une montée. Applique les 4 règles. Publie-le et identifie-moi : je regarde et je commente.</p></div><div class="box"></div></div>
+  </div>
+  <div class="foot"><span>Le Dojo de l'Image</span><span>10</span></div>
+</section>
+
+<!-- 11. FIN -->
+<section class="page end">
+  <div class="brand" style="font-weight:800;letter-spacing:4px;font-size:10pt;color:var(--gold)">LE DOJO DE L'IMAGE</div>
+  <h2>Tu as les bases.<br><span style="color:var(--gold)">Passe au niveau supérieur.</span></h2>
+  <p class="lead" style="color:#e2d9ca;max-width:150mm">Connaître les mouvements, c'est la ceinture blanche. Savoir les enchaîner pour raconter une histoire qui retient l'attention et qui vend, c'est la ceinture noire.</p>
+  <div class="offers">
+    <div class="offer main">
+      <div class="kicker" style="color:var(--paper)">La formation</div>
+      <h3><span class="todo">[NOM DE LA FORMATION]</span></h3>
+      <p>Tournage, cadrage, mouvements, montage et création de contenu : la méthode complète pour produire des vidéos qui font grandir ton audience et ton activité.</p>
+      <span class="link"><span class="todo">[LIEN FORMATION]</span></span>
+    </div>
+    <div class="offer">
+      <div class="kicker" style="color:var(--gold)">Prestations</div>
+      <h3>Besoin d'une vidéo pro ?</h3>
+      <p>Vidéo de marque, portrait, mariage, événement, photographie, contenus pour les réseaux sociaux. On en parle ?</p>
+      <span class="link"><span class="todo">[LIEN RÉSERVATION / CONTACT]</span></span>
+    </div>
+    <div class="offer">
+      <div class="kicker" style="color:var(--gold)">Chaque jour, une leçon</div>
+      <h3>Suis le dojo</h3>
+      <p>Instagram · TikTok · Facebook · YouTube : <span class="todo">[@TON_COMPTE]</span></p>
+    </div>
+  </div>
+  <div class="foot"><span>Le Dojo de l'Image</span><span class="kanji">道場</span></div>
+</section>
+
+</body>
+</html>
