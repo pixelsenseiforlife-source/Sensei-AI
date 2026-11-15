@@ -109,8 +109,10 @@ Scripts complets : dossier [`scripts/`](scripts/).
 - Outro animée : `brand/outro/outro-pixel-sensei.mp4` (regénérer : `node reels/brand/outro/render_outro.js`)
 
 ## 8. Animation et export
-- Reel 01 animé : `export/01-plan-fixe.mp4` (1080 × 1920, 30 i/s, −14 LUFS, outro incluse)
-- Pour le recréer : `python3 -I reels/animation/build_reel01.py && node reels/animation/render_reel.js 01`
+- Les 10 reels finaux : dossier `export/` (1080 × 1920, 30 i/s, −14 LUFS, outro du logo incluse)
+- Reel 01 : `python3 -I reels/animation/build_reel01.py && node reels/animation/render_reel.js 01`
+- Reels 02 à 10 (moteur commun `animation/engine.js` + mise en scène `animation/defs/NN.js` + démos `animation/demos.py`) :
+  `python3 -I reels/animation/align.py NN` (horodatage, une fois) puis `python3 -I reels/animation/build_reel.py NN && node reels/animation/render_reel.js NN`
 - Aperçu rapide (12 images) : ajouter `--preview`
 - La synchro voix/animation vient de `animation/01/timing.json` (horodatage des mots par ElevenLabs)
 
